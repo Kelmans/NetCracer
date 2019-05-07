@@ -1,0 +1,50 @@
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+.content{
+    width: 1200px;
+    height: 600px;
+    margin: auto;
+}
+.img_kv{
+    width: 16px;
+    height: 16px;
+    background: url("../img/img_kv.png");
+}
+.img_kv::hover{
+    width: 16 px;
+    height: 16px;
+    background: url("../img/img_kv_nav.png");
+}
+
+caption{
+    align-content: center;
+}
+.nameTable{
+    padding-left: 10px ;
+}
+.first_tr{
+    background: rgba(71,119,111,0.3);
+}
+table{
+    padding: 10px;
+    border-collapse: collapse;
+}
+.statusTable{
+    padding-left: 100px;
+}
+.autTable{
+    padding-left: 50px;
+}
+.loginTable{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.img_pl{
+
+    width: 16px;
+    height: 16px;
+    background: url("../img/img_pl.png");
+}
