@@ -3,69 +3,70 @@
     padding: 0px;
 
 }
-.content{
-    width: 1200px;
-    height: 600px;
-    margin: auto;
-}
-.img_kv{
-    width: 16px;
-    height: 16px;
-    background: url("../img/img_kv.png") no-repeat;
-    margin: auto;
-}
-.img_kv:hover{
-    width: 16 px;
-    height: 16px;
-    background: url("../img/img_kv_nav.png");
-}
 
 caption{
     align-content: center;
     padding: 20px;
     font-size: 20px;
 }
-.nameTable{
-    padding-left: 10px ;
-    width: 200px;
-    display: flex;
-}
-.first_tr{
-    background: rgba(71,119,111,0.3);
-}
+
 table{
 
     padding: 10px;
     border-collapse: collapse;
 }
-.statusTable{
+
+tr:hover .secured{
+    background: url("../img/prkp.png") round;
+}
+
+input{
+    width: 16px;
+    height: 16px;
+    background: aqua;
+}
+td{
+    padding: 10px;
+}
+
+tr:hover{
+    background: darkgrey;
+}
+
+.content{
+    width: 1200px;
+    height: 600px;
+    margin: auto;
+}
+.firstLine{
+    background: rgba(71,119,111,0.3);
+}
+.nameLine{
+    padding-left: 10px ;
+    width: 200px;
+    display: flex;
+}
+
+
+.statusLine{
     padding-left: 100px;
 }
-.autTable{
+.autLine{
     padding-left: 50px;
 }
-.loginTable{
+.loginLine{
     padding-left: 50px;
     padding-right: 50px;
 }
-.img_pl{
+.container_img-item{
 
     width: 20px;
     height: 20px;
     background: url("../img/img_pl.png") round;
 }
-td{
-    padding: 10px;
-}
-tr:hover{
-    background: darkgrey;
-}
-.krp{
+.secured{
    margin-left: 10px;
     width: 16px;
     height: 16px;
 
-}
-tr:hover .krp{
-    background: url("../img/prkp.png") round;
 }
