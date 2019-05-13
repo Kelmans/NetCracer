@@ -29,7 +29,7 @@ td{
     padding: 10px;
 }
 #tableHead{
-    background: rgba(71,119,111,0.3) ;
+    background: darkgrey ;
 
 }
 tr:hover {
@@ -42,12 +42,18 @@ tr:hover {
     margin: auto;
 }
 thead{
-    background: rgba(71,119,111,0.3);
+    background: darkgrey;
+
 }
 .nameLine{
     padding-left: 10px ;
     width: 200px;
     display: flex;
+    font-family: inherit;
+    color: #2a9afa;
+}
+tr:first-line{
+    color: black;
 }
 
 
@@ -85,7 +91,9 @@ thead{
 
 .checkbox-item .checker {
     content: '\2713';
-    background: #2a9afa;
+    background: azure;
+    border: 1px solid gray;
+    border-radius: 4px;
     position: absolute;
     left: 0;
     top: 50%;
@@ -97,7 +105,7 @@ thead{
 }
 
 .checkbox-item input[type="checkbox"]:checked~.checker {
-    content: url("data:image/gif;base64,R0lGODlhCgAKAJEAAAAAAP///////wAAACH5BAEAAAIALAAAAAAKAAoAAAISlG8AeMq5nnsiSlsjzmpzmj0FADs=");
+     content: url("data:image/gif;base64,R0lGODlhCgAKAJEAAAAAAP///////wAAACH5BAEAAAIALAAAAAAKAAoAAAISlG8AeMq5nnsiSlsjzmpzmj0FADs=");
     background: #2a9afa;
     font-family: FontAwesome;
     position: absolute;
