@@ -28,8 +28,11 @@ input{
 td{
     padding: 10px;
 }
+#tableHead{
+    background: rgba(71,119,111,0.3) ;
 
-tr:hover{
+}
+tr:hover {
     background: darkgrey;
 }
 
@@ -38,7 +41,7 @@ tr:hover{
     height: 600px;
     margin: auto;
 }
-.firstLine{
+thead{
     background: rgba(71,119,111,0.3);
 }
 .nameLine{
@@ -69,4 +72,33 @@ tr:hover{
     width: 16px;
     height: 16px;
 
+}
+.checkbox-item {
+    display: block;
+    width: 15px;
+    height: 15px;
+    padding-left: 20px;
+    position: relative;
+
+    cursor: pointer;
+}
+
+.checkbox-item .checker {
+    content: '\2713';
+    background: #2a9afa;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+   width: 15px;
+    height: 15px;
+    display: block;
+    font-family: FontAwesome;
+}
+
+.checkbox-item input[type="checkbox"]:checked~.checker {
+    content: url("data:image/gif;base64,R0lGODlhCgAKAJEAAAAAAP///////wAAACH5BAEAAAIALAAAAAAKAAoAAAISlG8AeMq5nnsiSlsjzmpzmj0FADs=");
+    background: #2a9afa;
+    font-family: FontAwesome;
+    position: absolute;
 }
