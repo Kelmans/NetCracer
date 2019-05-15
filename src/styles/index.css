@@ -88,7 +88,7 @@ tr:hover {
 }
 .checkbox-item .checker {
     content: '\2713';
-    background: azure;
+    background: #ffffff;
     border: 1px solid gray;
     border-radius: 4px;
     position: absolute;
