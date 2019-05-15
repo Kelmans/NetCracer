@@ -35,13 +35,14 @@ tr:hover {
     background: rgba(229,229,229,1);
 }
 
+
 .content{
     width: 1200px;
     height: 600px;
     margin: auto;
 }
 .nameLine{
-    height: 42px;
+    height: 30px;
     display: flex;
     align-items: center;
     font-family: no;
@@ -52,6 +53,7 @@ tr:hover {
     color: black;
 }
 .statusLine{
+
     padding-left: 100px;
 }
 .autLine{
@@ -106,13 +108,13 @@ tr:hover {
 .filtr{
     width:16px;
     height: 16px;
-    background: url("../img/fltr.png")no-repeat;
+    background-image: url("../img/fltr3.png");
 }
 .gl_str{
     margin-left: 6px;
     width: 16px;
     height: 16px;
-    background: url("../img/str.png");
+   background-image: url("../img/str.png");
 
 }
 .fon{
