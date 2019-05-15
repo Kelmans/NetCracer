@@ -1,6 +1,6 @@
 *{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 caption{
@@ -96,13 +96,13 @@ tr:hover {
    width: 15px;
     height: 15px;
     display: block;
-    font-family: FontAwesome;
+    /*font-family: FontAwesome;*/
 }
 
 .checkbox-item input[type="checkbox"]:checked~.checker {
      content: url("data:image/gif;base64,R0lGODlhCgAKAJEAAAAAAP///////wAAACH5BAEAAAIALAAAAAAKAAoAAAISlG8AeMq5nnsiSlsjzmpzmj0FADs=");
     background: #2a9afa;
-    font-family: FontAwesome;
+    /*font-family: FontAwesome;*/
     position: absolute;
 }
 .filtr{
