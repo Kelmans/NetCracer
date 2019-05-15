@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0;
 }
+body{
 
+}
 caption{
     align-content: center;
     padding: 20px;
@@ -42,10 +44,10 @@ tr:hover {
     margin: auto;
 }
 .nameLine{
+    font-family: Georgia, 'Nato Sans', Times, serif;;
     height: 30px;
     display: flex;
     align-items: center;
-
     color: #2a9afa;
 }
 .head_text{
@@ -53,22 +55,26 @@ tr:hover {
     color: black;
 }
 .statusLine{
-
+    display: flex;
     padding-left: 100px;
 }
 .autLine{
+    display: flex;
     padding-left: 50px;
 }
 .loginLine{
+    display: flex;
     font-family: inherit;
     padding-left: 70px;
 }
+
 .container_img-item{
     border-radius: 7px;
-  float: right;
     width: 30px;
     height: 30px;
-    background: url("../img/new1.svg") no-repeat;
+    background: blue no-repeat;
+    margin: auto;
+    background-image: url("../img/new1.svg");
 }
 .secured{
    margin-left: 10px;
@@ -90,6 +96,7 @@ tr:hover {
     content: '\2713';
     background: #ffffff;
     border: 1px solid gray;
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
     border-radius: 4px;
     position: absolute;
     left: 0;
@@ -106,6 +113,8 @@ tr:hover {
     position: absolute;
 }
 .filtr{
+    margin-left: 10px;
+    display: inline-block;
     width:16px;
     height: 16px;
     background-image: url("../img/fltr3.png");
