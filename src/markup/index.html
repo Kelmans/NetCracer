@@ -14,28 +14,25 @@
             <caption>Tree table</caption>
             <thead >
             <tr id="tablHead">
-                <td><label id="main" class="checkbox-item "><input hidden type="checkbox"><span class="checker"></span></label></td>
+                <td><div id="box" class="decor_checkbox"><span> <input type="checkbox"></span></div></td>
                 <td><div class="nameLine"><span class="head_text">Name</span><div class="gl_str"></div><div class="filtr"></div> </div></td>
                 <td><div class="statusHead"><span>Statuses</span><div class="filtr"></div></div></td>
                 <td><div class="autHead"><div>Authentication</div><div class="filtr"></div></div></td>
                 <td><div class="loginHead"><div>Last By Login</div></div></td>
                 <td></td>
-
             </tr>
             </thead>
             <tr>
-                <td><label class="checkbox-item"><input hidden type="checkbox"><span class="checker"></span></label></td>
+                <td><div class="decor_checkbox"><span> <input type="checkbox"></span></div></td>
                 <td><div class="nameLine"><div>Woods SamueWoods</div> <div class="secured"></div></div></td>
                 <td><div class="statusLine"> <div>Disabled</div></div></td>
                 <td><div class="autLine"><div>LDAP</div></div></td>
                 <td><div class="loginLine"><div>14:42 / 31 july 2017</div></div></td>
-                <td>
-                    <div class="container_img"><div class="container_img-item"></div>
-                    </div>
+                <td><div class="container_img"><div class="container_img-item"></div></div>
                 </td>
             </tr>
             <tr>
-                <td><label class="checkbox-item"><input hidden type="checkbox"><span class="checker"></span></label></td>
+                <td><div class="decor_checkbox"><span> <input type="checkbox"></span></div></td>
                 <td><div class="nameLine"><div>Eddy</div> <div class="secured"></div></div></td>
                 <td><div class="statusLine"> <div>Disabled</div></div></td>
                 <td><div class="autLine"><div>LDAP</div></div></td>
@@ -100,18 +97,45 @@
             </tr>
             </table>
         </div>
-
         <div class="fon"></div>
     </div>
-
 <script>
-    $('#main').click(function(){
-        if ($('#main').is(':checked')){
-            $('.checkbox-item input:checkbox').prop('checked', false);
+    // действия после полной загрузки страницы
+    $(document).ready(function(){
+        // проверяем, какие чекбоксы активны и меняем сласс для родительского дива
+        $('.decor_checkbox').each(function(){
+            var checkbox = $(this).find('input[type=checkbox]');
+            if(checkbox.prop("checked")) $(this).addClass("check_active");
+        });
+
+        // при клике по диву, делаем проверку
+        $('.decor_checkbox').click(function(){
+            var checkbox = $(this).find('input[type=checkbox]');
+            // если чекбокс был активен
+            if(checkbox.prop("checked")){
+                // снимаем класс с родительского дива
+                $(this).removeClass("check_active");
+                // и снимаем галочку с чекбокса
+                checkbox.prop("checked", false);
+                // если чекбокс не был активен
+            }else{
+                // добавляем класс родительскому диву
+                $(this).addClass("check_active");
+                // ставим галочку в чекбоксе
+                checkbox.prop("checked", true);
+            }
+        });
+    });
+</script>
+<script>
+    $("#main").change(function() {
+        if(this.checked) {
+            $('.decor_checkbox input:checkbox').prop('checked', true);
         } else {
-            $('.checkbox-item input:checkbox').prop('checked', true);
+            $('.decor_checkbox input:checkbox').prop('checked', false);
         }
     });
 </script>
+
 </body>
 </html>
