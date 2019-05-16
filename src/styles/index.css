@@ -50,19 +50,19 @@ tr:hover {
     margin: auto;
 }
 .nameLine{
-    font-weight: bold;
+
     font-size: 11px;
     height: 30px;
     display: flex;
     align-items: center;
-    color: rgb(82,150,198);
+    color: #0c6cb0;
 }
 .head_text{
-    font-weight: bold;
+    font-size: 9px;
     color: black;
 }
 .statusHead{
-    font-size: 10px;
+    font-size: 9px;
     display: flex;
     padding-left: 80px;
 
@@ -74,40 +74,50 @@ tr:hover {
     padding-left: 80px;
 }
 .autHead{
-    font-size: 10px;
+    font-size: 9px;
     display: flex;
     padding-left: 12px;
 
 }
 .autLine{
-    font-size: 12px;
+    font-size: 11px;
     display: flex;
     padding-left: 14px;
 }
 .loginHead{
-    font-size: 11px;
+    font-size: 9px;
     display: flex;
-    padding-left: 20px;
+
 }
 .loginLine{
-    font-size: 12px;
+    font-size: 11px;
     display: flex;
 
 }
 .container_img{
-
-    width: 25px;
-    height: 25px;
-    background: rgb(36,151,228);
     margin: auto;
+    /* margin-left: -21px; */
+    margin-right: 7px;
+    /* padding-left: 16px; */
+    display: flex;
+    /* float: right; */
+    width: 23px;
+    height: 23px;
+    background: rgb(36,151,228);
+    /* margin: auto; */
     border-radius: 4px;
+    box-shadow: 0 1px 0 rgb(214,209,206);
+    border: 1px groove rgb(38,155,232);
+
+
+
 }
 .container_img-item{
 
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     margin: auto;
-    background: no-repeat;
+    background: round;
     background-image: url("../img/new1.svg");
 }
 .secured{
@@ -117,20 +127,21 @@ tr:hover {
 
 }
 .checkbox-item {
-    margin-left: 10px;
+    margin-left: 6px;
     height: 25px;
     /* margin-left: 10px; */
-    padding-left: 8px;
+    padding-left: 6px;
     position: relative;
     display: flex;
     align-items: center;
     cursor: pointer;
 }
+
 .checkbox-item .checker {
     content: '\2713';
     background: #ffffff;
-    border: 1px solid gray;
-    box-shadow: 0 0 2px rgba(59,59,59,0.3);
+    border: 1px solid rgb(214,219,224);
+    box-shadow: 0 0 2px rgb(214,219,224);
     border-radius: 4px;
     position: absolute;
     left: 0;
@@ -139,6 +150,7 @@ tr:hover {
     display: block;
     /*font-family: FontAwesome;*/
 }
+
 
 .checkbox-item input[type="checkbox"]:checked~.checker {
      content: url("data:image/gif;base64,R0lGODlhCgAKAJEAAAAAAP///////wAAACH5BAEAAAIALAAAAAAKAAoAAAISlG8AeMq5nnsiSlsjzmpzmj0FADs=");
@@ -156,8 +168,8 @@ tr:hover {
 }
 .gl_str{
     margin-left: 3px;
-    width: 16px;
-    height: 11px;
+    width: 11px;
+    height: 10px;
     background: round;
    background-image: url("../img/str.png");
 
@@ -167,4 +179,25 @@ tr:hover {
     margin: auto;
     height: 500px;
     background: url(../img/fon.png) round;
+}
+
+.decor_checkbox span input[type="checkbox"]{
+    display: none;
+}
+.decor_checkbox{
+    clear: both;
+    height: 42px;
+    margin-bottom: 5px;
+}
+.decor_checkbox span {
+    display: block;
+    float:left;
+    cursor: pointer;
+    width: 42px;
+    height: 40px;
+    background: url("http://vk-book.ru/img/checkbox_sprite.png") no-repeat 0 0;
+    margin-right:10px;
+}
+.check_active span{
+    background-position: 0 -40px;
 }

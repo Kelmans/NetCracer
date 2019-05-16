@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link type="text/css" rel="stylesheet" href="../styles/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="../jquery-3.3.1.min.js"></script>
 </head>
 <body>
     <div class="content">
@@ -12,7 +14,7 @@
             <caption>Tree table</caption>
             <thead >
             <tr id="tablHead">
-                <td><label class="checkbox-item"><input hidden type="checkbox"><span class="checker"></span></label></td>
+                <td><label id="main" class="checkbox-item "><input hidden type="checkbox"><span class="checker"></span></label></td>
                 <td><div class="nameLine"><span class="head_text">Name</span><div class="gl_str"></div><div class="filtr"></div> </div></td>
                 <td><div class="statusHead"><span>Statuses</span><div class="filtr"></div></div></td>
                 <td><div class="autHead"><div>Authentication</div><div class="filtr"></div></div></td>
@@ -101,5 +103,15 @@
 
         <div class="fon"></div>
     </div>
+
+<script>
+    $('#main').click(function(){
+        if ($('#main').is(':checked')){
+            $('.checkbox-item input:checkbox').prop('checked', false);
+        } else {
+            $('.checkbox-item input:checkbox').prop('checked', true);
+        }
+    });
+</script>
 </body>
 </html>
