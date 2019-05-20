@@ -183,12 +183,12 @@ tr:hover {
     box-shadow: 0 0 2px rgb(214,219,224);
     border-radius: 4px;
 
-    width: 16px;
-    height: 16px;
+    width: 13px;
+    height: 13px;
     display: block;
 }
 .check_active span{
-    background-image: url("../img/box.png");
+    background-image: url("../img/boxl.png");
 
 
 }
