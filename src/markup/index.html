@@ -11,19 +11,23 @@
 <body>
     <div class="content">
         <div class="container">
-
-             <table>
+            <div class=" cont_Button">
+                <div id="adds" class="  add_button"><input type="button" class="button"  value="add"></div>
+                <div class=" remove_button"><input type="button" class="button"  value="Remove"></div>
+            </div>
+             <table id="tab">
             <caption>Tree table</caption>
             <thead >
             <tr id="tablHead">
-                <td><div id="box" class="decor_checkbox "><span> <input type="checkbox"></span></div></td>
-                <td><div class="nameLine"><span class="head_text">Name</span><div class="gl_str"></div><div class="filtr"></div> </div></td>
-                <td><div class="statusHead"><span>Statuses</span><div class="filtr"></div></div></td>
-                <td><div class="autHead"><div>Authentication</div><div class="filtr"></div></div></td>
-                <td><div class="loginHead"><div>Last By Login</div></div></td>
-                <td></td>
+                <th><div id="box" class="decor_checkbox "><span> <input type="checkbox"></span></div></th>
+                <th><div class="nameLine"><span class="head_text">Name</span><div class="gl_str"></div><div class="filtr"></div> </div></th>
+                <th><div class="statusHead"><span>Statuses</span><div class="filtr"></div></div></th>
+                <th><div class="autHead"><div>Authentication</div><div class="filtr"></div></div></th>
+                <th><div class="loginHead"><div>Last By Login</div></div></th>
+                <th></th>
             </tr>
             </thead>
+                 <tbody>
             <tr>
                 <td><div  class="decor_checkbox der"><span> <input type="checkbox" class="inp"></span></div></td>
                 <td><div class="nameLine"><div>Woods SamueWoods</div> <div class="secured"></div></div></td>
@@ -98,37 +102,34 @@
                 <td><div class="loginLine"><div>14:42 / 31 july 2017</div></div></td>
                 <td><div class="container_img"><div class="container_img-item"></div></div></td>
             </tr>
+                 </tbody>
             </table>
         </div>
         <div class="fon"></div>
     </div>
 <script>
-    // действия после полной загрузки страницы
     $(document).ready(function(){
-        // // проверяем, какие чекбоксы активны и меняем сласс для родительского дива
-        // $('.decor_checkbox').each(function(){
-        //     var checkbox = $(this).find('input[type=checkbox]');
-        //     if(checkbox.prop("checked")) $(this).addClass("check_active");
-        // });
-
+        var count = 0;
         // при клике по диву, делаем проверку
-        $('.decor_checkbox').click(function(){
+        $(document).on('click','.decor_checkbox',function(){
             var checkbox = $(this).find('input[type=checkbox]');
             // если чекбокс был активен
             if(checkbox.prop("checked")){
                 // снимаем класс с родительского дива
                 $(this).removeClass("check_active");
+
                 // и снимаем галочку с чекбокса
                 checkbox.prop("checked", false);
                 // если чекбокс не был активен
             }else{
                 // добавляем класс родительскому диву
                 $(this).addClass("check_active");
+
                 // ставим галочку в чекбоксе
                 checkbox.prop("checked", true);
             }
         });
-        $("#box").click(function() {
+        $(document).on('click','#box',function(){
             var checkboxs = $(this).find('input[type=checkbox]');
             if(checkboxs.prop("checked")){ //включен
                 $('.decor_checkbox input:checkbox').prop('checked', true);
@@ -140,13 +141,75 @@
 
         }
         });
-        $('.decor_checkbox').click(function(){
+        $(document).on('click','.decor_checkbox',function(){
+            var inps = document.getElementsByTagName('tr');
             var count = $('.inp[type=checkbox]:checked').length;
-            if (count  == 9 ){
+            if (count  == inps.length-1){
                 $('#box').addClass("check_active");
             } else{
                 $('#box').removeClass("check_active");
             }
+        });
+        $('#adds').click(function(){
+            if(count == 0){
+            $('#tab')
+                .append($('<tr>')
+                    .append($('<td>').append($('<div class="decor_checkbox der">').append($('<span>').append($('<input type="checkbox" class="inp" >')))))
+                    .append($('<td>').append($('<div class="nameLine ">').append($('<div>').append('<input type=text  id="names"class="inpt inpt1">'),$('<div class="secured">')    )))
+                    .append($('<td>').append($('<div class="statusLine">').append($('<div>').append('<input type=text id="names1"class="inpt inpt2">'))))
+                    .append($('<td>').append($('<div class="autLine ">').append($('<div>').append('<input type=text id="names2"  class="inpt inpt3">'))))
+                    .append($('<td>').append($('<div class="loginLine ">').append($('<div>').append('<input type=text id="names3" class="inpt inpt4">'))))
+                    .append($('<td>').append($('<div class="container_img">').append($('<div id="qwe" class="container_img-item2">'))))
+            )
+                $('div.nameLine').addClass('nameLine');
+            count++;
+        }else {
+                alert("Заполните предыдущую строку и нажмите 'ОК' ");
+
+            }
+        });
+        $(document).on('click','.container_img-item2',function(){
+         //  var s = ' ';
+       //  var s = s.replace(/^\s+|\s+$/g, '');
+          //  var value=$.trim($(".asd").val());
+         // if (value.length === s) {
+        if (document.getElementById("names").value === '' || document.getElementById("names1").value === '' || document.getElementById("names2").value === '' || document.getElementById("names3").value === '') {
+
+       //  if(document.getElementsByTagName('input[type=text]').value === ""){
+          //  form.find('.inpt').each(function(){
+               // if($(this).val() != ''){
+              alert("Заполните все поля")
+            } else {
+              $(this).addClass("container_img-item");
+              $('input[type=text]').prop('disabled', true);
+              $('input[type=text]').addClass('scr');
+              $(this).removeClass("container_img-item2");
+              count--;
+                }
+
+        });
+        // $(document).on('click','.remove_button',function(){
+        //     var checked = [];
+        //     $('input:checkbox:checked').each(function() {
+        //         checked.push($(this).val());
+        //     for (i = 0; i < checked.length; ++i) {
+        //         checked[index].setAttribute('class', 'sr');
+        //
+        //         }});
+        // });
+        $('.remove_button').click(function() {
+
+            $('tbody input:checkbox:checked').each(function () {
+                if (count == 0) {
+                    $(this).parents('tr').addClass('sr')
+                } //else if( strok == 0 ){
+               // $(this).parents('tr').removeClass('sr')
+                //   }
+                else {
+                    alert("Закончите с новой строкой перед удалением любой другой");
+                }
+
+            })
         });
     });
 </script>

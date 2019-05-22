@@ -106,6 +106,17 @@ tr:hover {
     background: round;
     background-image: url("../img/new1.svg");
 }
+.container_img-item:hover{
+    cursor: pointer;
+}
+.container_img-item2 {
+    width: 24px;
+    background: round;
+    height: 22px;
+    background-image: url("../img/kk.png");
+
+
+}
 .secured{
    margin-left: 10px;
     width: 15px;
@@ -207,4 +218,57 @@ tr:hover {
     width: 300px;
     height: 50px;
     margin: 10px;
+}
+.cont_Button{
+    width: 500px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap;
+}
+.button{
+    border-radius: 5px;
+    background: rgba(245,246,247,1);
+    width: 100px;
+    height: 30px;
+    margin: 2px ;
+}
+.inpt{
+    color: #262626;
+    font-family: 'Nato Sans', sans-serif;
+    background: white;
+    font-size: 12px;
+}
+.inpt1{
+    font-size: 11px;
+    height: 15px;
+    color: #0c6cb0;
+    width: 100px;
+}
+.inpt4{
+    height: 15px;
+
+    width: 100px;
+}
+.inpt3{
+
+    height: 15px;
+    width: 35px;
+}
+.inpt2{
+
+    height: 15px;
+    width: 50px;
+}
+.scr{
+    background: white;
+  border: none;
+}
+
+tr:hover .scr{
+    background: rgba(245,246,247,1)
+}
+.sr{
+    display: none;
 }

@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c56e3e5-e200-4773-ab6b-a17173b30fab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/scripts/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/kk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/zxc3.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/markup/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/markup/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/workspace.xml" afterDir="false" />
@@ -21,10 +22,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/markup/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="144" column="21" selection-start-line="144" selection-start-column="21" selection-end-line="144" selection-end-column="21" />
+            <state relative-caret-position="518">
+              <caret line="201" column="21" selection-start-line="201" selection-start-column="21" selection-end-line="201" selection-end-column="21" />
               <folding>
-                <marker date="1558359438828" expanded="true" signature="6680:8604" ph="..." />
+                <marker date="1558524476975" expanded="true" signature="7005:11795" ph="..." />
               </folding>
             </state>
           </provider>
@@ -33,18 +34,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/styles/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3374">
-              <caret line="209" column="1" lean-forward="true" selection-start-line="209" selection-start-column="1" selection-end-line="209" selection-end-column="1" />
+            <state relative-caret-position="450">
+              <caret line="240" column="17" selection-start-line="240" selection-start-column="17" selection-end-line="240" selection-end-column="17" />
               <folding>
                 <element signature="e#1475#1592#2" expanded="true" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/img/new1.svg">
-          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -174,7 +170,7 @@
       <option name="presentableId" value="Default" />
       <updated>1557221440092</updated>
       <workItem from="1557221441813" duration="4367000" />
-      <workItem from="1557738841661" duration="82463000" />
+      <workItem from="1557738841661" duration="118312000" />
     </task>
     <task id="LOCAL-00001" summary="zxs">
       <created>1557224852102</created>
@@ -295,11 +291,18 @@
       <option name="project" value="LOCAL" />
       <updated>1558345245422</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="qwe">
+      <created>1558359491956</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1558359491956</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86830000" />
+    <option name="totallyTimeSpent" value="122679000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -393,9 +396,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/img/new1.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -406,10 +406,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/img/new1.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3374">
-          <caret line="209" column="1" lean-forward="true" selection-start-line="209" selection-start-column="1" selection-end-line="209" selection-end-column="1" />
+        <state relative-caret-position="450">
+          <caret line="240" column="17" selection-start-line="240" selection-start-column="17" selection-end-line="240" selection-end-column="17" />
           <folding>
             <element signature="e#1475#1592#2" expanded="true" />
           </folding>
@@ -418,10 +421,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/markup/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="144" column="21" selection-start-line="144" selection-start-column="21" selection-end-line="144" selection-end-column="21" />
+        <state relative-caret-position="518">
+          <caret line="201" column="21" selection-start-line="201" selection-start-column="21" selection-end-line="201" selection-end-column="21" />
           <folding>
-            <marker date="1558359438828" expanded="true" signature="6680:8604" ph="..." />
+            <marker date="1558524476975" expanded="true" signature="7005:11795" ph="..." />
           </folding>
         </state>
       </provider>
