@@ -161,6 +161,8 @@
                     .append($('<td>').append($('<div class="loginLine ">').append($('<div>').append('<input type=text id="names3" class="inpt inpt4">'))))
                     .append($('<td>').append($('<div class="container_img">').append($('<div id="qwe" class="container_img-item2">'))))
             )
+                $('.decor_checkbox input:checkbox').prop('checked', false);
+                $('.decor_checkbox').not(this).removeClass("check_active");
                 $('div.nameLine').addClass('nameLine');
             count++;
         }else {
