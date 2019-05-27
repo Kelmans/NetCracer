@@ -11,7 +11,7 @@ caption{
 
 table{
     width: 1158px;
-   
+
     padding: 10px;
     border-collapse: collapse;
 }
@@ -163,11 +163,26 @@ tr:hover {
     background-image: url("../img/fltr3.png");
 }
 .gl_str{
+
+    margin-left: 3px;
+    width: 11px;
+    height: 10px;
+
+}
+.gl_str:hover{
+
     margin-left: 3px;
     width: 11px;
     height: 10px;
     background: round;
-   background-image: url("../img/str.png");
+    background-image: url("../img/str.png");
+}
+.gl_strOpa{
+    margin-left: 3px;
+    width: 11px;
+    height: 10px;
+    background: round;
+    background-image: url("../img/str.png");
 }
 .fon{
     width: 1200px;

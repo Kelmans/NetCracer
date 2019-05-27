@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4c56e3e5-e200-4773-ab6b-a17173b30fab" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/markup/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/markup/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,10 +20,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/markup/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="164" column="75" selection-start-line="164" selection-start-column="75" selection-end-line="164" selection-end-column="75" />
+            <state relative-caret-position="433">
+              <caret line="296" column="23" lean-forward="true" selection-start-line="296" selection-start-column="23" selection-end-line="296" selection-end-column="23" />
               <folding>
-                <marker date="1558526309188" expanded="true" signature="7005:11947" ph="..." />
+                <element signature="e#13988#14045#0" />
+                <element signature="e#11878#11900#0" />
+                <element signature="e#12251#12282#0" />
+                <element signature="e#12625#12657#0" />
+                <element signature="e#12378#12410#0" />
+                <marker date="1558964101580" expanded="true" signature="7245:18644" ph="..." />
+                <marker date="1558964101580" expanded="true" signature="15848:16754" ph="..." />
               </folding>
             </state>
           </provider>
@@ -31,11 +38,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/styles/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-              <folding>
-                <element signature="e#1475#1592#2" expanded="true" />
-              </folding>
+            <state relative-caret-position="552">
+              <caret line="183" column="22" lean-forward="true" selection-start-line="183" selection-start-column="22" selection-end-line="183" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -59,8 +63,8 @@
         <option value="$PROJECT_DIR$/.idea/src/markup/index.html" />
         <option value="$PROJECT_DIR$/src/img/new1.svg" />
         <option value="$PROJECT_DIR$/src/scripts/index.js" />
-        <option value="$PROJECT_DIR$/src/markup/index.html" />
         <option value="$PROJECT_DIR$/src/styles/index.css" />
+        <option value="$PROJECT_DIR$/src/markup/index.html" />
       </list>
     </option>
   </component>
@@ -102,7 +106,19 @@
               <item name="NetCracer" type="b2602c69:ProjectViewProjectNode" />
               <item name="NetCracer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="markup" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NetCracer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NetCracer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NetCracer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NetCracer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="styles" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -167,7 +183,7 @@
       <option name="presentableId" value="Default" />
       <updated>1557221440092</updated>
       <workItem from="1557221441813" duration="4367000" />
-      <workItem from="1557738841661" duration="120180000" />
+      <workItem from="1557738841661" duration="149812000" />
     </task>
     <task id="LOCAL-00001" summary="zxs">
       <created>1557224852102</created>
@@ -309,11 +325,18 @@
       <option name="project" value="LOCAL" />
       <updated>1558525172791</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="qweasdas">
+      <created>1558526428685</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1558526428685</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124547000" />
+    <option name="totallyTimeSpent" value="154179000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -423,21 +446,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/markup/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="164" column="75" selection-start-line="164" selection-start-column="75" selection-end-line="164" selection-end-column="75" />
+        <state relative-caret-position="433">
+          <caret line="296" column="23" lean-forward="true" selection-start-line="296" selection-start-column="23" selection-end-line="296" selection-end-column="23" />
           <folding>
-            <marker date="1558526309188" expanded="true" signature="7005:11947" ph="..." />
+            <element signature="e#13988#14045#0" />
+            <element signature="e#11878#11900#0" />
+            <element signature="e#12251#12282#0" />
+            <element signature="e#12625#12657#0" />
+            <element signature="e#12378#12410#0" />
+            <marker date="1558964101580" expanded="true" signature="7245:18644" ph="..." />
+            <marker date="1558964101580" expanded="true" signature="15848:16754" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-          <folding>
-            <element signature="e#1475#1592#2" expanded="true" />
-          </folding>
+        <state relative-caret-position="552">
+          <caret line="183" column="22" lean-forward="true" selection-start-line="183" selection-start-column="22" selection-end-line="183" selection-end-column="22" />
         </state>
       </provider>
     </entry>
