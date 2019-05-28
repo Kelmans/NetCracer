@@ -30,7 +30,7 @@
                  <tbody id="table_Body">
             <tr>
                 <td><div  class="decor_checkbox der"><span> <input type="checkbox" class="inp"></span></div></td>
-                <td ><div class="nameLine"><div class="text_Line">Abaa</div> <div class="secured"></div></div></td>
+                <td><div class="nameLine"><div class="text_Line">Abaa</div> <div class="secured"></div></div></td>
                 <td><div class="statusLine"> Enabled</div></td>
                 <td><div class="autLine">LDAP</div></td>
                 <td><div class="loginLine">23:42 / 31 july 2013</div></td>
@@ -178,6 +178,10 @@
             if (document.getElementById("names").value === '' || document.getElementById("names1").value === '' || document.getElementById("names2").value === '' || document.getElementById("names3").value === '') {
                 alert("Заполните все поля")
             } else {
+                //Добавляю html код
+                //Создал переменные для хранения значений из инпутов
+                //У ново добавленого штмл кода убираю дисплэй нон и добавляю его инпутам
+                //Сделал для сортировки массива
                 var perem_name = document.getElementById("names").value;
                 var perem_Status = document.getElementById("names1").value;
                 var perem_Aut = document.getElementById("names2").value;
@@ -261,23 +265,31 @@
             var f_lm = 1;
             var rowsOne = $('#tab tbody  tr').get();
 
-            if (counts == 0) {
+         //   if (counts == 0) {
                 $(document).on('click', ' #sl', function () {
                     $('.gl_str').removeClass('gl_strDisplay');
                     $('.nameLine').addClass('fontWe');
+                    $('.autLine').removeClass('fontWe');
+                    $('.statusLine').removeClass('fontWe');
+                    $('.loginLine').removeClass('fontWe');
                     //   $('.gl_strTwo').css('opacity', '0');
                     $('#sl .gl_str').addClass('gl_strDisplay');
                     $('.decor_checkbox input:checkbox').prop('checked', false);
                     $('.decor_checkbox').removeClass("check_active");
+                    var perem_Ch=0; //Пытался сделать второй счетчик , чтобы избежать выделения на разных столбцах
                     if (chet == 0) {
+
+                        perem_Ch++;
                         f_sl *= -1;
                         var n = $(this).prevAll().length;
                         sortTable(f_sl, n);
-                    } else if (chet == 1) {
+
+                    } else if (chet == 1 && perem_Ch ==1) {
                         $('#sl .gl_str').addClass('gl_strDisplayVr');
                         f_sl *= -1;
                         var n = $(this).prevAll().length;
                         sortTable(f_sl, n);
+                        perem_Ch=0;
                     } else {
                         $.each(rowsOne, function (index, row) {
                             $('#tab').children('tbody').append(row);
@@ -292,19 +304,25 @@
 
                 $(document).on('click', '#nm ', function () {
                     $('.gl_str').removeClass('gl_strDisplay');
+                    $('.nameLine').removeClass('fontWe');
+                    $('.autLine').removeClass('fontWe');
                     $('.statusLine').addClass('fontWe');
+                    $('.loginLine').removeClass('fontWe');
                     $('#nm .gl_str').addClass('gl_strDisplay');
                     $('.decor_checkbox input:checkbox').prop('checked', false);
                     $('.decor_checkbox').removeClass("check_active");
+                    var perem_Ch ;
                     if (chet == 0) {
                         f_nm *= -1;
                         var n = $(this).prevAll().length;
                         sortTable(f_nm, n);
-                    } else if (chet == 1) {
+                        perem_Ch++;
+                    } else if (chet == 1 && perem_Ch ==1) {
                         $('#nm .gl_str').addClass('gl_strDisplayVr');
                         f_nm *= -1;
                         var n = $(this).prevAll().length;
                         sortTable(f_nm, n);
+                        perem_Ch=0;
                     } else {
                         $.each(rowsOne, function (index, row) {
                             $('#tab').children('tbody').append(row);
@@ -318,20 +336,26 @@
                 });
 
                 $(document).on('click', '#km ', function () {
+                    $('.nameLine').removeClass('fontWe');
                     $('.autLine').addClass('fontWe');
-                    $('#km .gl_str').removeClass('gl_strDisplay');
+                    $('.statusLine').removeClass('fontWe');
+                    $('.loginLine').removeClass('fontWe');
+                    $('.gl_str').removeClass('gl_strDisplay');
                     $('#km .gl_str').addClass('gl_strDisplay');
                     $('.decor_checkbox input:checkbox').prop('checked', false);
                     $('.decor_checkbox').removeClass("check_active");
+                    var perem_Ch=0;
                     if (chet == 0) {
                         f_km *= -1;
                         var n = $(this).prevAll().length;
                         sortTable(f_km, n);
-                    } else if (chet == 1) {
+                        perem_Ch++;
+                    } else if (chet == 1 && perem_Ch ==1) {
                         $('#km .gl_str').addClass('gl_strDisplayVr');
                         f_km *= -1;
                         var n = $(this).prevAll().length;
                         sortTable(f_km, n);
+                        perem_Ch=0;
                     } else {
                         $.each(rowsOne, function (index, row) {
                             $('#tab').children('tbody').append(row);
@@ -344,20 +368,26 @@
                     }
                 });
                 $(document).on('click', '#lm ', function () {
+                    $('.nameLine').removeClass('fontWe');
+                    $('.autLine').removeClass('fontWe');
+                    $('.statusLine').removeClass('fontWe');
                     $('.loginLine').addClass('fontWe');
-                    $('#lm .gl_str').removeClass('gl_strDisplay');
+                    $('.gl_str').removeClass('gl_strDisplay');
                     $('#lm .gl_str').addClass('gl_strDisplay');
                     $('.decor_checkbox input:checkbox').prop('checked', false);
                     $('.decor_checkbox').removeClass("check_active");
+                    var perem_Ch=0;
                     if (chet == 0) {
                         f_lm *= -1;
                         var n = $(this).prevAll().length;
                         sortTable(f_lm, n);
-                    } else if (chet == 1) {
+                        perem_Ch++;
+                    } else if (chet == 1 && perem_Ch ==1) {
                         $('#lm .gl_str').addClass('gl_strDisplayVr');
                         f_lm *= -1;
                         var n = $(this).prevAll().length;
                         sortTable(f_lm, n);
+                        perem_Ch=0;
                     } else {
                         $.each(rowsOne, function (index, row) {
                             $('#tab').children('tbody').append(row);
@@ -369,10 +399,10 @@
                         $('.gl_str').removeClass('gl_strDisplayVr');
                     }
                 });
-            } else {
-                alert("Заполните новую строку и нажмите 'ОК' ");
-
-            }
+         //   } else {
+           //     alert("Заполните новую строку и нажмите 'ОК' ");
+//
+          //  }
         });
 
             // var tbody = document.getElementsByTagName('tbody')[0];
