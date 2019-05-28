@@ -46,6 +46,7 @@ tr:hover {
     margin: auto;
 }
 .nameLine{
+
     font-size: 11px;
     height: 30px;
     display: flex;
@@ -177,12 +178,20 @@ tr:hover {
     background: round;
     background-image: url("../img/str.png");
 }
-.gl_strOpa{
+.gl_strDisplay{
     margin-left: 3px;
     width: 11px;
     height: 10px;
     background: round;
     background-image: url("../img/str.png");
+}
+.gl_strDisplayVr{
+     background: round;
+     background-image: url("../img/strVr.png");
+ }
+.gl_strDisplayVr:hover{
+    background: round;
+    background-image: url("../img/strVr.png");
 }
 .fon{
     width: 1200px;
@@ -287,4 +296,7 @@ tr:hover .scr{
 }
 .sr{
     display: none;
+}
+.fontWe{
+    font-weight: bold;
 }

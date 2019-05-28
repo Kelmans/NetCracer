@@ -20,10 +20,10 @@
             <thead >
             <tr id="tablHead">
                 <th><div id="box" class="decor_checkbox "><span> <input type="checkbox"></span></div></th>
-                <th  id="sl"  data-type="string" ><div class="nameLine" ><span class="head_text">Name</span><div class="filtr"></div><div class="gl_str "></div></div> </th>
-                <th id="nm" ><div class="statusHead"><span>Statuses</span><div class="filtr"></div><div class="gl_str "></div></div></th>
-                <th  id="km"><div class="autHead"><div>Authentication</div><div  class="filtr"></div><div class="gl_str "></div></div></th>
-                <th  id="lm"><div class="loginHead"><div>Last By Login</div><div class="gl_str "></div></div></th>
+                <th id="sl"  data-type="string" ><div class="nameLine" ><span class="head_text">Name</span><div class="filtr"></div><div   class="gl_str "></div></div> </th>
+                <th id="nm" ><div class="statusHead"><span>Statuses</span><div class="filtr"></div><div class="gl_str  "></div></div></th>
+                <th  id="km"><div class="autHead"><div>Authentication</div><div  class="filtr"></div><div class="gl_str  "></div></div></th>
+                <th  id="lm"><div class="loginHead"><div>Last By Login</div><div class="gl_str  "></div></div></th>
                 <th></th>
             </tr>
             </thead>
@@ -209,6 +209,7 @@
             })
         });
 
+
             function sortTable(f, n) {
                 var rows = $('#tab tbody  tr').get();
 
@@ -246,13 +247,21 @@
             var f_km = 1;
             var f_lm = 1;
             var rowsOne = $('#tab tbody  tr').get();
-            $(document).on('click', '#sl', function () {
+
+            $(document).on('click', ' #sl', function () {
+                $('.gl_str').removeClass('gl_strDisplay');
+                $('.nameLine').addClass('fontWe');
                 //   $('.gl_strTwo').css('opacity', '0');
-                $('.gl_str').addClass('gl_strOpa');
+                $('#sl .gl_str').addClass('gl_strDisplay');
                 $('.decor_checkbox input:checkbox').prop('checked', false);
-                $('.decor_checkbox').not(this).removeClass("check_active");
-                if (chet == 0 || chet == 1) {
-                    f_sl *= -1; // toggle the sorting order
+                $('.decor_checkbox').removeClass("check_active");
+                if (chet == 0) {
+                    f_sl *= -1;
+                    var n = $(this).prevAll().length;
+                    sortTable(f_sl, n);
+                } else if (chet == 1) {
+                    $('#sl .gl_str').addClass('gl_strDisplayVr');
+                    f_sl *= -1;
                     var n = $(this).prevAll().length;
                     sortTable(f_sl, n);
                 } else {
@@ -261,16 +270,25 @@
 
                     });
                     chet = 0;
+                    $('.gl_str').removeClass('gl_strDisplay');
+                    $('.nameLine').removeClass('fontWe');
+                    $('.gl_str').removeClass('gl_strDisplayVr');
                 }
             });
 
-            $(document).on('click', '#nm', function () {
-
+            $(document).on('click', '#nm ', function () {
+                $('.gl_str').removeClass('gl_strDisplay');
+                $('.statusLine').addClass('fontWe');
+                $('#nm .gl_str').addClass('gl_strDisplay');
                 $('.decor_checkbox input:checkbox').prop('checked', false);
-                $('.decor_checkbox').not(this).removeClass("check_active");
-                if (chet == 0 || chet == 1) {
-
-                    f_nm *= -1; // toggle the sorting order
+                $('.decor_checkbox').removeClass("check_active");
+                if (chet == 0) {
+                    f_nm *= -1;
+                    var n = $(this).prevAll().length;
+                    sortTable(f_nm, n);
+                } else if (chet == 1) {
+                    $('#nm .gl_str').addClass('gl_strDisplayVr');
+                    f_nm *= -1;
                     var n = $(this).prevAll().length;
                     sortTable(f_nm, n);
                 } else {
@@ -279,15 +297,25 @@
 
                     });
                     chet = 0;
+                    $('.gl_str').removeClass('gl_strDisplay');
+                    $('.statusLine').removeClass('fontWe');
+                    $('.gl_str').removeClass('gl_strDisplayVr');
                 }
             });
 
-            $(document).on('click', '#km', function () {
-                $('.gl_str').addClass('gl_strOpa');
+            $(document).on('click', '#km ', function () {
+                $('.autLine').addClass('fontWe');
+                $('#km .gl_str').removeClass('gl_strDisplay');
+                $('#km .gl_str').addClass('gl_strDisplay');
                 $('.decor_checkbox input:checkbox').prop('checked', false);
-                $('.decor_checkbox').not(this).removeClass("check_active");
-                if (chet == 0 || chet == 1) {
-                    f_km *= -1; // toggle the sorting order
+                $('.decor_checkbox').removeClass("check_active");
+                if (chet == 0) {
+                    f_km *= -1;
+                    var n = $(this).prevAll().length;
+                    sortTable(f_km, n);
+                } else if (chet == 1) {
+                    $('#km .gl_str').addClass('gl_strDisplayVr');
+                    f_km *= -1;
                     var n = $(this).prevAll().length;
                     sortTable(f_km, n);
                 } else {
@@ -296,14 +324,24 @@
 
                     });
                     chet = 0;
+                    $('.gl_str').removeClass('gl_strDisplay');
+                    $('.autLine').removeClass('fontWe');
+                    $('.gl_str').removeClass('gl_strDisplayVr');
                 }
             });
-            $(document).on('click', '#lm', function () {
-
+            $(document).on('click', '#lm ', function () {
+                $('.loginLine').addClass('fontWe');
+                $('#lm .gl_str').removeClass('gl_strDisplay');
+                $('#lm .gl_str').addClass('gl_strDisplay');
                 $('.decor_checkbox input:checkbox').prop('checked', false);
-                $('.decor_checkbox').not(this).removeClass("check_active");
-                if (chet == 0 || chet == 1) {
-                    f_lm *= -1; // toggle the sorting order
+                $('.decor_checkbox').removeClass("check_active");
+                if (chet == 0) {
+                    f_lm *= -1;
+                    var n = $(this).prevAll().length;
+                    sortTable(f_lm, n);
+                } else if (chet == 1) {
+                    $('#lm .gl_str').addClass('gl_strDisplayVr');
+                    f_lm *= -1;
                     var n = $(this).prevAll().length;
                     sortTable(f_lm, n);
                 } else {
@@ -312,6 +350,9 @@
 
                     });
                     chet = 0;
+                    $('.gl_str').removeClass('gl_strDisplay');
+                    $('.loginLine').removeClass('fontWe');
+                    $('.gl_str').removeClass('gl_strDisplayVr');
                 }
             });
 
