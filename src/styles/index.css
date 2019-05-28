@@ -171,7 +171,7 @@ tr:hover {
 
 }
 .gl_str:hover{
-
+ cursor: pointer;
     margin-left: 3px;
     width: 11px;
     height: 10px;
@@ -299,4 +299,8 @@ tr:hover .scr{
 }
 .fontWe{
     font-weight: bold;
+}
+
+.dis{
+    display: none;
 }

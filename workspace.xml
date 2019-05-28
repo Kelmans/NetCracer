@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c56e3e5-e200-4773-ab6b-a17173b30fab" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/img/strVr.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/markup/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/markup/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/workspace.xml" afterDir="false" />
@@ -20,15 +21,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/markup/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="333" column="60" selection-start-line="333" selection-start-column="60" selection-end-line="333" selection-end-column="60" />
+            <state relative-caret-position="170">
+              <caret line="156" column="53" lean-forward="true" selection-start-line="156" selection-start-column="53" selection-end-line="156" selection-end-column="53" />
               <folding>
                 <element signature="e#11878#11900#0" />
                 <element signature="e#12251#12282#0" />
                 <element signature="e#12625#12657#0" />
                 <element signature="e#12378#12410#0" />
-                <marker date="1559034642184" expanded="true" signature="7249:20707" ph="..." />
-                <marker date="1559034642184" expanded="true" signature="17911:18817" ph="..." />
+                <marker date="1559047068603" expanded="true" signature="6959:21483" ph="..." />
+                <marker date="1559047068603" expanded="true" signature="18687:19593" ph="..." />
               </folding>
             </state>
           </provider>
@@ -37,8 +38,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/styles/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-43">
-              <caret line="191" column="23" lean-forward="true" selection-start-line="191" selection-start-column="23" selection-end-line="191" selection-end-column="23" />
+            <state relative-caret-position="739">
+              <caret line="302" selection-start-line="302" selection-end-line="302" />
             </state>
           </provider>
         </entry>
@@ -182,7 +183,7 @@
       <option name="presentableId" value="Default" />
       <updated>1557221440092</updated>
       <workItem from="1557221441813" duration="4367000" />
-      <workItem from="1557738841661" duration="156300000" />
+      <workItem from="1557738841661" duration="165020000" />
     </task>
     <task id="LOCAL-00001" summary="zxs">
       <created>1557224852102</created>
@@ -338,11 +339,18 @@
       <option name="project" value="LOCAL" />
       <updated>1558964265812</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="RD">
+      <created>1559034892353</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1559034892353</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160667000" />
+    <option name="totallyTimeSpent" value="169387000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -421,7 +429,8 @@
     <MESSAGE value="thre" />
     <MESSAGE value="qwe" />
     <MESSAGE value="qweasdas" />
-    <option name="LAST_COMMIT_MESSAGE" value="qweasdas" />
+    <MESSAGE value="RD" />
+    <option name="LAST_COMMIT_MESSAGE" value="RD" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/img/prkp.png">
@@ -450,24 +459,27 @@
     <entry file="file://$PROJECT_DIR$/src/img/new1.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/img/strVr.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-43">
-          <caret line="191" column="23" lean-forward="true" selection-start-line="191" selection-start-column="23" selection-end-line="191" selection-end-column="23" />
+        <state relative-caret-position="739">
+          <caret line="302" selection-start-line="302" selection-end-line="302" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/markup/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="333" column="60" selection-start-line="333" selection-start-column="60" selection-end-line="333" selection-end-column="60" />
+        <state relative-caret-position="170">
+          <caret line="156" column="53" lean-forward="true" selection-start-line="156" selection-start-column="53" selection-end-line="156" selection-end-column="53" />
           <folding>
             <element signature="e#11878#11900#0" />
             <element signature="e#12251#12282#0" />
             <element signature="e#12625#12657#0" />
             <element signature="e#12378#12410#0" />
-            <marker date="1559034642184" expanded="true" signature="7249:20707" ph="..." />
-            <marker date="1559034642184" expanded="true" signature="17911:18817" ph="..." />
+            <marker date="1559047068603" expanded="true" signature="6959:21483" ph="..." />
+            <marker date="1559047068603" expanded="true" signature="18687:19593" ph="..." />
           </folding>
         </state>
       </provider>
