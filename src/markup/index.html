@@ -109,7 +109,7 @@
     </div>
 <script>
     $(document).ready(function() {
-        var count = 0;
+        var counts = 0;
         var chet = 0;
         // при клике по диву, делаем проверку
         $(document).on('click', '.decor_checkbox', function () {
@@ -152,7 +152,7 @@
             }
         });
         $('#adds').click(function () {
-            if (count == 0) {
+            if (counts == 0) {
                 $('#tab')
                     .append($('<tr class="remove_class">')
                         .append($('<td>').append($('<div class="decor_checkbox der">').append($('<span>').append($('<input type="checkbox" class="inp" >')))))
@@ -165,7 +165,7 @@
                 $('.decor_checkbox input:checkbox').prop('checked', false);
                 $('.decor_checkbox').not(this).removeClass("check_active");
                 $('div.nameLine').addClass('nameLine');
-                count++;
+                counts++;
             } else {
                 alert("Заполните предыдущую строку и нажмите 'ОК' ");
 
@@ -190,7 +190,7 @@
                 $(this).removeClass("container_img-item2");
                 $('.add_class').removeClass('dis');
                 $('.remove_class').addClass('dis');
-                count--;
+                counts--;
             }
 
         });
@@ -209,7 +209,7 @@
             var flagSearch = true;
             $('tbody input:checkbox:checked').each(function () {
 
-                if (count == 0) {
+                if (counts == 0) {
                     $(this).parents('tr').addClass('sr')
                 } //else if( strok == 0 ){
                 // $(this).parents('tr').removeClass('sr')
@@ -222,7 +222,7 @@
             if (flagSearch == false) {alert('Закончите с редактированием новой строки');}
         });
 
-
+        $(document).ready(function() {
             function sortTable(f, n) {
                 var rows = $('#tab tbody  tr').get();
 
@@ -261,114 +261,119 @@
             var f_lm = 1;
             var rowsOne = $('#tab tbody  tr').get();
 
-            $(document).on('click', ' #sl', function () {
-                $('.gl_str').removeClass('gl_strDisplay');
-                $('.nameLine').addClass('fontWe');
-                //   $('.gl_strTwo').css('opacity', '0');
-                $('#sl .gl_str').addClass('gl_strDisplay');
-                $('.decor_checkbox input:checkbox').prop('checked', false);
-                $('.decor_checkbox').removeClass("check_active");
-                if (chet == 0) {
-                    f_sl *= -1;
-                    var n = $(this).prevAll().length;
-                    sortTable(f_sl, n);
-                } else if (chet == 1) {
-                    $('#sl .gl_str').addClass('gl_strDisplayVr');
-                    f_sl *= -1;
-                    var n = $(this).prevAll().length;
-                    sortTable(f_sl, n);
-                } else {
-                    $.each(rowsOne, function (index, row) {
-                        $('#tab').children('tbody').append(row);
-
-                    });
-                    chet = 0;
+            if (counts == 0) {
+                $(document).on('click', ' #sl', function () {
                     $('.gl_str').removeClass('gl_strDisplay');
-                    $('.nameLine').removeClass('fontWe');
-                    $('.gl_str').removeClass('gl_strDisplayVr');
-                }
-            });
+                    $('.nameLine').addClass('fontWe');
+                    //   $('.gl_strTwo').css('opacity', '0');
+                    $('#sl .gl_str').addClass('gl_strDisplay');
+                    $('.decor_checkbox input:checkbox').prop('checked', false);
+                    $('.decor_checkbox').removeClass("check_active");
+                    if (chet == 0) {
+                        f_sl *= -1;
+                        var n = $(this).prevAll().length;
+                        sortTable(f_sl, n);
+                    } else if (chet == 1) {
+                        $('#sl .gl_str').addClass('gl_strDisplayVr');
+                        f_sl *= -1;
+                        var n = $(this).prevAll().length;
+                        sortTable(f_sl, n);
+                    } else {
+                        $.each(rowsOne, function (index, row) {
+                            $('#tab').children('tbody').append(row);
 
-            $(document).on('click', '#nm ', function () {
-                $('.gl_str').removeClass('gl_strDisplay');
-                $('.statusLine').addClass('fontWe');
-                $('#nm .gl_str').addClass('gl_strDisplay');
-                $('.decor_checkbox input:checkbox').prop('checked', false);
-                $('.decor_checkbox').removeClass("check_active");
-                if (chet == 0) {
-                    f_nm *= -1;
-                    var n = $(this).prevAll().length;
-                    sortTable(f_nm, n);
-                } else if (chet == 1) {
-                    $('#nm .gl_str').addClass('gl_strDisplayVr');
-                    f_nm *= -1;
-                    var n = $(this).prevAll().length;
-                    sortTable(f_nm, n);
-                } else {
-                    $.each(rowsOne, function (index, row) {
-                        $('#tab').children('tbody').append(row);
+                        });
+                        chet = 0;
+                        $('.gl_str').removeClass('gl_strDisplay');
+                        $('.nameLine').removeClass('fontWe');
+                        $('.gl_str').removeClass('gl_strDisplayVr');
+                    }
+                });
 
-                    });
-                    chet = 0;
+                $(document).on('click', '#nm ', function () {
                     $('.gl_str').removeClass('gl_strDisplay');
-                    $('.statusLine').removeClass('fontWe');
-                    $('.gl_str').removeClass('gl_strDisplayVr');
-                }
-            });
+                    $('.statusLine').addClass('fontWe');
+                    $('#nm .gl_str').addClass('gl_strDisplay');
+                    $('.decor_checkbox input:checkbox').prop('checked', false);
+                    $('.decor_checkbox').removeClass("check_active");
+                    if (chet == 0) {
+                        f_nm *= -1;
+                        var n = $(this).prevAll().length;
+                        sortTable(f_nm, n);
+                    } else if (chet == 1) {
+                        $('#nm .gl_str').addClass('gl_strDisplayVr');
+                        f_nm *= -1;
+                        var n = $(this).prevAll().length;
+                        sortTable(f_nm, n);
+                    } else {
+                        $.each(rowsOne, function (index, row) {
+                            $('#tab').children('tbody').append(row);
 
-            $(document).on('click', '#km ', function () {
-                $('.autLine').addClass('fontWe');
-                $('#km .gl_str').removeClass('gl_strDisplay');
-                $('#km .gl_str').addClass('gl_strDisplay');
-                $('.decor_checkbox input:checkbox').prop('checked', false);
-                $('.decor_checkbox').removeClass("check_active");
-                if (chet == 0) {
-                    f_km *= -1;
-                    var n = $(this).prevAll().length;
-                    sortTable(f_km, n);
-                } else if (chet == 1) {
-                    $('#km .gl_str').addClass('gl_strDisplayVr');
-                    f_km *= -1;
-                    var n = $(this).prevAll().length;
-                    sortTable(f_km, n);
-                } else {
-                    $.each(rowsOne, function (index, row) {
-                        $('#tab').children('tbody').append(row);
+                        });
+                        chet = 0;
+                        $('.gl_str').removeClass('gl_strDisplay');
+                        $('.statusLine').removeClass('fontWe');
+                        $('.gl_str').removeClass('gl_strDisplayVr');
+                    }
+                });
 
-                    });
-                    chet = 0;
-                    $('.gl_str').removeClass('gl_strDisplay');
-                    $('.autLine').removeClass('fontWe');
-                    $('.gl_str').removeClass('gl_strDisplayVr');
-                }
-            });
-            $(document).on('click', '#lm ', function () {
-                $('.loginLine').addClass('fontWe');
-                $('#lm .gl_str').removeClass('gl_strDisplay');
-                $('#lm .gl_str').addClass('gl_strDisplay');
-                $('.decor_checkbox input:checkbox').prop('checked', false);
-                $('.decor_checkbox').removeClass("check_active");
-                if (chet == 0) {
-                    f_lm *= -1;
-                    var n = $(this).prevAll().length;
-                    sortTable(f_lm, n);
-                } else if (chet == 1) {
-                    $('#lm .gl_str').addClass('gl_strDisplayVr');
-                    f_lm *= -1;
-                    var n = $(this).prevAll().length;
-                    sortTable(f_lm, n);
-                } else {
-                    $.each(rowsOne, function (index, row) {
-                        $('#tab').children('tbody').append(row);
+                $(document).on('click', '#km ', function () {
+                    $('.autLine').addClass('fontWe');
+                    $('#km .gl_str').removeClass('gl_strDisplay');
+                    $('#km .gl_str').addClass('gl_strDisplay');
+                    $('.decor_checkbox input:checkbox').prop('checked', false);
+                    $('.decor_checkbox').removeClass("check_active");
+                    if (chet == 0) {
+                        f_km *= -1;
+                        var n = $(this).prevAll().length;
+                        sortTable(f_km, n);
+                    } else if (chet == 1) {
+                        $('#km .gl_str').addClass('gl_strDisplayVr');
+                        f_km *= -1;
+                        var n = $(this).prevAll().length;
+                        sortTable(f_km, n);
+                    } else {
+                        $.each(rowsOne, function (index, row) {
+                            $('#tab').children('tbody').append(row);
 
-                    });
-                    chet = 0;
-                    $('.gl_str').removeClass('gl_strDisplay');
-                    $('.loginLine').removeClass('fontWe');
-                    $('.gl_str').removeClass('gl_strDisplayVr');
-                }
-            });
+                        });
+                        chet = 0;
+                        $('.gl_str').removeClass('gl_strDisplay');
+                        $('.autLine').removeClass('fontWe');
+                        $('.gl_str').removeClass('gl_strDisplayVr');
+                    }
+                });
+                $(document).on('click', '#lm ', function () {
+                    $('.loginLine').addClass('fontWe');
+                    $('#lm .gl_str').removeClass('gl_strDisplay');
+                    $('#lm .gl_str').addClass('gl_strDisplay');
+                    $('.decor_checkbox input:checkbox').prop('checked', false);
+                    $('.decor_checkbox').removeClass("check_active");
+                    if (chet == 0) {
+                        f_lm *= -1;
+                        var n = $(this).prevAll().length;
+                        sortTable(f_lm, n);
+                    } else if (chet == 1) {
+                        $('#lm .gl_str').addClass('gl_strDisplayVr');
+                        f_lm *= -1;
+                        var n = $(this).prevAll().length;
+                        sortTable(f_lm, n);
+                    } else {
+                        $.each(rowsOne, function (index, row) {
+                            $('#tab').children('tbody').append(row);
 
+                        });
+                        chet = 0;
+                        $('.gl_str').removeClass('gl_strDisplay');
+                        $('.loginLine').removeClass('fontWe');
+                        $('.gl_str').removeClass('gl_strDisplayVr');
+                    }
+                });
+            } else {
+                alert("Заполните новую строку и нажмите 'ОК' ");
+
+            }
+        });
 
             // var tbody = document.getElementsByTagName('tbody')[0];
             // var rows = [];
