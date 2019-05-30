@@ -1,6 +1,6 @@
 //
 // $(function () {
-//     $('.decor_checkbox').click(decor);
+//     $('.modifiedCheckbox').click(decor);
 //     $("#box").click(box);
 //
 //
@@ -24,11 +24,11 @@
 //     function box() {
 //             var checkboxs = $(this).find('input[type=checkbox]');
 //             if (checkboxs.prop("checked")) { //включен
-//                 $('.decor_checkbox input:checkbox').prop('checked', true);
-//                 $('.decor_checkbox').not(this).addClass("check_active");
+//                 $('.modifiedCheckbox input:checkbox').prop('checked', true);
+//                 $('.modifiedCheckbox').not(this).addClass("check_active");
 //             } else { //выключен
-//                 $('.decor_checkbox input:checkbox').prop('checked', false);
-//                 $('.decor_checkbox').not(this).removeClass("check_active");
+//                 $('.modifiedCheckbox input:checkbox').prop('checked', false);
+//                 $('.modifiedCheckbox').not(this).removeClass("check_active");
 //             }
 //
 //         }

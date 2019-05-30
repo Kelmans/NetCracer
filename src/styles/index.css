@@ -29,7 +29,7 @@ input{
     background: aqua;
 }
 
-#tablHead{
+#headLineage{
     background: rgba(245,246,247,1) ;
     border-radius: 110px;
 }
@@ -53,7 +53,7 @@ tr:hover {
     align-items: center;
     color: #0c6cb0;
 }
-.head_text{
+.headText{
     font-size: 9px;
     color: black;
 }
@@ -155,7 +155,7 @@ tr:hover {
     /*font-family: FontAwesome;*/
     position: absolute;
 }
-.filtr{
+.containerFiltr{
     margin-left: 6px;
     display: inline-block;
     width:10px;
@@ -163,14 +163,14 @@ tr:hover {
     background: round;
     background-image: url("../img/fltr3.png");
 }
-.gl_str{
+.containerArrow{
 
     margin-left: 3px;
     width: 11px;
     height: 10px;
 
 }
-.gl_str:hover{
+.containerArrow:hover{
  cursor: pointer;
     margin-left: 3px;
     width: 11px;
@@ -178,18 +178,18 @@ tr:hover {
     background: round;
     background-image: url("../img/str.png");
 }
-.gl_strDisplay{
+.containerArrowSortDec{
     margin-left: 3px;
     width: 11px;
     height: 10px;
     background: round;
     background-image: url("../img/str.png");
 }
-.gl_strDisplayVr{
+.containerArrowSortInc{
      background: round;
      background-image: url("../img/strVr.png");
  }
-.gl_strDisplayVr:hover{
+.containerArrowSortInc:hover{
     background: round;
     background-image: url("../img/strVr.png");
 }
@@ -199,12 +199,12 @@ tr:hover {
     height: 500px;
     background: url(../img/fon.png) round;
 }
-.decor_checkbox span input[type="checkbox"] {
+.modifiedCheckbox span input[type="checkbox"] {
     background: #ffffff;
     display: none;
     content: '\2713';
 }
-.decor_checkbox{
+.modifiedCheckbox{
     margin-right: -7px;
     margin-left: 6px;
     height: 25px;
@@ -213,7 +213,7 @@ tr:hover {
     align-items: center;
     cursor: pointer;
 }
-.decor_checkbox span  {
+.modifiedCheckbox span  {
     content: '\2713\0020';
     background: #ffffff;
     border: 1px solid rgb(214,219,224);
