@@ -18,26 +18,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/markup/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="230" lean-forward="true" selection-start-line="230" selection-end-line="230" />
+            <state relative-caret-position="708">
+              <caret line="110" column="38" selection-start-line="110" selection-start-column="8" selection-end-line="110" selection-end-column="38" />
               <folding>
-                <element signature="e#7551#7818#0" />
-                <element signature="e#7822#8035#0" />
-                <element signature="e#11405#11839#0" />
-                <element signature="e#14708#14741#0" />
-                <element signature="e#19411#19478#0" />
-                <element signature="e#17001#17039#0" />
-                <element signature="e#13988#14045#0" />
-                <element signature="e#11878#11900#0" />
-                <element signature="e#12251#12282#0" />
-                <element signature="e#12625#12657#0" />
-                <element signature="e#12378#12410#0" />
-                <marker date="1559216051641" expanded="true" signature="7547:30136" ph="..." />
-                <marker date="1559216051641" expanded="true" signature="14034:18808" ph="..." />
-                <marker date="1559216051641" expanded="true" signature="27343:28249" ph="..." />
+                <marker date="1559218414512" expanded="true" signature="7637:31919" ph="..." />
+                <marker date="1559218414512" expanded="true" signature="28662:29737" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/scripts/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="21" lean-forward="true" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+              <folding>
+                <element signature="e#611#878#0" />
+                <element signature="e#884#1097#0" />
+                <element signature="e#5858#6373#0" />
               </folding>
             </state>
           </provider>
@@ -70,9 +72,9 @@
         <option value="$PROJECT_DIR$/.idea/src/styles/index.css" />
         <option value="$PROJECT_DIR$/.idea/src/markup/index.html" />
         <option value="$PROJECT_DIR$/src/img/new1.svg" />
-        <option value="$PROJECT_DIR$/src/scripts/index.js" />
         <option value="$PROJECT_DIR$/src/styles/index.css" />
         <option value="$PROJECT_DIR$/src/markup/index.html" />
+        <option value="$PROJECT_DIR$/src/scripts/index.js" />
       </list>
     </option>
   </component>
@@ -191,7 +193,7 @@
       <option name="presentableId" value="Default" />
       <updated>1557221440092</updated>
       <workItem from="1557221441813" duration="4367000" />
-      <workItem from="1557738841661" duration="197676000" />
+      <workItem from="1557738841661" duration="200235000" />
     </task>
     <task id="LOCAL-00001" summary="zxs">
       <created>1557224852102</created>
@@ -389,17 +391,24 @@
       <option name="project" value="LOCAL" />
       <updated>1559211720744</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="RD">
+      <created>1559216084767</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1559216084767</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="202043000" />
+    <option name="totallyTimeSpent" value="204602000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12953092" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12953092" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -489,16 +498,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="35" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/img/new1.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -514,23 +513,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/markup/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="230" lean-forward="true" selection-start-line="230" selection-end-line="230" />
+        <state relative-caret-position="708">
+          <caret line="110" column="38" selection-start-line="110" selection-start-column="8" selection-end-line="110" selection-end-column="38" />
           <folding>
-            <element signature="e#7551#7818#0" />
-            <element signature="e#7822#8035#0" />
-            <element signature="e#11405#11839#0" />
-            <element signature="e#14708#14741#0" />
-            <element signature="e#19411#19478#0" />
-            <element signature="e#17001#17039#0" />
-            <element signature="e#13988#14045#0" />
-            <element signature="e#11878#11900#0" />
-            <element signature="e#12251#12282#0" />
-            <element signature="e#12625#12657#0" />
-            <element signature="e#12378#12410#0" />
-            <marker date="1559216051641" expanded="true" signature="7547:30136" ph="..." />
-            <marker date="1559216051641" expanded="true" signature="14034:18808" ph="..." />
-            <marker date="1559216051641" expanded="true" signature="27343:28249" ph="..." />
+            <marker date="1559218414512" expanded="true" signature="7637:31919" ph="..." />
+            <marker date="1559218414512" expanded="true" signature="28662:29737" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="21" lean-forward="true" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+          <folding>
+            <element signature="e#611#878#0" />
+            <element signature="e#884#1097#0" />
+            <element signature="e#5858#6373#0" />
           </folding>
         </state>
       </provider>

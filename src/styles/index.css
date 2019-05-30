@@ -16,7 +16,7 @@ table{
     border-collapse: collapse;
 }
 
-tr:hover .secured{
+tr:hover .fasten{
     background: url("../img/prkp.png") round;
 }
 thead{
@@ -119,7 +119,7 @@ tr:hover {
 
 
 }
-.secured{
+.fasten{
    margin-left: 10px;
     width: 15px;
     height: 15px;
