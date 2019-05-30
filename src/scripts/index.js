@@ -1,8 +1,8 @@
 
 $(document).ready(function() {
-        var counts = 0;
-        var chet = 0;
-        var f_id_element = 1;
+        var counterAdditionLineage = 0;
+        var counterСlicks = 0;
+        var constSort = 1;
         var rowsOne = $('#bossTable tbody  tr').get();
         var flag_sl = 0;// Флаг нажатия для #sl
         var flag_nm = 0;// Флаг нажатия для #nm
@@ -50,7 +50,7 @@ $(document).ready(function() {
             }
         });
         $('#additionLineage').click(function () {
-            if (counts == 0) {
+            if (counterAdditionLineage == 0) {
                 $('#bossTable')
                     .append($('<tr class="remove_class">')
                         .append($('<td>').append($('<div class="modifiedCheckbox der">').append($('<span>').append($('<input type="checkbox" class="inp" >')))))
@@ -68,7 +68,7 @@ $(document).ready(function() {
                 });
                 $('.containerArrow').removeClass('containerArrowSortDec');
                 $('.containerArrow').removeClass('containerArrowSortInc');
-                counts++;
+                counterAdditionLineage++;
             } else {
                 alert("Заполните предыдущую строку и нажмите 'ОК' ");
             }
@@ -95,7 +95,7 @@ $(document).ready(function() {
                 $(this).removeClass("container_img-item2");
                 $('.add_class').removeClass('dis');
                 $('.remove_class').addClass('dis');
-                counts--;
+                counterAdditionLineage--;
             }
 
         });
@@ -104,7 +104,7 @@ $(document).ready(function() {
             var flagSearch = true;
             $('tbody input:checkbox:checked').each(function () {
 
-                if (counts == 0) {
+                if (counterAdditionLineage == 0) {
                     $(this).parents('tr').addClass('sr')
                 } //else if( strok == 0 ){
                 // $(this).parents('tr').removeClass('sr')
@@ -143,24 +143,24 @@ $(document).ready(function() {
                     flag_lm++;
                 }
                 if (element_click == 'containerArrow') {
-                    chet = 0;
+                    counterСlicks = 0;
                 } else if (element_click == 'containerArrow containerArrowSortDec') {
-                    chet = 1;
+                    counterСlicks = 1;
                 } else {
-                    chet = 2;
+                    counterСlicks = 2;
                 }
 
-                if (chet == 0) {
+                if (counterСlicks == 0) {
                     $('.containerArrow').removeClass('containerArrowSortDec');
                     $('.containerArrow').removeClass('containerArrowSortInc');
-                    f_id_element *= -1;
+                    constSort *= -1;
                     $(event.target).addClass('containerArrowSortDec');
-                    sortTable(f_id_element, n);
-                } else if (chet == 1) {
+                    sortTable(constSort, n);
+                } else if (counterСlicks == 1) {
                     $('.containerArrow').removeClass('containerArrowSortInc');
                     $(event.target).addClass('containerArrowSortInc');
-                    f_id_element *= -1;
-                    sortTable(f_id_element, n);
+                    constSort *= -1;
+                    sortTable(constSort, n);
                 } else {
                     $.each(rowsOne, function (index, row) {
                         $('#bossTable').children('tbody').append(row);
