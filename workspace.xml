@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4c56e3e5-e200-4773-ab6b-a17173b30fab" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/markup/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/markup/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/index.css" afterDir="false" />
+    <list default="true" id="4c56e3e5-e200-4773-ab6b-a17173b30fab" name="Default Changelist" comment="RD">
+      <change beforePath="$PROJECT_DIR$/src/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/markup/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="33" lean-forward="true" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+            <state relative-caret-position="391">
+              <caret line="23" column="177" selection-start-line="23" selection-start-column="163" selection-end-line="23" selection-end-column="177" />
               <folding>
                 <marker date="1559220650577" expanded="false" signature="7564:31846" ph="..." />
                 <marker date="1559220650577" expanded="true" signature="28589:29664" ph="..." />
@@ -30,14 +29,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/scripts/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="408">
-              <caret line="72" column="60" selection-start-line="72" selection-start-column="60" selection-end-line="72" selection-end-column="60" />
+              <caret line="120" column="53" lean-forward="true" selection-start-line="120" selection-start-column="53" selection-end-line="120" selection-end-column="53" />
               <folding>
                 <element signature="e#884#1097#0" />
-                <element signature="e#5858#6373#0" />
               </folding>
             </state>
           </provider>
@@ -71,8 +69,8 @@
         <option value="$PROJECT_DIR$/.idea/src/markup/index.html" />
         <option value="$PROJECT_DIR$/src/img/new1.svg" />
         <option value="$PROJECT_DIR$/src/styles/index.css" />
-        <option value="$PROJECT_DIR$/src/scripts/index.js" />
         <option value="$PROJECT_DIR$/src/markup/index.html" />
+        <option value="$PROJECT_DIR$/src/scripts/index.js" />
       </list>
     </option>
   </component>
@@ -191,7 +189,7 @@
       <option name="presentableId" value="Default" />
       <updated>1557221440092</updated>
       <workItem from="1557221441813" duration="4367000" />
-      <workItem from="1557738841661" duration="202220000" />
+      <workItem from="1557738841661" duration="203052000" />
     </task>
     <task id="LOCAL-00001" summary="zxs">
       <created>1557224852102</created>
@@ -424,11 +422,18 @@
       <option name="project" value="LOCAL" />
       <updated>1559219814163</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="RD">
+      <created>1559220671222</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1559220671222</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="206587000" />
+    <option name="totallyTimeSpent" value="207419000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -537,24 +542,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/index.js">
+    <entry file="file://$PROJECT_DIR$/src/markup/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="72" column="60" selection-start-line="72" selection-start-column="60" selection-end-line="72" selection-end-column="60" />
+        <state relative-caret-position="391">
+          <caret line="23" column="177" selection-start-line="23" selection-start-column="163" selection-end-line="23" selection-end-column="177" />
           <folding>
-            <element signature="e#884#1097#0" />
-            <element signature="e#5858#6373#0" />
+            <marker date="1559220650577" expanded="false" signature="7564:31846" ph="..." />
+            <marker date="1559220650577" expanded="true" signature="28589:29664" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/markup/index.html">
+    <entry file="file://$PROJECT_DIR$/src/scripts/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="33" lean-forward="true" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+        <state relative-caret-position="408">
+          <caret line="120" column="53" lean-forward="true" selection-start-line="120" selection-start-column="53" selection-end-line="120" selection-end-column="53" />
           <folding>
-            <marker date="1559220650577" expanded="false" signature="7564:31846" ph="..." />
-            <marker date="1559220650577" expanded="true" signature="28589:29664" ph="..." />
+            <element signature="e#884#1097#0" />
           </folding>
         </state>
       </provider>

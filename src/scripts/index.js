@@ -118,7 +118,7 @@ $(document).ready(function() {
                 alert('Закончите с редактированием новой строки');
             }
         });
-        $('table').click(function (event) {
+        $('.containerArrow').click(function (event) {
 
             var element_click = event.target.className; // Тут имя класса по которому тыкнули
             var parent_click_element = $('.containerArrow').closest(".modifiedFont");
