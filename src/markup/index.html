@@ -12,7 +12,7 @@
     <div class="content">
         <div class="container">
             <div class=" cont_Button">
-                <div id="adds" class="add_button"><input type="button" class="button"  value="add"></div>
+                <div id="add_lineage" class="add_button"><input type="button" class="button"  value="add"></div>
                 <div class=" remove_button"><input type="button" class="button"  value="Remove"></div>
             </div>
              <table id="tab">
@@ -113,6 +113,10 @@
         var chet = 0;
         var f_id_element=1;
         var rowsOne = $('#tab tbody  tr').get();
+        var flag_sl = 0;// Флаг нажатия для #sl
+        var flag_nm = 0;// Флаг нажатия для #nm
+        var flag_km = 0 ;//Флаг нажатия для #km
+        var flag_lm = 0 ;//Флаг нажатия для #lm
         // при клике по диву, делаем проверку
         $(document).on('click', '.decor_checkbox', function () {
             var checkbox = $(this).find('input[type=checkbox]');
@@ -167,6 +171,11 @@
                 $('.decor_checkbox input:checkbox').prop('checked', false);
                 $('.decor_checkbox').not(this).removeClass("check_active");
                 $('div.nameLine').addClass('nameLine');
+                $.each(rowsOne, function (index, row) {
+                    $('#tab').children('tbody').append(row);
+                });
+                $('.gl_str').removeClass('gl_strDisplay');
+                $('.gl_str').removeClass('gl_strDisplayVr');
                 counts++;
             } else {
                 alert("Заполните предыдущую строку и нажмите 'ОК' ");
@@ -227,56 +236,82 @@
             })
             if (flagSearch == false) {alert('Закончите с редактированием новой строки');}
         });
-
-
             //Остановился на выделении сортированных столбцов жирным и надо навесить классы.
             //Переименовать все классы ---сделать красиво---
-
         $('table' ).click(function( event ) {
+            $('#tab td').removeClass('fontWe');
             var element_click = event.target.className; // Тут имя класса по которому тыкнули, пока не знаю зачем оно мне
             var parent_click_element = $('.gl_str').closest(".font");
-            var rods = event.target.closest('td');
+            var rods = event.target.closest('.font');
+            var nameClass = '.'+ rods.className;
             var rod = event.target.closest('th').id;// тут ID тега TH
             var id_element;
-         //   var f_id_element=1;
 
-            if(element_click =='gl_str'){
+            var perem_proverka_gl_strDisplay = '.gl_str .gl_strDisplay';//переменная для проверки есть ли на стрелке доп класс убывания
+            var perem_proverka_gl_strDisplayVr = '.gl_str .gl_strDisplay .gl_strDisplayVr';//переменная для проверки есть ли на стрелке доп класс возрастания.
+
+
+            if(element_click =='gl_str' || element_click =='gl_str gl_strDisplay'|| element_click =='gl_str gl_strDisplay gl_strDisplayVr' ){
+
                 if(rod =='sl'){
-                    id_element='#sl'
+                    id_element='#sl';
                       var  n=1;
+                    flag_sl++;
                 }else if(rod =='nm'){
                    var n=2;
-                    id_element ='#nm'
+                    flag_nm++;
+                    id_element ='#nm';
                 }else if(rod =='km'){
                     n=3
-                    id_element='#km'
+                    id_element='#km';
+                    flag_km++;
                 }else{
                     n=4
-                    id_element="#lm"
+                    id_element="#lm";
+                    flag_lm++;
                 }
+
+// есть глобальная переменная при нажатии на любой силует она прибавляется на один
+// для 4 дверей повесить флаг
+// при любом нажатии глобальная переменная обнуляется, далее подходит к двери сравниевает какой у нее флаг и становится таким же коунтом
+// при стуке в дверь 1 все переменные у остальных обнуляются.
 
                // var f_sl = 1;
                // var f_nm = 1;
                // var f_km = 1;
               //  var f_lm = 1;
+                if(element_click =='gl_str'){
+                   chet = 0;
+                }else if(element_click =='gl_str gl_strDisplay'){
+                    chet =1;
+                } else{
+                   chet = 2;
+                }
 
                 if (chet == 0) {
+                    $('.gl_str').removeClass('gl_strDisplay');
+                    $('.gl_str').removeClass('gl_strDisplayVr');
                  //   $('.font').removeClass('fontWe');
                 //    $(parent_click_element).addClass('fontWe');
                 //    $('.gl_str').removeClass('gl_strDisplay');
                     f_id_element *= -1;
-
+                    $(event.target).addClass('gl_strDisplay');
                     sortTable(f_id_element, n);
+                  //  chet++;
                 } else if (chet == 1) {
-                    $('id_element .gl_str').addClass('gl_strDisplayVr');
+                    $('.gl_str').removeClass('gl_strDisplayVr');
+                    $(event.target).addClass('gl_strDisplayVr');
                     f_id_element *= -1;
-
+                 //   chet++;
                     sortTable(f_id_element, n);
                 } else {
+
                     $.each(rowsOne, function (index, row) {
                         $('#tab').children('tbody').append(row);
                     });
-                    chet = 0;
+                    $(event.target).removeClass('gl_strDisplay');
+                    $(event.target).removeClass('gl_strDisplayVr');
+                 //   chet = 0;
                     // $('.gl_str').removeClass('gl_strDisplay');
                     // $('.nameLine').removeClass('fontWe');
                     // $('.gl_str').removeClass('gl_strDisplayVr');
@@ -296,10 +331,12 @@
             // }
             function sortTable(f, n) {
 
+
                 var rows = $('#tab tbody  tr').get();``
                 //  rows = rows.replace(/\s/g, '');
 
                     rows.sort(function (a, b) {
+
                         $('.gl_str').parents('.fon').addClass('fontWe');
                         var A = getVal(a);
                         var B = getVal(b);
@@ -315,6 +352,8 @@
 
                     function getVal(elm) {
                         var v = $(elm).children('td').eq(n).text().toUpperCase();
+                        var  element_fontWe =  $(elm).children('td').eq(n);
+                        $(element_fontWe).addClass('fontWe')
                         if ($.isNumeric(v)) {
                             v = parseInt(v, 10);
                         }
@@ -323,8 +362,9 @@
 
                     $.each(rows, function (index, row) {
                         $('#tab').children('tbody').append(row);
+
                     });
-                    chet++;
+
                 };
 
 
