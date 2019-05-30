@@ -49,7 +49,7 @@ $(document).ready(function() {
                 $('#box').removeClass("check_active");
             }
         });
-        $('#add_lineage').click(function () {
+        $('#additionLineage').click(function () {
             if (counts == 0) {
                 $('#bossTable')
                     .append($('<tr class="remove_class">')
@@ -100,7 +100,7 @@ $(document).ready(function() {
 
         });
 
-        $('.remove_button').click(function () {
+        $('.buttonDeletion').click(function () {
             var flagSearch = true;
             $('tbody input:checkbox:checked').each(function () {
 
