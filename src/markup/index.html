@@ -11,102 +11,107 @@
 <body>
     <div class="content">
         <div class="container">
-            <div class="container-buttons">
-                <div id="additionLineage" class="container-button"><input type="button" class="container-button__button" value="add"></div>
-                <div class="container-button"><input type="button" class="container-button__button" value="Remove"></div>
+            <div class="buttons-wrapper">
+                <button id="addition-lineage" class="button" value="add"><p>add</p></button>
+                <button id="remove-lineage" class="button" value="Remove"><p>remove</p></button>
             </div>
-            <div class="container-table">
+            <div class="table-wrapper">
              <table class="table" id="bossTable">
             <caption>Tree table</caption>
-            <thead >
-            <tr class="table__row-header" id="headLineage">
-                <th class="table__data-head"><div id="box" class="table__modified-checkbox "><span><input type="checkbox"></span></div></th>
-                <th class="table__data-head" id="sl" data-type="string"><div class="table__name-line modified-font"><span class="table__head-text">Name</span><div class="table__container-filtr"></div><div class="table__container-arrow"></div></div></th>
-                <th class="table__data-head" id="nm"><div class="table__status-head modified-font"><span>Statuses</span><div class="table__container-filtr"></div><div class="table__container-arrow"></div></div></th>
-                <th class="table__data-head" id="km"><div class="table__aut-head modified-font"><div>Authentication</div><div class="table__container-filtr"></div><div class="table__container-arrow"></div></div></th>
-                <th class="table__data-head" id="lm"><div class="table__login-head modified-font"><div>Last By Login</div><div class="table__container-arrow"></div></div></th>
-                <th class="table__data-head"></th>
-            </tr>
+            <thead class="table-head">
+                <tr class="table-head__row" id="headLineage">
+                    <th class="table-head__cell"><div id="box" class="table-body__checkbox-wrapper "><span><input type="checkbox"></span></div></th>
+                    <th class="table-head__cell" id="sl" data-type="string"><div class="table-body__name-line font-weight_bold"><span class="table-head_text">Name</span><div class="table-head__icons-filter"></div><div class="table-head__icons-arrow"></div></div></th>
+                    <th class="table-head__cell" id="nm"><div class="table__status-head font-weight_bold"><span>Statuses</span><div class="table-head__icons-filter"></div><div class="table-head__icons-arrow"></div></div></th>
+                    <th class="table-head__cell" id="km"><div class="table__aut-head font-weight_bold"><div>Authentication</div><div class="table-head__icons-filter"></div><div class="table-head__icons-arrow"></div></div></th>
+                    <th class="table-head__cell" id="lm"><div class="table__login-head font-weight_bold"><div>Last By Login</div><div class="table-head__icons-arrow"></div></div></th>
+                    <th class="table-head__cell"></th>
+                </tr>
             </thead>
-                 <tbody id="table_Body">
+                 <tbody class="table-body" id="table_Body">
             <tr class="table__row">
-                <td  class="table__data"><div  class="table__modified-checkbox der"><span> <input type="checkbox" class="inp"></span></div></td>
-                <td  class="table__data"><div class="table__name-line modified-font"><div>Abaa</div> <div class="fasten"></div></div></td>
-                <td  class="table__data"><div class="table__status-line modified-font">Enabled</div></td>
-                <td  class="table__data"><div class="table__aut-line modified-font">LDAP</div></td>
-                <td  class="table__data"><div class="table__login-line modified-font">23:42 / 31 july 2013</div></td>
-                <td  class="table__data"><div class="table__container-img"><div class="container_img-item"></div></div>
+                <td  class="table-body__cell"><div class="table-body__checkbox-wrapper der"><span> <input type="checkbox" class="inp"></span></div></td>
+                <td  class="table-body__cell"><div class="table-body__name-line font-weight_bold"><div>Abaa</div> <div class="table-body__visible-pin"></div></div></td>
+                <td  class="table-body__cell"><div class="table-body__status-line font-weight_bold">Enabled</div></td>
+                <td  class="table-body__cell"><div class="table-body__aut-line font-weight_bold">LDAP</div></td>
+                <td  class="table-body__cell"><div class="table-body__login-line font-weight_bold">23:42 / 31 july 2013</div></td>
+                <td  class="table-body__cell"><div class="table-body__img-wrapper"><div class="table-body__img-wrapper_item"></div></div>
                 </td>
             </tr>
             <tr  class="table__row">
-                <td  class="table__data"><div  class="table__modified-checkbox der"><span> <input type="checkbox" class="inp"></span></div></td>
-                <td  class="table__data"><div class="table__name-line modified-font"><div>Eda</div> <div class="fasten"></div></div></td>
-                <td  class="table__data"><div class="table__status-line modified-font">Disabled</div></td>
-                <td  class="table__data"><div class="table__aut-line modified-font">ADLPs</div></td>
-                <td  class="table__data"><div class="table__login-line modified-font">22:42 / 31 july 2015</div></td>
-                <td  class="table__data"><div class="table__container-img"><div class="container_img-item"></div></div></td>
+                <td  class="table-body__cell"><div class="table-body__checkbox-wrapper der"><span> <input type="checkbox" class="inp"></span></div></td>
+                <td  class="table-body__cell"><div class="table-body__name-line font-weight_bold"><div>Eda</div> <div class="table-body__visible-pin"></div></div></td>
+                <td  class="table-body__cell"><div class="table-body__status-line font-weight_bold">Disabled</div></td>
+                <td  class="table-body__cell"><div class="table-body__aut-line font-weight_bold">ADLPs</div></td>
+                <td  class="table-body__cell"><div class="table-body__login-line font-weight_bold">22:42 / 31 july 2015</div></td>
+                <td  class="table-body__cell"><div class="table-body__img-wrapper"><div class="table-body__img-wrapper_item"></div></div></td>
             </tr>
             <tr  class="table__row">
-                <td  class="table__data"><div  class="table__modified-checkbox der"><span> <input type="checkbox" class="inp"></span></div></td>
-                <td  class="table__data"><div class="table__name-line modified-font"><div>Baooa</div> <div class="fasten"></div></div></td>
-                <td  class="table__data"><div class="table__status-line modifiedFont">Enabled</div></td>
-                <td  class="table__data"><div class="table__aut-line modifiedFont">ADLP</div></td>
-                <td  class="table__data"><div class="table__login-line modifiedFont">20:42 / 31 july 2014</div></td>
-                <td  class="table__data"><div class="table__container-img"><div class="container_img-item"></div></div></td>
+                <td  class="table-body__cell"><div class="table-body__checkbox-wrapper der"><span> <input type="checkbox" class="inp"></span></div></td>
+                <td  class="table-body__cell"><div class="table-body__name-line font-weight_bold"><div>Baooa</div> <div class="table-body__visible-pin"></div></div></td>
+                <td  class="table-body__cell"><div class="table-body__status-line font-weight_bold">Enabled</div></td>
+                <td  class="table-body__cell"><div class="table-body__aut-line font-weight_bold">ADLP</div></td>
+                <td  class="table-body__cell"><div class="table-body__login-line font-weight_bold">20:42 / 31 july 2014</div></td>
+                <td  class="table-body__cell"><div class="table-body__img-wrapper"><div class="table-body__img-wrapper_item"></div></div></td>
             </tr>
             <tr  class="table__row">
-                <td  class="table__data"><div  class="table__modified-checkbox der"><span> <input type="checkbox" class="inp"></span></div></td>
-                <td  class="table__data"><div class="table__name-line modified-font"><div>Codssss</div> <div class="fasten"></div></div></td>
-                <td  class="table__data"><div class="table__status-line modifiedFont">Disabled</div></td>
-                <td  class="table__data"><div class="table__aut-line modifiedFont">LDAP</div></td>
-                <td  class="table__data"><div class="table__login-line modifiedFont">18:42 / 31 july 2015</div></td>
-                <td  class="table__data"><div class="table__container-img"><div class="container_img-item"></div></div></td>
+                <td  class="table-body__cell"><div class="table-body__checkbox-wrapper der"><span> <input type="checkbox" class="inp"></span></div></td>
+                <td  class="table-body__cell"><div class="table-body__name-line font-weight_bold"><div>Codssss</div> <div class="table-body__visible-pin"></div></div></td>
+                <td  class="table-body__cell"><div class="table-body__status-line font-weight_bold">Disabled</div></td>
+                <td  class="table-body__cell"><div class="table-body__aut-line font-weight_bold">LDAP</div></td>
+                <td  class="table-body__cell"><div class="table-body__login-line font-weight_bold">18:42 / 31 july 2015</div></td>
+                <td  class="table-body__cell"><div class="table-body__img-wrapper"><div class="table-body__img-wrapper_item"></div></div></td>
             </tr>
             <tr  class="table__row">
-                <td  class="table__data"><div  class="table__modified-checkbox der"><span> <input type="checkbox" class="inp"></span></div></td>
-                <td  class="table__data"><div class="table__name-line modified-font"><div>Acoodsa</div> <div class="fasten"></div></div></td>
-                <td  class="table__data"><div class="table__status-line modifiedFont">Enabled</div></td>
-                <td  class="table__data"><div class="table__aut-line modifiedFont">ADLP</div></td>
-                <td  class="table__data"><div class="table__login-line modifiedFont">16:42 / 31 july 2017</div></td>
-                <td  class="table__data"><div class="table__container-img"><div class="container_img-item"></div></div></td>
+                <td  class="table-body__cell"><div class="table-body__checkbox-wrapper der"><span> <input type="checkbox" class="inp"></span></div></td>
+                <td  class="table-body__cell"><div class="table-body__name-line modified-font"><div>Acoodsa</div> <div class="table-body__visible-pin"></div></div></td>
+                <td  class="table-body__cell"><div class="table-body__status-line font-weight_bold">Enabled</div></td>
+                <td  class="table-body__cell"><div class="table-body__aut-line font-weight_bold">ADLP</div></td>
+                <td  class="table-body__cell"><div class="table-body__login-line font-weight_bold">16:42 / 31 july 2017</div></td>
+                <td  class="table-body__cell"><div class="table-body__img-wrapper"><div class="table-body__img-wrapper_item"></div></div></td>
             </tr>
             <tr  class="table__row">
-                <td  class="table__data"><div class="table__modified-checkbox der"><span> <input type="checkbox" class="inp" ></span></div></td>
-                <td  class="table__data"><div class="table__name-line modified-font"><div>WaodsSa</div> <div class="fasten"></div></div></td>
-                <td  class="table__data"><div class="table__status-line modified-font">Disabled</div></td>
-                <td  class="table__data"><div class="table__aut-line modified-font">LDAP</div></td>
-                <td  class="table__data"><div class="table__login-line modified-font">12:42 / 31 july 2016</div></td>
-                <td  class="table__data"><div class="table__container-img"><div class="container_img-item"></div></div></td>
+                <td  class="table-body__cell"><div class="table-body__checkbox-wrapper der"><span> <input type="checkbox" class="inp" ></span></div></td>
+                <td  class="table-body__cell"><div class="table-body__name-line font-weight_bold"><div>WaodsSa</div> <div class="table-body__visible-pin"></div></div></td>
+                <td  class="table-body__cell"><div class="table-body__status-line font-weight_bold">Disabled</div></td>
+                <td  class="table-body__cell"><div class="table-body__aut-line font-weight_bold">LDAP</div></td>
+                <td  class="table-body__cell"><div class="table-body__login-line font-weight_bold">12:42 / 31 july 2016</div></td>
+                <td  class="table-body__cell"><div class="table-body__img-wrapper"><div class="table-body__img-wrapper_item"></div></div></td>
             </tr>
             <tr  class="table__row">
-                <td  class="table__data"><div  class="table__modified-checkbox der"><span> <input type="checkbox" class="inp"></span></div></td>
-                <td  class="table__data"><div class="table__name-line modified-font"><div>BwodsSam</div> <div class="fasten"></div></div></td>
-                <td  class="table__data"><div class="table__status-line modified-font">Enabled</div></td>
-                <td  class="table__data"><div class="table__aut-line modified-font">DAPL</div></td>
-                <td  class="table__data"><div class="table__login-line modified-font">10:42 / 3 july 2016</div></td>
-                <td  class="table__data"><div class="table__container-img"><div class="container_img-item"></div></div></td>
+                <td  class="table-body__cell"><div class="table-body__checkbox-wrapper der"><span> <input type="checkbox" class="inp"></span></div></td>
+                <td  class="table-body__cell"><div class="table-body__name-line font-weight_bold"><div>BwodsSam</div> <div class="table-body__visible-pin"></div></div></td>
+                <td  class="table-body__cell"><div class="table-body__status-line font-weight_bold">Enabled</div></td>
+                <td  class="table-body__cell"><div class="table-body__aut-line font-weight_bold">DAPL</div></td>
+                <td  class="table-body__cell"><div class="table-body__login-line font-weight_bold">10:42 / 3 july 2016</div></td>
+                <td  class="table-body__cell"><div class="table-body__img-wrapper"><div class="table-body__img-wrapper_item"></div></div></td>
             </tr>
             <tr  class="table__row">
-                <td  class="table__data"><div class="table__modified-checkbox der"><span> <input type="checkbox" class="inp"></span></div></td>
-                <td  class="table__data"><div class="table__name-line modified-font"><div>CdodsSaaa</div> <div class="fasten"></div></div></td>
-                <td  class="table__data"><div class="table__status-line modified-font">Disabled</div></td>
-                <td  class="table__data"><div class="table__aut-line modified-font">LDAP</div></td>
-                <td  class="table__data"><div class="table__login-line modified-font">8:42 / 31 july 2016</div></td>
-                <td  class="table__data"><div class="table__container-img"><div class="container_img-item"></div></div></td>
+                <td  class="table-body__cell"><div class="table-body__checkbox-wrapper der"><span> <input type="checkbox" class="inp"></span></div></td>
+                <td  class="table-body__cell"><div class="table-body__name-line font-weight_bold"><div>CdodsSaaa</div> <div class="table-body__visible-pin"></div></div></td>
+                <td  class="table-body__cell"><div class="table-body__status-line font-weight_bold">Disabled</div></td>
+                <td  class="table-body__cell"><div class="table-body__aut-line font-weight_bold">LDAP</div></td>
+                <td  class="table-body__cell"><div class="table-body__login-line font-weight_bold">8:42 / 31 july 2016</div></td>
+                <td  class="table-body__cell"><div class="table-body__img-wrapper"><div class="table-body__img-wrapper_item"></div></div></td>
             </tr>
             <tr  class="table__row">
 <!--                <td><label class="checkbox-item"><input hidden type="checkbox"><span class="checker"></span></label></td>-->
-                <td  class="table__data"><div  class="table__modified-checkbox der"><span> <input type="checkbox" class="inp"></span></div></td>
-                <td  class="table__data"><div class="table__name-line modified-font"><div>DsodsSamaa</div> <div class="fasten"></div></div></td>
-                <td  class="table__data"><div class="table__status-line modified-font">Disabled</div></td>
-                <td  class="table__data"><div class="table__aut-line modified-font">DAPL</div></td>
-                <td  class="table__data"><div class="table__login-line modified-font-font">6:42 / 31 july 2017</div></td>
-                <td  class="table__data"><div class="table__container-img"><div class="container_img-item"></div></div></td>
+                <td  class="table-body__cell"><div class="table-body__checkbox-wrapper der"><span> <input type="checkbox" class="inp"></span></div></td>
+                <td  class="table-body__cell"><div class="table-body__name-line font-weight_bold"><div>DsodsSamaa</div> <div class="table-body__visible-pin"></div></div></td>
+                <td  class="table-body__cell"><div class="table-body__status-line font-weight_bold">Disabled</div></td>
+                <td  class="table-body__cell"><div class="table-body__aut-line font-weight_bold">DAPL</div></td>
+                <td  class="table-body__cell"><div class="table-body__login-line font-weight_bold">6:42 / 31 july 2017</div></td>
+                <td  class="table-body__cell"><div class="table-body__img-wrapper"><div class="table-body__img-wrapper_item"></div></div></td>
             </tr>
                  </tbody>
             </table>
             </div>
         </div>
+
+
+
+
+
 
     </div>
 <!--<script>-->
@@ -133,12 +138,12 @@
 <!--        $(document).on('click', '#box', function () {-->
 <!--            var checkboxs = $(this).find('input[type=checkbox]');-->
 <!--            if (checkboxs.prop("checked")) { //включен-->
-<!--                $('.table__modified-checkbox input:checkbox').prop('checked', true);-->
-<!--                $('.table__modified-checkbox').not(this).addClass("check_active");-->
+<!--                $('.table-body__checkbox-wrapper input:checkbox').prop('checked', true);-->
+<!--                $('.table-body__checkbox-wrapper').not(this).addClass("check_active");-->
 
 <!--            } else { //выключен-->
-<!--                $('.table__modified-checkbox input:checkbox').prop('checked', false);-->
-<!--                $('.table__modified-checkbox').not(this).removeClass("check_active");-->
+<!--                $('.table-body__checkbox-wrapper input:checkbox').prop('checked', false);-->
+<!--                $('.table-body__checkbox-wrapper').not(this).removeClass("check_active");-->
 
 <!--            }-->
 <!--        });-->
@@ -155,46 +160,46 @@
 <!--            if (counts == 0) {-->
 <!--                $('#bossTable')-->
 <!--                    .append($('<tr class="remove_class">')-->
-<!--                        .append($('<td>').append($('<div class="table__modified-checkbox der">').append($('<span>').append($('<input type="checkbox" class="inp" >')))))-->
-<!--                        .append($('<td>').append($('<div class="table__name-line modifiedFont">').append($('<div class="text_Line">').append('<input type=text  id="table__name-line"class="inpt inpt1">'), $('<div class="fasten">'))))-->
-<!--                        .append($('<td>').append($('<div class="table__status-line modifiedFont">').append($('<div>').append('<input type=text id="table__status-line"class="inpt inpt2">'))))-->
-<!--                        .append($('<td>').append($('<div class="table__aut-line modifiedFont">').append($('<div>').append('<input type=text id="table__aut-line"  class="inpt inpt3">'))))-->
-<!--                        .append($('<td>').append($('<div class="table__login-line modifiedFont">').append($('<div>').append('<input type=text id="table__login-line" class="inpt inpt4">'))))-->
-<!--                        .append($('<td>').append($('<div class="table__container-img">').append($('<div id="qwe" class="table__container-img-item2">'))))-->
+<!--                        .append($('<td>').append($('<div class="table-body__checkbox-wrapper der">').append($('<span>').append($('<input type="checkbox" class="inp" >')))))-->
+<!--                        .append($('<td>').append($('<div class="table-body__name-line modifiedFont">').append($('<div class="text_Line">').append('<input type=text  id="table-body__name-line"class="search-input inpt1">'), $('<div class="table-body__visible-pin">'))))-->
+<!--                        .append($('<td>').append($('<div class="table-body__status-line modifiedFont">').append($('<div>').append('<input type=text id="table-body__status-line"class="search-input inpt2">'))))-->
+<!--                        .append($('<td>').append($('<div class="table-body__aut-line modifiedFont">').append($('<div>').append('<input type=text id="table-body__aut-line"  class="search-input inpt3">'))))-->
+<!--                        .append($('<td>').append($('<div class="table-body__login-line modifiedFont">').append($('<div>').append('<input type=text id="table-body__login-line" class="search-input inpt4">'))))-->
+<!--                        .append($('<td>').append($('<div class="table-body__img-wrapper">').append($('<div id="qwe" class="table-body__img-wrapper-item2">'))))-->
 <!--                    )-->
-<!--                $('.table__modified-checkbox input:checkbox').prop('checked', false);-->
-<!--                $('.table__modified-checkbox').not(this).removeClass("check_active");-->
-<!--                $('div.table__name-line').addClass('table__name-line');-->
+<!--                $('.table-body__checkbox-wrapper input:checkbox').prop('checked', false);-->
+<!--                $('.table-body__checkbox-wrapper').not(this).removeClass("check_active");-->
+<!--                $('div.table-body__name-line').addClass('table-body__name-line');-->
 <!--                $.each(rowsOne, function (index, row) {-->
 <!--                    $('#bossTable').children('tbody').append(row);-->
 <!--                });-->
-<!--                $('.table__container-arrow').removeClass('containerArrowSortDec');-->
-<!--                $('.table__container-arrow').removeClass('containerArrowSortInc');-->
+<!--                $('.table-head__icons-arrow').removeClass('containerArrowSortDec');-->
+<!--                $('.table-head__icons-arrow').removeClass('containerArrowSortInc');-->
 <!--                counts++;-->
 <!--            } else {-->
 <!--                alert("Заполните предыдущую строку и нажмите 'ОК' ");-->
 <!--            }-->
 
 <!--        });-->
-<!--        $(document).on('click', '.table__container-img-item2', function () {// изменить имена-->
+<!--        $(document).on('click', '.table-body__img-wrapper-item2', function () {// изменить имена-->
 
-<!--            if (document.getElementById("table__name-line").value === '' || document.getElementById("table__status-line").value === '' || document.getElementById("table__aut-line").value === '' || document.getElementById("table__login-line").value === '') {-->
+<!--            if (document.getElementById("table-body__name-line").value === '' || document.getElementById("table-body__status-line").value === '' || document.getElementById("table-body__aut-line").value === '' || document.getElementById("table-body__login-line").value === '') {-->
 <!--                alert("Заполните все поля")-->
 <!--            } else {-->
 <!--                //Добавляю html код-->
 <!--                //Создал переменные для хранения значений из инпутов-->
 <!--                //У ново добавленого штмл кода убираю дисплэй нон и добавляю его инпутам-->
 <!--                //Сделал для сортировки массива-->
-<!--                var inputNameLine = document.getElementById("table__name-line").value;-->
-<!--                var inputStatusLine = document.getElementById("table__name-line").value;-->
-<!--                var inputAutLine = document.getElementById("table__name-line").value;-->
-<!--                var inputLoginLine = document.getElementById("table__login-line").value;-->
-<!--                var as = '<tr class="add_class dis"><td><div class="table__modified-checkbox der"><span> <input type="checkbox" class="inp"></span></div></td><td><div class="table__name-line"><div  class="text_Line">'+inputNameLine+'</div> <div class="fasten"></div></div></td> <td><div class="table__status-line">'+inputStatusLine+'</div></td> <td><div class="table__aut-line">'+inputAutLine+'</div></td> <td><div class="table__login-line">'+inputLoginLine+'</div></td> <td><div class="table__container-img"><div class="table__container-img-item"></div></div></td> </tr>'-->
+<!--                var inputNameLine = document.getElementById("table-body__name-line").value;-->
+<!--                var inputStatusLine = document.getElementById("table-body__name-line").value;-->
+<!--                var inputAutLine = document.getElementById("table-body__name-line").value;-->
+<!--                var inputLoginLine = document.getElementById("table-body__login-line").value;-->
+<!--                var as = '<tr class="add_class dis"><td><div class="table-body__checkbox-wrapper der"><span> <input type="checkbox" class="inp"></span></div></td><td><div class="table-body__name-line"><div  class="text_Line">'+inputNameLine+'</div> <div class="table-body__visible-pin"></div></div></td> <td><div class="table-body__status-line">'+inputStatusLine+'</div></td> <td><div class="table-body__aut-line">'+inputAutLine+'</div></td> <td><div class="table-body__login-line">'+inputLoginLine+'</div></td> <td><div class="table-body__img-wrapper"><div class="table-body__img-wrapper-item"></div></div></td> </tr>'-->
 <!--                $('#bossTable').append(as);-->
-<!--                $(this).addClass("table__container-img-item");-->
+<!--                $(this).addClass("table-body__img-wrapper-item");-->
 <!--                $('input[type=text]').prop('disabled', true);-->
 <!--                $('input[type=text]').addClass('scr');-->
-<!--                $(this).removeClass("table__container-img-item2");-->
+<!--                $(this).removeClass("table-body__img-wrapper-item2");-->
 <!--                $('.add_class').removeClass('dis');-->
 <!--                $('.remove_class').addClass('dis');-->
 <!--                counts&#45;&#45;;-->
@@ -221,13 +226,13 @@
 <!--        $('table' ).click(function( event ) {-->
 
 <!--            var element_click = event.target.className; // Тут имя класса по которому тыкнули-->
-<!--            var parent_click_element = $('.table__container-arrow').closest(".modifiedFont");-->
+<!--            var parent_click_element = $('.table-head__icons-arrow').closest(".modifiedFont");-->
 <!--            var rods = event.target.closest('.modifiedFont');-->
 <!--            var nameClass = '.'+ rods.className;-->
 <!--            var rod = event.target.closest('th').id;// тут ID тега TH-->
 <!--            var id_element;-->
 
-<!--            if(element_click =='table__container-arrow' || element_click =='table__container-arrow containerArrowSortDec'|| element_click =='table__container-arrow containerArrowSortDec containerArrowSortInc' ){-->
+<!--            if(element_click =='table-head__icons-arrow' || element_click =='table-head__icons-arrow containerArrowSortDec'|| element_click =='table-head__icons-arrow containerArrowSortDec containerArrowSortInc' ){-->
 <!--                $('#bossTable td').removeClass('fontWe');-->
 <!--                if(rod =='sl'){-->
 <!--                    var  n=1;-->
@@ -242,22 +247,22 @@
 <!--                    var n=4-->
 <!--                    flag_lm++;-->
 <!--                }-->
-<!--                if(element_click =='table__container-arrow'){-->
+<!--                if(element_click =='table-head__icons-arrow'){-->
 <!--                   chet = 0;-->
-<!--                }else if(element_click =='table__container-arrow containerArrowSortDec'){-->
+<!--                }else if(element_click =='table-head__icons-arrow containerArrowSortDec'){-->
 <!--                    chet =1;-->
 <!--                } else{-->
 <!--                   chet = 2;-->
 <!--                }-->
 
 <!--                if (chet == 0) {-->
-<!--                    $('.table__container-arrow').removeClass('containerArrowSortDec');-->
-<!--                    $('.table__container-arrow').removeClass('containerArrowSortInc');-->
+<!--                    $('.table-head__icons-arrow').removeClass('containerArrowSortDec');-->
+<!--                    $('.table-head__icons-arrow').removeClass('containerArrowSortInc');-->
 <!--                    f_id_element *= -1;-->
 <!--                    $(event.target).addClass('containerArrowSortDec');-->
 <!--                    sortTable(f_id_element, n);-->
 <!--                } else if (chet == 1) {-->
-<!--                    $('.table__container-arrow').removeClass('containerArrowSortInc');-->
+<!--                    $('.table-head__icons-arrow').removeClass('containerArrowSortInc');-->
 <!--                    $(event.target).addClass('containerArrowSortInc');-->
 <!--                    f_id_element *= -1;-->
 <!--                    sortTable(f_id_element, n);-->
@@ -273,7 +278,7 @@
 <!--            function sortTable(f, n) {-->
 <!--                var rows = $('#bossTable tbody  tr').get();``-->
 <!--                    rows.sort(function (a, b) {-->
-<!--                        $('.table__container-arrow').parents('.modifiedFont').addClass('fontWe');-->
+<!--                        $('.table-head__icons-arrow').parents('.modifiedFont').addClass('fontWe');-->
 <!--                        var A = getVal(a);-->
 <!--                        var B = getVal(b);-->
 
@@ -352,14 +357,14 @@
 <!--       //          $(document).on('click', ' #sl', function () {-->
 <!--       //              var id_click = (this.id);-->
 <!--       //              $('.gl_str').removeClass('containerArrowSortWane');-->
-<!--       //              $('.table__name-line').addClass('fontWe');-->
-<!--       //              $('.table__aut-line').removeClass('fontWe');-->
-<!--       //              $('.table__status-line').removeClass('fontWe');-->
-<!--       //              $('.table__login-line').removeClass('fontWe');-->
+<!--       //              $('.table-body__name-line').addClass('fontWe');-->
+<!--       //              $('.table-body__aut-line').removeClass('fontWe');-->
+<!--       //              $('.table-body__status-line').removeClass('fontWe');-->
+<!--       //              $('.table-body__login-line').removeClass('fontWe');-->
 <!--       //              //   $('.gl_strTwo').css('opacity', '0');-->
 <!--       //              $('#sl .gl_str').addClass('containerArrowSortWane');-->
-<!--       //              $('.table__modified-checkbox input:checkbox').prop('checked', false);-->
-<!--       //              $('.table__modified-checkbox').removeClass("check_active");-->
+<!--       //              $('.table-body__checkbox-wrapper input:checkbox').prop('checked', false);-->
+<!--       //              $('.table-body__checkbox-wrapper').removeClass("check_active");-->
 <!--       //-->
 <!--       //              if (chet == 0) {-->
 <!--       //-->
@@ -381,7 +386,7 @@
 <!--       //                  });-->
 <!--       //                  chet = 0;-->
 <!--       //                  $('.gl_str').removeClass('containerArrowSortWane');-->
-<!--       //                  $('.table__name-line').removeClass('fontWe');-->
+<!--       //                  $('.table-body__name-line').removeClass('fontWe');-->
 <!--       //                  $('.gl_str').removeClass('gl_strDisplayVr');-->
 <!--       //              }-->
 <!--       //          });-->
@@ -390,13 +395,13 @@
 <!--       //              var id_click = (this.id);-->
 <!--       //              var id_chet_click = 0;-->
 <!--       //              $('.gl_str').removeClass('containerArrowSortWane');-->
-<!--       //              $('.table__name-line').removeClass('fontWe');-->
-<!--       //              $('.table__aut-line').removeClass('fontWe');-->
-<!--       //              $('.table__status-line').addClass('fontWe');-->
-<!--       //              $('.table__login-line').removeClass('fontWe');-->
+<!--       //              $('.table-body__name-line').removeClass('fontWe');-->
+<!--       //              $('.table-body__aut-line').removeClass('fontWe');-->
+<!--       //              $('.table-body__status-line').addClass('fontWe');-->
+<!--       //              $('.table-body__login-line').removeClass('fontWe');-->
 <!--       //              $('#nm .gl_str').addClass('containerArrowSortWane');-->
-<!--       //              $('.table__modified-checkbox input:checkbox').prop('checked', false);-->
-<!--       //              $('.table__modified-checkbox').removeClass("check_active");-->
+<!--       //              $('.table-body__checkbox-wrapper input:checkbox').prop('checked', false);-->
+<!--       //              $('.table-body__checkbox-wrapper').removeClass("check_active");-->
 <!--       //-->
 <!--       //              if (chet == 0) {-->
 <!--       //                  f_nm *= -1;-->
@@ -416,20 +421,20 @@
 <!--       //                  });-->
 <!--       //                  chet = 0;-->
 <!--       //                  $('.gl_str').removeClass('containerArrowSortWane');-->
-<!--       //                  $('.table__status-line').removeClass('fontWe');-->
+<!--       //                  $('.table-body__status-line').removeClass('fontWe');-->
 <!--       //                  $('.gl_str').removeClass('gl_strDisplayVr');-->
 <!--       //              }-->
 <!--       //          });-->
 <!--       //-->
 <!--       //          $(document).on('click', '#km ', function () {-->
-<!--       //              $('.table__name-line').removeClass('fontWe');-->
-<!--       //              $('.table__aut-line').addClass('fontWe');-->
-<!--       //              $('.table__status-line').removeClass('fontWe');-->
-<!--       //              $('.table__login-line').removeClass('fontWe');-->
+<!--       //              $('.table-body__name-line').removeClass('fontWe');-->
+<!--       //              $('.table-body__aut-line').addClass('fontWe');-->
+<!--       //              $('.table-body__status-line').removeClass('fontWe');-->
+<!--       //              $('.table-body__login-line').removeClass('fontWe');-->
 <!--       //              $('.gl_str').removeClass('containerArrowSortWane');-->
 <!--       //              $('#km .gl_str').addClass('containerArrowSortWane');-->
-<!--       //              $('.table__modified-checkbox input:checkbox').prop('checked', false);-->
-<!--       //              $('.table__modified-checkbox').removeClass("check_active");-->
+<!--       //              $('.table-body__checkbox-wrapper input:checkbox').prop('checked', false);-->
+<!--       //              $('.table-body__checkbox-wrapper').removeClass("check_active");-->
 <!--       //-->
 <!--       //              if (chet == 0) {-->
 <!--       //                  f_km *= -1;-->
@@ -449,19 +454,19 @@
 <!--       //                  });-->
 <!--       //                  chet = 0;-->
 <!--       //                  $('.gl_str').removeClass('containerArrowSortWane');-->
-<!--       //                  $('.table__aut-line').removeClass('fontWe');-->
+<!--       //                  $('.table-body__aut-line').removeClass('fontWe');-->
 <!--       //                  $('.gl_str').removeClass('gl_strDisplayVr');-->
 <!--       //              }-->
 <!--       //          });-->
 <!--       //          $(document).on('click', '#lm ', function () {-->
-<!--       //              $('.table__name-line').removeClass('fontWe');-->
-<!--       //              $('.table__aut-line').removeClass('fontWe');-->
-<!--       //              $('.table__status-line').removeClass('fontWe');-->
-<!--       //              $('.table__login-line').addClass('fontWe');-->
+<!--       //              $('.table-body__name-line').removeClass('fontWe');-->
+<!--       //              $('.table-body__aut-line').removeClass('fontWe');-->
+<!--       //              $('.table-body__status-line').removeClass('fontWe');-->
+<!--       //              $('.table-body__login-line').addClass('fontWe');-->
 <!--       //              $('.gl_str').removeClass('containerArrowSortWane');-->
 <!--       //              $('#lm .gl_str').addClass('containerArrowSortWane');-->
-<!--       //              $('.table__modified-checkbox input:checkbox').prop('checked', false);-->
-<!--       //              $('.table__modified-checkbox').removeClass("check_active");-->
+<!--       //              $('.table-body__checkbox-wrapper input:checkbox').prop('checked', false);-->
+<!--       //              $('.table-body__checkbox-wrapper').removeClass("check_active");-->
 <!--       //-->
 <!--       //              if (chet == 0) {-->
 <!--       //                  f_lm *= -1;-->
@@ -481,7 +486,7 @@
 <!--       //                  });-->
 <!--       //                  chet = 0;-->
 <!--       //                  $('.gl_str').removeClass('containerArrowSortWane');-->
-<!--       //                  $('.table__login-line').removeClass('fontWe');-->
+<!--       //                  $('.table-body__login-line').removeClass('fontWe');-->
 <!--       //                  $('.gl_str').removeClass('gl_strDisplayVr');-->
 <!--       //              }-->
 <!--       //          });-->
@@ -514,7 +519,7 @@
 <!--            // }-->
 
 <!--            // var usl =  $('td');-->
-<!--            // var liArr = usl.children('.table__name-line').get();-->
+<!--            // var liArr = usl.children('.table-body__name-line').get();-->
 <!--            // var arr = new Array()-->
 <!--            // for (var i = 0; i < liArr.length; i++) {-->
 <!--            //     arr.push(liArr[i].textContent)-->
@@ -527,7 +532,7 @@
 <!--            //     liArr[index].textContent = content-->
 <!--            // })-->
 
-<!--            // var mylist = $('.table__name-line');-->
+<!--            // var mylist = $('.table-body__name-line');-->
 <!--            // var listitems = mylist.children('.text_Line').get();-->
 <!--            // listitems.sort(function(a, b) {-->
 <!--            //     return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());-->
@@ -535,7 +540,7 @@
 <!--            // $.each(listitems, function(idx, itm) { mylist.append(itm); });-->
 
 
-<!--           //  var mylist = $('.table__name-line');-->
+<!--           //  var mylist = $('.table-body__name-line');-->
 <!--           //  let tbody = mylist.children('.text_Line').get();-->
 <!--           // // let tbody = document.getElementsByClassName('.text_Line');-->
 <!--           //  var newColl = []-->
@@ -549,7 +554,7 @@
 <!--           //          mylist.append(item);-->
 <!--           //      });-->
 
-<!--            // var mylists = $('.table__name-line');-->
+<!--            // var mylists = $('.table-body__name-line');-->
 <!--            // var listitems = mylists.children('.text_Line').get();-->
 <!--            // listitems.sort(function(a, b) {-->
 <!--            //     var compA = $(a).text().toUpperCase();-->

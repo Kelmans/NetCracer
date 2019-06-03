@@ -9,7 +9,7 @@ $(document).ready(function() {
         var flag_km = 0;//Флаг нажатия для #km
         var flag_lm = 0;//Флаг нажатия для #lm
         // при клике по диву, делаем проверку
-        $(document).on('click', '.table__modified-checkbox', function () {
+        $(document).on('click', '.table-body__checkbox-wrapper', function () {
             var checkbox = $(this).find('input[type=checkbox]');
             // если чекбокс был активен
             if (checkbox.prop("checked")) {
@@ -31,16 +31,16 @@ $(document).ready(function() {
         $(document).on('click', '#box', function () { //Активация всех чекбоксов
             var manyCheckboxs = $(this).find('input[type=checkbox]');
             if (manyCheckboxs.prop("checked")) { //включен
-                $('.table__modified-checkbox input:checkbox').prop('checked', true);
-                $('.table__modified-checkbox').not(this).addClass("check_active");
+                $('.table-body__checkbox-wrapper input:checkbox').prop('checked', true);
+                $('.table-body__checkbox-wrapper').not(this).addClass("check_active");
 
             } else { //выключен
-                $('.table__modified-checkbox input:checkbox').prop('checked', false);
-                $('.table__modified-checkbox').not(this).removeClass("check_active");
+                $('.table-body__checkbox-wrapper input:checkbox').prop('checked', false);
+                $('.table-body__checkbox-wrapper').not(this).removeClass("check_active");
 
             }
         });
-        $(document).on('click', '.table__modified-checkbox', function () {
+        $(document).on('click', '.table-body__checkbox-wrapper', function () {
             var inps = document.getElementsByTagName('tr');
             var count = $('.inp[type=checkbox]:checked').length;
             if (count == inps.length - 1) {
@@ -49,50 +49,50 @@ $(document).ready(function() {
                 $('#box').removeClass("check_active");
             }
         });
-        $('#additionLineage').click(function () {
+        $('#addition-lineage').click(function () {
             if (counterAdditionLineage == 0) {
                 $('#bossTable')
                     .append($('<tr class="remove_class">')
-                        .append($('<td>').append($('<div class="table__modified-checkbox der">').append($('<span>').append($('<input type="checkbox" class="inp" >')))))
-                        .append($('<td>').append($('<div class="table__name-line modified-font">').append($('<div class="text_Line">').append('<input type=text  id="table__name-line"class="inpt inpt1">'), $('<div class="fasten">'))))
-                        .append($('<td>').append($('<div class="table__status-line modified-font">').append($('<div>').append('<input type=text id="table__status-line"class="inpt inpt2">'))))
-                        .append($('<td>').append($('<div class="table__aut-line modified-font">').append($('<div>').append('<input type=text id="table__aut-line"  class="inpt inpt3">'))))
-                        .append($('<td>').append($('<div class="table__login-line modified-font">').append($('<div>').append('<input type=text id="table__login-line" class="inpt inpt4">'))))
-                        .append($('<td>').append($('<div class="table__container-img">').append($('<div id="qwe" class="table__container-img-item2">'))))
+                        .append($('<td class="table-body__cell">').append($('<div class="table-body__checkbox-wrapper der">').append($('<span>').append($('<input type="checkbox" class="inp" >')))))
+                        .append($('<td class="table-body__cell">').append($('<div class="table-body__name-line modified-font">').append($('<div class="text_Line">').append('<input type=text  id="table-body__name-line"class="search-input search-input__one-cell " >'), $('<div class="table-body__visible-pin">'))))
+                        .append($('<td class="table-body__cell">').append($('<div class="table-body__status-line modified-font">').append($('<div>').append('<input type=text id="table-body__status-line"class="search-input search-input__two-cell ">'))))
+                        .append($('<td class="table-body__cell">').append($('<div class="table-body__aut-line modified-font">').append($('<div>').append('<input type=text id="table-body__aut-line"  class="search-input search-input__three-cell ">'))))
+                        .append($('<td class="table-body__cell">').append($('<div class="table-body__login-line modified-font">').append($('<div>').append('<input type=text id="table-body__login-line" class="search-input search-input__four-cell ">'))))
+                        .append($('<td class="table-body__cell">').append($('<div class="table-body__img-wrapper">').append($('<div id="qwe" class="table-body__img-wrapper-item2">'))))
                     )
-                $('.table__modified-checkbox input:checkbox').prop('checked', false);
-                $('.table__modified-checkbox').not(this).removeClass("check_active");
-                $('div.table__name-line').addClass('table__name-line');
+                $('.table-body__checkbox-wrapper input:checkbox').prop('checked', false);
+                $('.table-body__checkbox-wrapper').not(this).removeClass("check_active");
+                $('div.table-body__name-line').addClass('table-body__name-line');
                 $.each(rowsOne, function (index, row) {
                     $('#bossTable').children('tbody').append(row);
                 });
-                $('.table__container-arrow').removeClass('containerArrowSortDec');
-                $('.table__container-arrow').removeClass('containerArrowSortInc');
+                $('.table-head__icons-arrow').removeClass('containerArrowSortDec');
+                $('.table-head__icons-arrow').removeClass('containerArrowSortInc');
                 counterAdditionLineage++;
             } else {
                 alert("Заполните предыдущую строку и нажмите 'ОК' ");
             }
 
         });
-        $(document).on('click', '.table__container-img-item2', function () {// изменить имена
+        $(document).on('click', '.table-body__img-wrapper-item2', function () {// изменить имена
 
-            if (document.getElementById("table__name-line").value === '' || document.getElementById("table__status-line").value === '' || document.getElementById("table__aut-line").value === '' || document.getElementById("table__login-line").value === '') {
+            if (document.getElementById("table-body__name-line").value === '' || document.getElementById("table-body__status-line").value === '' || document.getElementById("table-body__aut-line").value === '' || document.getElementById("table-body__login-line").value === '') {
                 alert("Заполните все поля")
             } else {
                 //Добавляю html код
                 //Создал переменные для хранения значений из инпутов
                 //У ново добавленого штмл кода убираю дисплэй нон и добавляю его инпутам
                 //Сделал для сортировки массива
-                var inputNameLine = document.getElementById("table__name-line").value;
-                var inputStatusLine = document.getElementById("table__name-line").value;
-                var inputAutLine = document.getElementById("table__name-line").value;
-                var inputLoginLine = document.getElementById("table__login-line").value;
-                var as = '<tr class="add_class dis"><td><div class="table__modified-checkbox der"><span> <input type="checkbox" class="inp"></span></div></td><td><div class="table__name-line"><div  class="text_Line">' + inputNameLine + '</div> <div class="fasten"></div></div></td> <td><div class="table__status-line">' + inputStatusLine + '</div></td> <td><div class="table__aut-line">' + inputAutLine + '</div></td> <td><div class="table__login-line">' + inputLoginLine + '</div></td> <td><div class="table__container-img"><div class="table__container-img-item"></div></div></td> </tr>'
+                var inputNameLine = document.getElementById("table-body__name-line").value;
+                var inputStatusLine = document.getElementById("table-body__name-line").value;
+                var inputAutLine = document.getElementById("table-body__name-line").value;
+                var inputLoginLine = document.getElementById("table-body__login-line").value;
+                var as = '<tr class="add_class dis"><td class="table-body__cell"><div class="table-body__checkbox-wrapper der"><span> <input type="checkbox" class="inp"></span></div></td><td class="table-body__cell"><div class="table-body__name-line"><div  class="text_Line">' + inputNameLine + '</div> <div class="table-body__visible-pin"></div></div></td> <td class="table-body__cell"><div class="table-body__status-line">' + inputStatusLine + '</div></td> <td class="table-body__cell"><div class="table-body__aut-line">' + inputAutLine + '</div></td > <td class="table-body__cell"><div class="table-body__login-line">' + inputLoginLine + '</div></td>  <td  class="table-body__cell"><div class="table-body__img-wrapper"><div class="table-body__img-wrapper_item"></div></div></td> </tr>'
                 $('#bossTable').append(as);
-                $(this).addClass("container_img-item");
+                $(this).addClass("table-body__img-wrapper_item");
                 $('input[type=text]').prop('disabled', true);
                 $('input[type=text]').addClass('scr');
-                $(this).removeClass("container_img-item2");
+                $(this).removeClass("table-body__img-wrapper-item2");
                 $('.add_class').removeClass('dis');
                 $('.remove_class').addClass('dis');
                 counterAdditionLineage--;
@@ -100,7 +100,7 @@ $(document).ready(function() {
 
         });
 
-        $('.buttonDeletion').click(function () {
+        $('#remove-lineage').click(function () {
             var flagSearch = true;
             $('tbody input:checkbox:checked').each(function () {
 
@@ -118,16 +118,16 @@ $(document).ready(function() {
                 alert('Закончите с редактированием новой строки');
             }
         });
-        $('.table__container-arrow').click(function (event) {
+        $('.table-head__icons-arrow').click(function (event) {
 
             var element_click = event.target.className; // Тут имя класса по которому тыкнули
-            var parent_click_element = $('.table__container-arrow').closest(".modified-font");
-            var rods = event.target.closest('.modified-font');
+            var parent_click_element = $('.table-head__icons-arrow').closest(".font-weight_bold");
+            var rods = event.target.closest('.font-weight_bold');
             var nameClass = '.' + rods.className;
             var rod = event.target.closest('th').id;// тут ID тега TH
             var id_element;
 
-            if (element_click == 'table__container-arrow' || element_click == 'table__container-arrow containerArrowSortDec' || element_click == 'table__container-arrow containerArrowSortDec containerArrowSortInc') {
+            if (element_click == 'table-head__icons-arrow' || element_click == 'table-head__icons-arrow containerArrowSortDec' || element_click == 'table-head__icons-arrow containerArrowSortDec containerArrowSortInc') {
                 $('#bossTable td').removeClass('fontWe');
                 if (rod == 'sl') {
                     var n = 1;
@@ -142,22 +142,22 @@ $(document).ready(function() {
                     var n = 4
                     flag_lm++;
                 }
-                if (element_click == 'table__container-arrow') {
+                if (element_click == 'table-head__icons-arrow') {
                     counterСlicks = 0;
-                } else if (element_click == 'table__container-arrow containerArrowSortDec') {
+                } else if (element_click == 'table-head__icons-arrow containerArrowSortDec') {
                     counterСlicks = 1;
                 } else {
                     counterСlicks = 2;
                 }
 
                 if (counterСlicks == 0) {
-                    $('.table__container-arrow').removeClass('containerArrowSortDec');
-                    $('.table__container-arrow').removeClass('containerArrowSortInc');
+                    $('.table-head__icons-arrow').removeClass('containerArrowSortDec');
+                    $('.table-head__icons-arrow').removeClass('containerArrowSortInc');
                     constSort *= -1;
                     $(event.target).addClass('containerArrowSortDec');
                     sortTable(constSort, n);
                 } else if (counterСlicks == 1) {
-                    $('.table__container-arrow').removeClass('containerArrowSortInc');
+                    $('.table-head__icons-arrow').removeClass('containerArrowSortInc');
                     $(event.target).addClass('containerArrowSortInc');
                     constSort *= -1;
                     sortTable(constSort, n);
@@ -174,7 +174,7 @@ $(document).ready(function() {
                 var rows = $('#bossTable tbody  tr').get();
                 ``
                 rows.sort(function (a, b) {
-                    $('.table__container-arrow').parents('.modifiedFont').addClass('fontWe');
+                    $('.table-head__icons-arrow').parents('.modifiedFont').addClass('fontWe');
                     var A = getVal(a);
                     var B = getVal(b);
 
