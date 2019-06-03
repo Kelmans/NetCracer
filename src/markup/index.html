@@ -12,26 +12,26 @@
     <div class="content">
         <div class="container">
             <div class="container-button">
-                <div id="additionLineage" class="container_button-addition"><input type="button" class="button" value="add"></div>
-                <div class="container_button-Deletion"><input type="button" class="button" value="Remove"></div>
+                <div id="additionLineage" class="container__button_addition"><input type="button" class="container-button" value="add"></div>
+                <div class="container_button_deletion"><input type="button" class="container-button" value="Remove"></div>
             </div>
             <div class="container-table">
-             <table id="bossTable">
+             <table class="table" id="bossTable">
             <caption>Tree table</caption>
             <thead >
-            <tr id="headLineage">
-                <th><div id="box" class="modifiedCheckbox "><span class=""><input type="checkbox"></span></div></th>
-                <th id="sl" data-type="string" ><div class="nameLine modifiedFont"><span class="headText">Name</span><div class="containerFiltr"></div><div class="containerArrow"></div></div></th>
-                <th id="nm" ><div class="statusHead modifiedFont"><span>Statuses</span><div class="containerFiltr"></div><div class="containerArrow"></div></div></th>
-                <th id="km"><div class="autHead modifiedFont"><div>Authentication</div><div  class="containerFiltr"></div><div class="containerArrow"></div></div></th>
-                <th id="lm"><div class="loginHead modifiedFont"><div>Last By Login</div><div class="containerArrow"></div></div></th>
-                <th></th>
+            <tr class="table__header" id="headLineage">
+                <th class="table__data-head"><div id="box" class="table__modified-checkbox "><span><input type="checkbox"></span></div></th>
+                <th class="table__data-head" id="sl" data-type="string"><div class="table__name-line table__name-line_modified-font"><span class="table__head-text">Name</span><div class="table__container-filtr"></div><div class="table__container-arrow"></div></div></th>
+                <th class="table__data-head" id="nm"><div class="table__status-head table__name-line_modified-font"><span>Statuses</span><div class="table__container-filtr"></div><div class="table__container-arrow"></div></div></th>
+                <th class="table__data-head" id="km"><div class="table__aut-head table__name-line_modified-font"><div>Authentication</div><div class="table__container-filtr"></div><div class="table__container-arrow"></div></div></th>
+                <th class="table__data-head" id="lm"><div class="table__login-head table__name-line_modified-font"><div>Last By Login</div><div class="table__container-arrow"></div></div></th>
+                <th class="table__data-head"></th>
             </tr>
             </thead>
                  <tbody id="table_Body">
             <tr>
-                <td><div  class="modifiedCheckbox der"><span> <input type="checkbox" class="inp"></span></div></td>
-                <td><div class="nameLine modifiedFont"><div>Abaa</div> <div class="fasten"></div></div></td>
+                <td><div  class="table__modified-checkbox der"><span> <input type="checkbox" class="inp"></span></div></td>
+                <td><div class="table__name-line modifiedFont"><div>Abaa</div> <div class="fasten"></div></div></td>
                 <td><div class="statusLine modifiedFont">Enabled</div></td>
                 <td><div class="autLine modifiedFont">LDAP</div></td>
                 <td><div class="loginLine modifiedFont">23:42 / 31 july 2013</div></td>
@@ -39,56 +39,56 @@
                 </td>
             </tr>
             <tr>
-                <td><div  class="modifiedCheckbox der"><span> <input type="checkbox" class="inp"></span></div></td>
-                <td><div class="nameLine modifiedFont"><div>Eda</div> <div class="fasten"></div></div></td>
+                <td><div  class="table__modified-checkbox der"><span> <input type="checkbox" class="inp"></span></div></td>
+                <td><div class="table__name-line modifiedFont"><div>Eda</div> <div class="fasten"></div></div></td>
                 <td><div class="statusLine modifiedFont">Disabled</div></td>
                 <td><div class="autLine modifiedFont">ADLPs</div></td>
                 <td><div class="loginLine modifiedFont">22:42 / 31 july 2015</div></td>
                 <td><div class="container_img"><div class="container_img-item"></div></div></td>
             </tr>
             <tr>
-                <td><div  class="modifiedCheckbox der"><span> <input type="checkbox" class="inp"></span></div></td>
-                <td><div class="nameLine modifiedFont"><div>Baooa</div> <div class="fasten"></div></div></td>
+                <td><div  class="table__modified-checkbox der"><span> <input type="checkbox" class="inp"></span></div></td>
+                <td><div class="table__name-line modifiedFont"><div>Baooa</div> <div class="fasten"></div></div></td>
                 <td><div class="statusLine modifiedFont">Enabled</div></td>
                 <td><div class="autLine modifiedFont">ADLP</div></td>
                 <td><div class="loginLine modifiedFont">20:42 / 31 july 2014</div></td>
                 <td><div class="container_img"><div class="container_img-item"></div></div></td>
             </tr>
             <tr>
-                <td><div  class="modifiedCheckbox der"><span> <input type="checkbox" class="inp"></span></div></td>
-                <td><div class="nameLine modifiedFont"><div>Codssss</div> <div class="fasten"></div></div></td>
+                <td><div  class="table__modified-checkbox der"><span> <input type="checkbox" class="inp"></span></div></td>
+                <td><div class="table__name-line modifiedFont"><div>Codssss</div> <div class="fasten"></div></div></td>
                 <td><div class="statusLine modifiedFont">Disabled</div></td>
                 <td><div class="autLine modifiedFont">LDAP</div></td>
                 <td><div class="loginLine modifiedFont">18:42 / 31 july 2015</div></td>
                 <td><div class="container_img"><div class="container_img-item"></div></div></td>
             </tr>
             <tr>
-                <td><div  class="modifiedCheckbox der"><span> <input type="checkbox" class="inp"></span></div></td>
-                <td><div class="nameLine modifiedFont"><div>Acoodsa</div> <div class="fasten"></div></div></td>
+                <td><div  class="table__modified-checkbox der"><span> <input type="checkbox" class="inp"></span></div></td>
+                <td><div class="table__name-line modifiedFont"><div>Acoodsa</div> <div class="fasten"></div></div></td>
                 <td><div class="statusLine modifiedFont">Enabled</div></td>
                 <td><div class="autLine modifiedFont">ADLP</div></td>
                 <td><div class="loginLine modifiedFont">16:42 / 31 july 2017</div></td>
                 <td><div class="container_img"><div class="container_img-item"></div></div></td>
             </tr>
             <tr>
-                <td><div class="modifiedCheckbox der"><span> <input type="checkbox" class="inp" ></span></div></td>
-                <td><div class="nameLine modifiedFont"><div>WaodsSa</div> <div class="fasten"></div></div></td>
+                <td><div class="table__modified-checkbox der"><span> <input type="checkbox" class="inp" ></span></div></td>
+                <td><div class="table__name-line modifiedFont"><div>WaodsSa</div> <div class="fasten"></div></div></td>
                 <td><div class="statusLine modifiedFont">Disabled</div></td>
                 <td><div class="autLine modifiedFont">LDAP</div></td>
                 <td><div class="loginLine modifiedFont">12:42 / 31 july 2016</div></td>
                 <td><div class="container_img"><div class="container_img-item"></div></div></td>
             </tr>
             <tr>
-                <td><div  class="modifiedCheckbox der"><span> <input type="checkbox" class="inp"></span></div></td>
-                <td><div class="nameLine modifiedFont"><div>BwodsSam</div> <div class="fasten"></div></div></td>
+                <td><div  class="table__modified-checkbox der"><span> <input type="checkbox" class="inp"></span></div></td>
+                <td><div class="table__name-line modifiedFont"><div>BwodsSam</div> <div class="fasten"></div></div></td>
                 <td><div class="statusLine modifiedFont">Enabled</div></td>
                 <td><div class="autLine modifiedFont">DAPL</div></td>
                 <td><div class="loginLine modifiedFont">10:42 / 3 july 2016</div></td>
                 <td><div class="container_img"><div class="container_img-item"></div></div></td>
             </tr>
             <tr>
-                <td><div class="modifiedCheckbox der"><span> <input type="checkbox" class="inp"></span></div></td>
-                <td><div class="nameLine modifiedFont"><div>CdodsSaaa</div> <div class="fasten"></div></div></td>
+                <td><div class="table__modified-checkbox der"><span> <input type="checkbox" class="inp"></span></div></td>
+                <td><div class="table__name-line modifiedFont"><div>CdodsSaaa</div> <div class="fasten"></div></div></td>
                 <td><div class="statusLine modifiedFont">Disabled</div></td>
                 <td><div class="autLine modifiedFont">LDAP</div></td>
                 <td><div class="loginLine modifiedFont">8:42 / 31 july 2016</div></td>
@@ -96,8 +96,8 @@
             </tr>
             <tr>
 <!--                <td><label class="checkbox-item"><input hidden type="checkbox"><span class="checker"></span></label></td>-->
-                <td><div  class="modifiedCheckbox der"><span> <input type="checkbox" class="inp"></span></div></td>
-                <td><div class="nameLine modifiedFont"><div>DsodsSamaa</div> <div class="fasten"></div></div></td>
+                <td><div  class="table__modified-checkbox der"><span> <input type="checkbox" class="inp"></span></div></td>
+                <td><div class="table__name-line modifiedFont"><div>DsodsSamaa</div> <div class="fasten"></div></div></td>
                 <td><div class="statusLine modifiedFont">Disabled</div></td>
                 <td><div class="autLine modifiedFont">DAPL</div></td>
                 <td><div class="loginLine modifiedFont">6:42 / 31 july 2017</div></td>
@@ -141,12 +141,12 @@
 <!--        $(document).on('click', '#box', function () {-->
 <!--            var checkboxs = $(this).find('input[type=checkbox]');-->
 <!--            if (checkboxs.prop("checked")) { //включен-->
-<!--                $('.modifiedCheckbox input:checkbox').prop('checked', true);-->
-<!--                $('.modifiedCheckbox').not(this).addClass("check_active");-->
+<!--                $('.table__modified-checkbox input:checkbox').prop('checked', true);-->
+<!--                $('.table__modified-checkbox').not(this).addClass("check_active");-->
 
 <!--            } else { //выключен-->
-<!--                $('.modifiedCheckbox input:checkbox').prop('checked', false);-->
-<!--                $('.modifiedCheckbox').not(this).removeClass("check_active");-->
+<!--                $('.table__modified-checkbox input:checkbox').prop('checked', false);-->
+<!--                $('.table__modified-checkbox').not(this).removeClass("check_active");-->
 
 <!--            }-->
 <!--        });-->
@@ -163,21 +163,21 @@
 <!--            if (counts == 0) {-->
 <!--                $('#bossTable')-->
 <!--                    .append($('<tr class="remove_class">')-->
-<!--                        .append($('<td>').append($('<div class="modifiedCheckbox der">').append($('<span>').append($('<input type="checkbox" class="inp" >')))))-->
-<!--                        .append($('<td>').append($('<div class="nameLine modifiedFont">').append($('<div class="text_Line">').append('<input type=text  id="nameLine"class="inpt inpt1">'), $('<div class="fasten">'))))-->
+<!--                        .append($('<td>').append($('<div class="table__modified-checkbox der">').append($('<span>').append($('<input type="checkbox" class="inp" >')))))-->
+<!--                        .append($('<td>').append($('<div class="table__name-line modifiedFont">').append($('<div class="text_Line">').append('<input type=text  id="table__name-line"class="inpt inpt1">'), $('<div class="fasten">'))))-->
 <!--                        .append($('<td>').append($('<div class="statusLine modifiedFont">').append($('<div>').append('<input type=text id="statusLine"class="inpt inpt2">'))))-->
 <!--                        .append($('<td>').append($('<div class="autLine modifiedFont">').append($('<div>').append('<input type=text id="autLine"  class="inpt inpt3">'))))-->
 <!--                        .append($('<td>').append($('<div class="loginLine modifiedFont">').append($('<div>').append('<input type=text id="loginLine" class="inpt inpt4">'))))-->
 <!--                        .append($('<td>').append($('<div class="container_img">').append($('<div id="qwe" class="container_img-item2">'))))-->
 <!--                    )-->
-<!--                $('.modifiedCheckbox input:checkbox').prop('checked', false);-->
-<!--                $('.modifiedCheckbox').not(this).removeClass("check_active");-->
-<!--                $('div.nameLine').addClass('nameLine');-->
+<!--                $('.table__modified-checkbox input:checkbox').prop('checked', false);-->
+<!--                $('.table__modified-checkbox').not(this).removeClass("check_active");-->
+<!--                $('div.table__name-line').addClass('table__name-line');-->
 <!--                $.each(rowsOne, function (index, row) {-->
 <!--                    $('#bossTable').children('tbody').append(row);-->
 <!--                });-->
-<!--                $('.containerArrow').removeClass('containerArrowSortDec');-->
-<!--                $('.containerArrow').removeClass('containerArrowSortInc');-->
+<!--                $('.table__container-arrow').removeClass('containerArrowSortDec');-->
+<!--                $('.table__container-arrow').removeClass('containerArrowSortInc');-->
 <!--                counts++;-->
 <!--            } else {-->
 <!--                alert("Заполните предыдущую строку и нажмите 'ОК' ");-->
@@ -186,18 +186,18 @@
 <!--        });-->
 <!--        $(document).on('click', '.container_img-item2', function () {// изменить имена-->
 
-<!--            if (document.getElementById("nameLine").value === '' || document.getElementById("statusLine").value === '' || document.getElementById("autLine").value === '' || document.getElementById("loginLine").value === '') {-->
+<!--            if (document.getElementById("table__name-line").value === '' || document.getElementById("statusLine").value === '' || document.getElementById("autLine").value === '' || document.getElementById("loginLine").value === '') {-->
 <!--                alert("Заполните все поля")-->
 <!--            } else {-->
 <!--                //Добавляю html код-->
 <!--                //Создал переменные для хранения значений из инпутов-->
 <!--                //У ново добавленого штмл кода убираю дисплэй нон и добавляю его инпутам-->
 <!--                //Сделал для сортировки массива-->
-<!--                var inputNameLine = document.getElementById("nameLine").value;-->
-<!--                var inputStatusLine = document.getElementById("nameLine").value;-->
-<!--                var inputAutLine = document.getElementById("nameLine").value;-->
+<!--                var inputNameLine = document.getElementById("table__name-line").value;-->
+<!--                var inputStatusLine = document.getElementById("table__name-line").value;-->
+<!--                var inputAutLine = document.getElementById("table__name-line").value;-->
 <!--                var inputLoginLine = document.getElementById("loginLine").value;-->
-<!--                var as = '<tr class="add_class dis"><td><div class="modifiedCheckbox der"><span> <input type="checkbox" class="inp"></span></div></td><td><div class="nameLine"><div  class="text_Line">'+inputNameLine+'</div> <div class="fasten"></div></div></td> <td><div class="statusLine">'+inputStatusLine+'</div></td> <td><div class="autLine">'+inputAutLine+'</div></td> <td><div class="loginLine">'+inputLoginLine+'</div></td> <td><div class="container_img"><div class="container_img-item"></div></div></td> </tr>'-->
+<!--                var as = '<tr class="add_class dis"><td><div class="table__modified-checkbox der"><span> <input type="checkbox" class="inp"></span></div></td><td><div class="table__name-line"><div  class="text_Line">'+inputNameLine+'</div> <div class="fasten"></div></div></td> <td><div class="statusLine">'+inputStatusLine+'</div></td> <td><div class="autLine">'+inputAutLine+'</div></td> <td><div class="loginLine">'+inputLoginLine+'</div></td> <td><div class="container_img"><div class="container_img-item"></div></div></td> </tr>'-->
 <!--                $('#bossTable').append(as);-->
 <!--                $(this).addClass("container_img-item");-->
 <!--                $('input[type=text]').prop('disabled', true);-->
@@ -229,13 +229,13 @@
 <!--        $('table' ).click(function( event ) {-->
 
 <!--            var element_click = event.target.className; // Тут имя класса по которому тыкнули-->
-<!--            var parent_click_element = $('.containerArrow').closest(".modifiedFont");-->
+<!--            var parent_click_element = $('.table__container-arrow').closest(".modifiedFont");-->
 <!--            var rods = event.target.closest('.modifiedFont');-->
 <!--            var nameClass = '.'+ rods.className;-->
 <!--            var rod = event.target.closest('th').id;// тут ID тега TH-->
 <!--            var id_element;-->
 
-<!--            if(element_click =='containerArrow' || element_click =='containerArrow containerArrowSortDec'|| element_click =='containerArrow containerArrowSortDec containerArrowSortInc' ){-->
+<!--            if(element_click =='table__container-arrow' || element_click =='table__container-arrow containerArrowSortDec'|| element_click =='table__container-arrow containerArrowSortDec containerArrowSortInc' ){-->
 <!--                $('#bossTable td').removeClass('fontWe');-->
 <!--                if(rod =='sl'){-->
 <!--                    var  n=1;-->
@@ -250,22 +250,22 @@
 <!--                    var n=4-->
 <!--                    flag_lm++;-->
 <!--                }-->
-<!--                if(element_click =='containerArrow'){-->
+<!--                if(element_click =='table__container-arrow'){-->
 <!--                   chet = 0;-->
-<!--                }else if(element_click =='containerArrow containerArrowSortDec'){-->
+<!--                }else if(element_click =='table__container-arrow containerArrowSortDec'){-->
 <!--                    chet =1;-->
 <!--                } else{-->
 <!--                   chet = 2;-->
 <!--                }-->
 
 <!--                if (chet == 0) {-->
-<!--                    $('.containerArrow').removeClass('containerArrowSortDec');-->
-<!--                    $('.containerArrow').removeClass('containerArrowSortInc');-->
+<!--                    $('.table__container-arrow').removeClass('containerArrowSortDec');-->
+<!--                    $('.table__container-arrow').removeClass('containerArrowSortInc');-->
 <!--                    f_id_element *= -1;-->
 <!--                    $(event.target).addClass('containerArrowSortDec');-->
 <!--                    sortTable(f_id_element, n);-->
 <!--                } else if (chet == 1) {-->
-<!--                    $('.containerArrow').removeClass('containerArrowSortInc');-->
+<!--                    $('.table__container-arrow').removeClass('containerArrowSortInc');-->
 <!--                    $(event.target).addClass('containerArrowSortInc');-->
 <!--                    f_id_element *= -1;-->
 <!--                    sortTable(f_id_element, n);-->
@@ -281,7 +281,7 @@
 <!--            function sortTable(f, n) {-->
 <!--                var rows = $('#bossTable tbody  tr').get();``-->
 <!--                    rows.sort(function (a, b) {-->
-<!--                        $('.containerArrow').parents('.modifiedFont').addClass('fontWe');-->
+<!--                        $('.table__container-arrow').parents('.modifiedFont').addClass('fontWe');-->
 <!--                        var A = getVal(a);-->
 <!--                        var B = getVal(b);-->
 
@@ -360,14 +360,14 @@
 <!--       //          $(document).on('click', ' #sl', function () {-->
 <!--       //              var id_click = (this.id);-->
 <!--       //              $('.gl_str').removeClass('containerArrowSortWane');-->
-<!--       //              $('.nameLine').addClass('fontWe');-->
+<!--       //              $('.table__name-line').addClass('fontWe');-->
 <!--       //              $('.autLine').removeClass('fontWe');-->
 <!--       //              $('.statusLine').removeClass('fontWe');-->
 <!--       //              $('.loginLine').removeClass('fontWe');-->
 <!--       //              //   $('.gl_strTwo').css('opacity', '0');-->
 <!--       //              $('#sl .gl_str').addClass('containerArrowSortWane');-->
-<!--       //              $('.modifiedCheckbox input:checkbox').prop('checked', false);-->
-<!--       //              $('.modifiedCheckbox').removeClass("check_active");-->
+<!--       //              $('.table__modified-checkbox input:checkbox').prop('checked', false);-->
+<!--       //              $('.table__modified-checkbox').removeClass("check_active");-->
 <!--       //-->
 <!--       //              if (chet == 0) {-->
 <!--       //-->
@@ -389,7 +389,7 @@
 <!--       //                  });-->
 <!--       //                  chet = 0;-->
 <!--       //                  $('.gl_str').removeClass('containerArrowSortWane');-->
-<!--       //                  $('.nameLine').removeClass('fontWe');-->
+<!--       //                  $('.table__name-line').removeClass('fontWe');-->
 <!--       //                  $('.gl_str').removeClass('gl_strDisplayVr');-->
 <!--       //              }-->
 <!--       //          });-->
@@ -398,13 +398,13 @@
 <!--       //              var id_click = (this.id);-->
 <!--       //              var id_chet_click = 0;-->
 <!--       //              $('.gl_str').removeClass('containerArrowSortWane');-->
-<!--       //              $('.nameLine').removeClass('fontWe');-->
+<!--       //              $('.table__name-line').removeClass('fontWe');-->
 <!--       //              $('.autLine').removeClass('fontWe');-->
 <!--       //              $('.statusLine').addClass('fontWe');-->
 <!--       //              $('.loginLine').removeClass('fontWe');-->
 <!--       //              $('#nm .gl_str').addClass('containerArrowSortWane');-->
-<!--       //              $('.modifiedCheckbox input:checkbox').prop('checked', false);-->
-<!--       //              $('.modifiedCheckbox').removeClass("check_active");-->
+<!--       //              $('.table__modified-checkbox input:checkbox').prop('checked', false);-->
+<!--       //              $('.table__modified-checkbox').removeClass("check_active");-->
 <!--       //-->
 <!--       //              if (chet == 0) {-->
 <!--       //                  f_nm *= -1;-->
@@ -430,14 +430,14 @@
 <!--       //          });-->
 <!--       //-->
 <!--       //          $(document).on('click', '#km ', function () {-->
-<!--       //              $('.nameLine').removeClass('fontWe');-->
+<!--       //              $('.table__name-line').removeClass('fontWe');-->
 <!--       //              $('.autLine').addClass('fontWe');-->
 <!--       //              $('.statusLine').removeClass('fontWe');-->
 <!--       //              $('.loginLine').removeClass('fontWe');-->
 <!--       //              $('.gl_str').removeClass('containerArrowSortWane');-->
 <!--       //              $('#km .gl_str').addClass('containerArrowSortWane');-->
-<!--       //              $('.modifiedCheckbox input:checkbox').prop('checked', false);-->
-<!--       //              $('.modifiedCheckbox').removeClass("check_active");-->
+<!--       //              $('.table__modified-checkbox input:checkbox').prop('checked', false);-->
+<!--       //              $('.table__modified-checkbox').removeClass("check_active");-->
 <!--       //-->
 <!--       //              if (chet == 0) {-->
 <!--       //                  f_km *= -1;-->
@@ -462,14 +462,14 @@
 <!--       //              }-->
 <!--       //          });-->
 <!--       //          $(document).on('click', '#lm ', function () {-->
-<!--       //              $('.nameLine').removeClass('fontWe');-->
+<!--       //              $('.table__name-line').removeClass('fontWe');-->
 <!--       //              $('.autLine').removeClass('fontWe');-->
 <!--       //              $('.statusLine').removeClass('fontWe');-->
 <!--       //              $('.loginLine').addClass('fontWe');-->
 <!--       //              $('.gl_str').removeClass('containerArrowSortWane');-->
 <!--       //              $('#lm .gl_str').addClass('containerArrowSortWane');-->
-<!--       //              $('.modifiedCheckbox input:checkbox').prop('checked', false);-->
-<!--       //              $('.modifiedCheckbox').removeClass("check_active");-->
+<!--       //              $('.table__modified-checkbox input:checkbox').prop('checked', false);-->
+<!--       //              $('.table__modified-checkbox').removeClass("check_active");-->
 <!--       //-->
 <!--       //              if (chet == 0) {-->
 <!--       //                  f_lm *= -1;-->
@@ -522,7 +522,7 @@
 <!--            // }-->
 
 <!--            // var usl =  $('td');-->
-<!--            // var liArr = usl.children('.nameLine').get();-->
+<!--            // var liArr = usl.children('.table__name-line').get();-->
 <!--            // var arr = new Array()-->
 <!--            // for (var i = 0; i < liArr.length; i++) {-->
 <!--            //     arr.push(liArr[i].textContent)-->
@@ -535,7 +535,7 @@
 <!--            //     liArr[index].textContent = content-->
 <!--            // })-->
 
-<!--            // var mylist = $('.nameLine');-->
+<!--            // var mylist = $('.table__name-line');-->
 <!--            // var listitems = mylist.children('.text_Line').get();-->
 <!--            // listitems.sort(function(a, b) {-->
 <!--            //     return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());-->
@@ -543,7 +543,7 @@
 <!--            // $.each(listitems, function(idx, itm) { mylist.append(itm); });-->
 
 
-<!--           //  var mylist = $('.nameLine');-->
+<!--           //  var mylist = $('.table__name-line');-->
 <!--           //  let tbody = mylist.children('.text_Line').get();-->
 <!--           // // let tbody = document.getElementsByClassName('.text_Line');-->
 <!--           //  var newColl = []-->
@@ -557,7 +557,7 @@
 <!--           //          mylist.append(item);-->
 <!--           //      });-->
 
-<!--            // var mylists = $('.nameLine');-->
+<!--            // var mylists = $('.table__name-line');-->
 <!--            // var listitems = mylists.children('.text_Line').get();-->
 <!--            // listitems.sort(function(a, b) {-->
 <!--            //     var compA = $(a).text().toUpperCase();-->

@@ -45,7 +45,7 @@ tr:hover {
     height: 600px;
     margin: auto;
 }
-.nameLine{
+.table__name-line{
 
     font-size: 11px;
     height: 30px;
@@ -53,11 +53,11 @@ tr:hover {
     align-items: center;
     color: #0c6cb0;
 }
-.headText{
+.table__head-text{
     font-size: 9px;
     color: black;
 }
-.statusHead{
+.table__status-head{
     font-size: 9px;
     display: flex;
     padding-left: 80px;
@@ -67,7 +67,7 @@ tr:hover {
     display: flex;
     padding-left: 80px;
 }
-.autHead{
+.table__aut-head{
     font-size: 9px;
     display: flex;
     padding-left: 12px;
@@ -77,7 +77,7 @@ tr:hover {
     display: flex;
     padding-left: 14px;
 }
-.loginHead{
+.table__login-head{
     font-size: 9px;
     display: flex;
 }
@@ -155,7 +155,7 @@ tr:hover {
     /*font-family: FontAwesome;*/
     position: absolute;
 }
-.containerFiltr{
+.table__container-filtr{
     margin-left: 6px;
     display: inline-block;
     width:10px;
@@ -163,14 +163,14 @@ tr:hover {
     background: round;
     background-image: url("../img/fltr3.png");
 }
-.containerArrow{
+.table__container-arrow{
 
     margin-left: 3px;
     width: 11px;
     height: 10px;
 
 }
-.containerArrow:hover{
+.table__container-arrow:hover{
  cursor: pointer;
     margin-left: 3px;
     width: 11px;
@@ -199,12 +199,12 @@ tr:hover {
     height: 500px;
     background: url(../img/fon.png) round;
 }
-.modifiedCheckbox span input[type="checkbox"] {
+.table__modified-checkbox span input[type="checkbox"] {
     background: #ffffff;
     display: none;
     content: '\2713';
 }
-.modifiedCheckbox{
+.table__modified-checkbox{
     margin-right: -7px;
     margin-left: 6px;
     height: 25px;
@@ -213,7 +213,7 @@ tr:hover {
     align-items: center;
     cursor: pointer;
 }
-.modifiedCheckbox span  {
+.table__modified-checkbox span  {
     content: '\2713\0020';
     background: #ffffff;
     border: 1px solid rgb(214,219,224);
@@ -252,7 +252,7 @@ tr:hover {
     align-items: center;
     flex-flow: wrap;
 }
-.button{
+.container-button{
     border-radius: 5px;
     background: rgba(245,246,247,1);
     width: 100px;
