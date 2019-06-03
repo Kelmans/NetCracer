@@ -62,7 +62,7 @@ tr:hover {
     display: flex;
     padding-left: 80px;
 }
-.statusLine{
+.table__status-line{
     font-size: 12px;
     display: flex;
     padding-left: 80px;
@@ -72,7 +72,7 @@ tr:hover {
     display: flex;
     padding-left: 12px;
 }
-.autLine{
+.table__aut-line{
     font-size: 11px;
     display: flex;
     padding-left: 14px;
@@ -81,11 +81,11 @@ tr:hover {
     font-size: 9px;
     display: flex;
 }
-.loginLine{
+.table__login-line{
     font-size: 11px;
     display: flex;
 }
-.container_img{
+.table__container-img{
     margin: auto;
     /* margin-left: -21px; */
     margin-right: 7px;
@@ -252,7 +252,7 @@ tr:hover {
     align-items: center;
     flex-flow: wrap;
 }
-.container-button{
+.container-button__button{
     border-radius: 5px;
     background: rgba(245,246,247,1);
     width: 100px;

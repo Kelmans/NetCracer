@@ -54,11 +54,11 @@ $(document).ready(function() {
                 $('#bossTable')
                     .append($('<tr class="remove_class">')
                         .append($('<td>').append($('<div class="table__modified-checkbox der">').append($('<span>').append($('<input type="checkbox" class="inp" >')))))
-                        .append($('<td>').append($('<div class="table__name-line modifiedFont">').append($('<div class="text_Line">').append('<input type=text  id="table__name-line"class="inpt inpt1">'), $('<div class="fasten">'))))
-                        .append($('<td>').append($('<div class="statusLine modifiedFont">').append($('<div>').append('<input type=text id="statusLine"class="inpt inpt2">'))))
-                        .append($('<td>').append($('<div class="autLine modifiedFont">').append($('<div>').append('<input type=text id="autLine"  class="inpt inpt3">'))))
-                        .append($('<td>').append($('<div class="loginLine modifiedFont">').append($('<div>').append('<input type=text id="loginLine" class="inpt inpt4">'))))
-                        .append($('<td>').append($('<div class="container_img">').append($('<div id="qwe" class="container_img-item2">'))))
+                        .append($('<td>').append($('<div class="table__name-line modified-font">').append($('<div class="text_Line">').append('<input type=text  id="table__name-line"class="inpt inpt1">'), $('<div class="fasten">'))))
+                        .append($('<td>').append($('<div class="table__status-line modified-font">').append($('<div>').append('<input type=text id="table__status-line"class="inpt inpt2">'))))
+                        .append($('<td>').append($('<div class="table__aut-line modified-font">').append($('<div>').append('<input type=text id="table__aut-line"  class="inpt inpt3">'))))
+                        .append($('<td>').append($('<div class="table__login-line modified-font">').append($('<div>').append('<input type=text id="table__login-line" class="inpt inpt4">'))))
+                        .append($('<td>').append($('<div class="table__container-img">').append($('<div id="qwe" class="table__container-img-item2">'))))
                     )
                 $('.table__modified-checkbox input:checkbox').prop('checked', false);
                 $('.table__modified-checkbox').not(this).removeClass("check_active");
@@ -74,9 +74,9 @@ $(document).ready(function() {
             }
 
         });
-        $(document).on('click', '.container_img-item2', function () {// изменить имена
+        $(document).on('click', '.table__container-img-item2', function () {// изменить имена
 
-            if (document.getElementById("table__name-line").value === '' || document.getElementById("statusLine").value === '' || document.getElementById("autLine").value === '' || document.getElementById("loginLine").value === '') {
+            if (document.getElementById("table__name-line").value === '' || document.getElementById("table__status-line").value === '' || document.getElementById("table__aut-line").value === '' || document.getElementById("table__login-line").value === '') {
                 alert("Заполните все поля")
             } else {
                 //Добавляю html код
@@ -86,8 +86,8 @@ $(document).ready(function() {
                 var inputNameLine = document.getElementById("table__name-line").value;
                 var inputStatusLine = document.getElementById("table__name-line").value;
                 var inputAutLine = document.getElementById("table__name-line").value;
-                var inputLoginLine = document.getElementById("loginLine").value;
-                var as = '<tr class="add_class dis"><td><div class="table__modified-checkbox der"><span> <input type="checkbox" class="inp"></span></div></td><td><div class="table__name-line"><div  class="text_Line">' + inputNameLine + '</div> <div class="fasten"></div></div></td> <td><div class="statusLine">' + inputStatusLine + '</div></td> <td><div class="autLine">' + inputAutLine + '</div></td> <td><div class="loginLine">' + inputLoginLine + '</div></td> <td><div class="container_img"><div class="container_img-item"></div></div></td> </tr>'
+                var inputLoginLine = document.getElementById("table__login-line").value;
+                var as = '<tr class="add_class dis"><td><div class="table__modified-checkbox der"><span> <input type="checkbox" class="inp"></span></div></td><td><div class="table__name-line"><div  class="text_Line">' + inputNameLine + '</div> <div class="fasten"></div></div></td> <td><div class="table__status-line">' + inputStatusLine + '</div></td> <td><div class="table__aut-line">' + inputAutLine + '</div></td> <td><div class="table__login-line">' + inputLoginLine + '</div></td> <td><div class="table__container-img"><div class="table__container-img-item"></div></div></td> </tr>'
                 $('#bossTable').append(as);
                 $(this).addClass("container_img-item");
                 $('input[type=text]').prop('disabled', true);
@@ -121,8 +121,8 @@ $(document).ready(function() {
         $('.table__container-arrow').click(function (event) {
 
             var element_click = event.target.className; // Тут имя класса по которому тыкнули
-            var parent_click_element = $('.table__container-arrow').closest(".modifiedFont");
-            var rods = event.target.closest('.modifiedFont');
+            var parent_click_element = $('.table__container-arrow').closest(".modified-font");
+            var rods = event.target.closest('.modified-font');
             var nameClass = '.' + rods.className;
             var rod = event.target.closest('th').id;// тут ID тега TH
             var id_element;
