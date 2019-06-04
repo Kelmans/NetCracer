@@ -9,7 +9,7 @@ $(document).ready(function() {
         var flag_km = 0;//Флаг нажатия для #km
         var flag_lm = 0;//Флаг нажатия для #lm
         // при клике по диву, делаем проверку
-        $(document).on('click', '.table-body__checkbox-wrapper', function () {
+        $(document).on('click', '.table__checkbox-wrapper', function () {
             var checkbox = $(this).find('input[type=checkbox]');
             // если чекбокс был активен
             if (checkbox.prop("checked")) {
@@ -31,16 +31,16 @@ $(document).ready(function() {
         $(document).on('click', '#box', function () { //Активация всех чекбоксов
             var testActiveCheckbox = $(this).find('input[type=checkbox]');
             if (testActiveCheckbox.prop("checked")) { //включен
-                $('.table-body__checkbox-wrapper input:checkbox').prop('checked', true);
-                $('.table-body__checkbox-wrapper').not(this).addClass("check_active");
+                $('.table__checkbox-wrapper input:checkbox').prop('checked', true);
+                $('.table__checkbox-wrapper').not(this).addClass("check_active");
 
             } else { //выключен
-                $('.table-body__checkbox-wrapper input:checkbox').prop('checked', false);
-                $('.table-body__checkbox-wrapper').not(this).removeClass("check_active");
+                $('.table__checkbox-wrapper input:checkbox').prop('checked', false);
+                $('.table__checkbox-wrapper').not(this).removeClass("check_active");
 
             }
         });
-        $(document).on('click', '.table-body__checkbox-wrapper', function () {
+        $(document).on('click', '.table__checkbox-wrapper', function () {
             var variableRow = document.getElementsByTagName('tr');
             var countActiveCheckbox = $('.inp[type=checkbox]:checked').length;
             if (countActiveCheckbox == variableRow.length - 1) {
@@ -53,15 +53,15 @@ $(document).ready(function() {
             if (counterAdditionLineage == 0) {
                 $('#bossTable')
                     .append($('<tr class="remove_class">')
-                        .append($('<td class="table-body__cell">').append($('<div class="table-body__checkbox-wrapper der">').append($('<span>').append($('<input type="checkbox" class="inp" >')))))
+                        .append($('<td class="table-body__cell">').append($('<div class="table__checkbox-wrapper der">').append($('<span>').append($('<input type="checkbox" class="inp" >')))))
                         .append($('<td class="table-body__cell">').append($('<div class="table-body__name-line font-weight_bold">').append($('<div class="text_Line">').append('<input type=text  id="table-body__name-line"class="search-input search-input__one-cell " >'), $('<div class="table-body__visible-pin">'))))
                         .append($('<td class="table-body__cell">').append($('<div class="table-body__status-line font-weight_bold">').append($('<div>').append('<input type=text id="table-body__status-line"class="search-input search-input__two-cell ">'))))
                         .append($('<td class="table-body__cell">').append($('<div class="table-body__aut-line font-weight_bold">').append($('<div>').append('<input type=text id="table-body__aut-line"  class="search-input search-input__three-cell ">'))))
                         .append($('<td class="table-body__cell">').append($('<div class="table-body__login-line font-weight_bold">').append($('<div>').append('<input type=text id="table-body__login-line" class="search-input search-input__four-cell ">'))))
                         .append($('<td class="table-body__cell">').append($('<div class="table-body__img-wrapper">').append($('<div id="qwe" class="table-body__img-wrapper-item2">'))))
                     )
-                $('.table-body__checkbox-wrapper input:checkbox').prop('checked', false);
-                $('.table-body__checkbox-wrapper').not(this).removeClass("check_active");
+                $('.table__checkbox-wrapper input:checkbox').prop('checked', false);
+                $('.table__checkbox-wrapper').not(this).removeClass("check_active");
                 $('div.table-body__name-line').addClass('table-body__name-line');
                 $.each(rowsOne, function (index, row) {
                     $('#bossTable').children('tbody').append(row);
@@ -87,7 +87,7 @@ $(document).ready(function() {
                 var inputStatusLine = document.getElementById("table-body__name-line").value;
                 var inputAutLine = document.getElementById("table-body__name-line").value;
                 var inputLoginLine = document.getElementById("table-body__login-line").value;
-                var insertHTML = '<tr class="add_class dis"><td class="table-body__cell"><div class="table-body__checkbox-wrapper der"><span> <input type="checkbox" class="inp"></span></div></td><td class="table-body__cell"><div class="table-body__name-line"><div  class="text_Line">' + inputNameLine + '</div> <div class="table-body__visible-pin"></div></div></td> <td class="table-body__cell"><div class="table-body__status-line">' + inputStatusLine + '</div></td> <td class="table-body__cell"><div class="table-body__aut-line">' + inputAutLine + '</div></td > <td class="table-body__cell"><div class="table-body__login-line">' + inputLoginLine + '</div></td>  <td  class="table-body__cell"><div class="table-body__img-wrapper"><div class="table-body__img-wrapper_item"></div></div></td> </tr>'
+                var insertHTML = '<tr class="add_class dis"><td class="table-body__cell"><div class="table__checkbox-wrapper der"><span> <input type="checkbox" class="inp"></span></div></td><td class="table-body__cell"><div class="table-body__name-line"><div  class="text_Line">' + inputNameLine + '</div> <div class="table-body__visible-pin"></div></div></td> <td class="table-body__cell"><div class="table-body__status-line">' + inputStatusLine + '</div></td> <td class="table-body__cell"><div class="table-body__aut-line">' + inputAutLine + '</div></td > <td class="table-body__cell"><div class="table-body__login-line">' + inputLoginLine + '</div></td>  <td  class="table-body__cell"><div class="table-body__img-wrapper"><div class="table-body__img-wrapper_item"></div></div></td> </tr>'
                 $('#bossTable').append(insertHTML);
                 $(this).addClass("table-body__img-wrapper_item");
                 $('input[type=text]').prop('disabled', true);

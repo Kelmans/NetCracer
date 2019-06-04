@@ -9,8 +9,8 @@
     <script  language="JavaScript" type="text/javascript" src="../scripts/index.js"></script>
 </head>
 <body>
-    <div class="content">
-        <div class="container">
+    <div class="content-table">
+        <div class="wrapper-table-button">
             <div class="buttons-wrapper">
                 <button id="addition-lineage" class="button" value="add"><p>add</p></button>
                 <button id="remove-lineage" class="button" value="Remove"><p>remove</p></button>
@@ -20,17 +20,17 @@
             <caption>Tree table</caption>
             <thead class="table-head">
                 <tr class="table-head__row" id="headLineage">
-                    <th class="table-head__cell"><div id="box" class="table-body__checkbox-wrapper "><span><input type="checkbox"></span></div></th>
-                    <th class="table-head__cell" id="sl" data-type="string"><div class="table-body__name-line font-weight_bold"><span class="table-head_text">Name</span><div class="table-head__icons-filter"></div><div class="table-head__icons-arrow"></div></div></th>
-                    <th class="table-head__cell" id="nm"><div class="table__status-head font-weight_bold"><span>Statuses</span><div class="table-head__icons-filter"></div><div class="table-head__icons-arrow"></div></div></th>
-                    <th class="table-head__cell" id="km"><div class="table__aut-head font-weight_bold"><div>Authentication</div><div class="table-head__icons-filter"></div><div class="table-head__icons-arrow"></div></div></th>
-                    <th class="table-head__cell" id="lm"><div class="table__login-head font-weight_bold"><div>Last By Login</div><div class="table-head__icons-arrow"></div></div></th>
+                    <th class="table-head__cell"><div id="box" class="table__checkbox-wrapper "><span class="resetStyle"><input type="checkbox"></span></div></th>
+                    <th class="table-head__cell" id="sl" data-type="string"><div class="table-head__name-line font-weight_bold"><span class="table-head__text">Name</span><div class="table-head__icons-filter"></div><div class="table-head__icons-arrow"></div></div></th>
+                    <th class="table-head__cell" id="nm"><div class="table-head__status-head font-weight_bold"><span>Statuses</span><div class="table-head__icons-filter"></div><div class="table-head__icons-arrow"></div></div></th>
+                    <th class="table-head__cell" id="km"><div class="table-head__aut-head font-weight_bold"><div>Authentication</div><div class="table-head__icons-filter"></div><div class="table-head__icons-arrow"></div></div></th>
+                    <th class="table-head__cell" id="lm"><div class="table-head__login-head font-weight_bold"><div>Last By Login</div><div class="table-head__icons-arrow"></div></div></th>
                     <th class="table-head__cell"></th>
                 </tr>
             </thead>
                  <tbody class="table-body" id="table_Body">
             <tr class="table__row">
-                <td  class="table-body__cell"><div class="table-body__checkbox-wrapper der"><span> <input type="checkbox" class="inp"></span></div></td>
+                <td  class="table-body__cell"><div class="table__checkbox-wrapper der"><span class="resetStyle"> <input type="checkbox" class="inp"></span></div></td>
                 <td  class="table-body__cell"><div class="table-body__name-line font-weight_bold"><div>Abaa</div> <div class="table-body__visible-pin"></div></div></td>
                 <td  class="table-body__cell"><div class="table-body__status-line font-weight_bold">Enabled</div></td>
                 <td  class="table-body__cell"><div class="table-body__aut-line font-weight_bold">LDAP</div></td>
@@ -39,7 +39,7 @@
                 </td>
             </tr>
             <tr  class="table__row">
-                <td  class="table-body__cell"><div class="table-body__checkbox-wrapper der"><span> <input type="checkbox" class="inp"></span></div></td>
+                <td  class="table-body__cell"><div class="table__checkbox-wrapper der"><span class="resetStyle"> <input type="checkbox" class="inp"></span></div></td>
                 <td  class="table-body__cell"><div class="table-body__name-line font-weight_bold"><div>Eda</div> <div class="table-body__visible-pin"></div></div></td>
                 <td  class="table-body__cell"><div class="table-body__status-line font-weight_bold">Disabled</div></td>
                 <td  class="table-body__cell"><div class="table-body__aut-line font-weight_bold">ADLPs</div></td>
@@ -47,7 +47,7 @@
                 <td  class="table-body__cell"><div class="table-body__img-wrapper"><div class="table-body__img-wrapper_item"></div></div></td>
             </tr>
             <tr  class="table__row">
-                <td  class="table-body__cell"><div class="table-body__checkbox-wrapper der"><span> <input type="checkbox" class="inp"></span></div></td>
+                <td  class="table-body__cell"><div class="table__checkbox-wrapper der"><span class="resetStyle"> <input type="checkbox" class="inp"></span></div></td>
                 <td  class="table-body__cell"><div class="table-body__name-line font-weight_bold"><div>Baooa</div> <div class="table-body__visible-pin"></div></div></td>
                 <td  class="table-body__cell"><div class="table-body__status-line font-weight_bold">Enabled</div></td>
                 <td  class="table-body__cell"><div class="table-body__aut-line font-weight_bold">ADLP</div></td>
@@ -55,7 +55,7 @@
                 <td  class="table-body__cell"><div class="table-body__img-wrapper"><div class="table-body__img-wrapper_item"></div></div></td>
             </tr>
             <tr  class="table__row">
-                <td  class="table-body__cell"><div class="table-body__checkbox-wrapper der"><span> <input type="checkbox" class="inp"></span></div></td>
+                <td  class="table-body__cell"><div class="table__checkbox-wrapper der"><span class="resetStyle"> <input type="checkbox" class="inp"></span></div></td>
                 <td  class="table-body__cell"><div class="table-body__name-line font-weight_bold"><div>Codssss</div> <div class="table-body__visible-pin"></div></div></td>
                 <td  class="table-body__cell"><div class="table-body__status-line font-weight_bold">Disabled</div></td>
                 <td  class="table-body__cell"><div class="table-body__aut-line font-weight_bold">LDAP</div></td>
@@ -63,7 +63,7 @@
                 <td  class="table-body__cell"><div class="table-body__img-wrapper"><div class="table-body__img-wrapper_item"></div></div></td>
             </tr>
             <tr  class="table__row">
-                <td  class="table-body__cell"><div class="table-body__checkbox-wrapper der"><span> <input type="checkbox" class="inp"></span></div></td>
+                <td  class="table-body__cell"><div class="table__checkbox-wrapper der"><span class="resetStyle"> <input type="checkbox" class="inp"></span></div></td>
                 <td  class="table-body__cell"><div class="table-body__name-line modified-font"><div>Acoodsa</div> <div class="table-body__visible-pin"></div></div></td>
                 <td  class="table-body__cell"><div class="table-body__status-line font-weight_bold">Enabled</div></td>
                 <td  class="table-body__cell"><div class="table-body__aut-line font-weight_bold">ADLP</div></td>
@@ -71,7 +71,7 @@
                 <td  class="table-body__cell"><div class="table-body__img-wrapper"><div class="table-body__img-wrapper_item"></div></div></td>
             </tr>
             <tr  class="table__row">
-                <td  class="table-body__cell"><div class="table-body__checkbox-wrapper der"><span> <input type="checkbox" class="inp" ></span></div></td>
+                <td  class="table-body__cell"><div class="table__checkbox-wrapper der"><span class="resetStyle"> <input type="checkbox" class="inp" ></span></div></td>
                 <td  class="table-body__cell"><div class="table-body__name-line font-weight_bold"><div>WaodsSa</div> <div class="table-body__visible-pin"></div></div></td>
                 <td  class="table-body__cell"><div class="table-body__status-line font-weight_bold">Disabled</div></td>
                 <td  class="table-body__cell"><div class="table-body__aut-line font-weight_bold">LDAP</div></td>
@@ -79,7 +79,7 @@
                 <td  class="table-body__cell"><div class="table-body__img-wrapper"><div class="table-body__img-wrapper_item"></div></div></td>
             </tr>
             <tr  class="table__row">
-                <td  class="table-body__cell"><div class="table-body__checkbox-wrapper der"><span> <input type="checkbox" class="inp"></span></div></td>
+                <td  class="table-body__cell"><div class="table__checkbox-wrapper der"><span class="resetStyle"> <input type="checkbox" class="inp"></span></div></td>
                 <td  class="table-body__cell"><div class="table-body__name-line font-weight_bold"><div>BwodsSam</div> <div class="table-body__visible-pin"></div></div></td>
                 <td  class="table-body__cell"><div class="table-body__status-line font-weight_bold">Enabled</div></td>
                 <td  class="table-body__cell"><div class="table-body__aut-line font-weight_bold">DAPL</div></td>
@@ -87,7 +87,7 @@
                 <td  class="table-body__cell"><div class="table-body__img-wrapper"><div class="table-body__img-wrapper_item"></div></div></td>
             </tr>
             <tr  class="table__row">
-                <td  class="table-body__cell"><div class="table-body__checkbox-wrapper der"><span> <input type="checkbox" class="inp"></span></div></td>
+                <td  class="table-body__cell"><div class="table__checkbox-wrapper der"><span class="resetStyle"> <input type="checkbox" class="inp"></span></div></td>
                 <td  class="table-body__cell"><div class="table-body__name-line font-weight_bold"><div>CdodsSaaa</div> <div class="table-body__visible-pin"></div></div></td>
                 <td  class="table-body__cell"><div class="table-body__status-line font-weight_bold">Disabled</div></td>
                 <td  class="table-body__cell"><div class="table-body__aut-line font-weight_bold">LDAP</div></td>
@@ -96,7 +96,7 @@
             </tr>
             <tr  class="table__row">
 <!--                <td><label class="checkbox-item"><input hidden type="checkbox"><span class="checker"></span></label></td>-->
-                <td  class="table-body__cell"><div class="table-body__checkbox-wrapper der"><span> <input type="checkbox" class="inp"></span></div></td>
+                <td  class="table-body__cell"><div class="table__checkbox-wrapper der"><span class="resetStyle"> <input type="checkbox" class="inp"></span></div></td>
                 <td  class="table-body__cell"><div class="table-body__name-line font-weight_bold"><div>DsodsSamaa</div> <div class="table-body__visible-pin"></div></div></td>
                 <td  class="table-body__cell"><div class="table-body__status-line font-weight_bold">Disabled</div></td>
                 <td  class="table-body__cell"><div class="table-body__aut-line font-weight_bold">DAPL</div></td>
