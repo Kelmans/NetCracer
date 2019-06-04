@@ -54,10 +54,10 @@ $(document).ready(function() {
                 $('#onlyTable')
                     .append($('<tr class="remove_class">')
                         .append($('<td class="table-body__cell">').append($('<div class="table__checkbox-wrapper der">').append($('<span>').append($('<input type="checkbox" class="table__input-checkbox" >')))))
-                        .append($('<td class="table-body__cell">').append($('<div class="table-body__text-cell font-color">').append($('<div class="text_Line">').append('<input type=text  id="table-body__name-line"class="search-input search-input__one-cell " >'), $('<div class="table-body__visible-pin">'))))
-                        .append($('<td class="table-body__cell">').append($('<div class="table-body__text-cell ">').append($('<div>').append('<input type=text id="table-body__status-line"class="search-input search-input__two-cell ">'))))
-                        .append($('<td class="table-body__cell">').append($('<div class="table-body__text-cell ">').append($('<div>').append('<input type=text id="table-body__aut-line"  class="search-input search-input__three-cell ">'))))
-                        .append($('<td class="table-body__cell">').append($('<div class="table-body__text-cell ">').append($('<div>').append('<input type=text id="table-body__login-line" class="search-input search-input__four-cell ">'))))
+                        .append($('<td class="table-body__cell">').append($('<div class="table-body__cell-text font-color">').append($('<div class="text_Line">').append('<input type=text  id="table-body__name-line"class="search-input search-input__one-cell " >'), $('<div class="table-body__visible-pin">'))))
+                        .append($('<td class="table-body__cell">').append($('<div class="table-body__cell-text ">').append($('<div>').append('<input type=text id="table-body__status-line"class="search-input search-input__two-cell ">'))))
+                        .append($('<td class="table-body__cell">').append($('<div class="table-body__cell-text ">').append($('<div>').append('<input type=text id="table-body__aut-line"  class="search-input search-input__three-cell ">'))))
+                        .append($('<td class="table-body__cell">').append($('<div class="table-body__cell-text ">').append($('<div>').append('<input type=text id="table-body__login-line" class="search-input search-input__four-cell ">'))))
                         .append($('<td class="table-body__cell">').append($('<div class="table-body__img-wrapper">').append($('<div id="qwe" class="table-body__img-wrapper-item2">'))))
                     )
                 $('.table__checkbox-wrapper input:checkbox').prop('checked', false);
@@ -87,7 +87,7 @@ $(document).ready(function() {
                 var inputStatusLine = document.getElementById("table-body__name-line").value;
                 var inputAutLine = document.getElementById("table-body__name-line").value;
                 var inputLoginLine = document.getElementById("table-body__login-line").value;
-                var insertHTML = '<tr class="add_class dis"><td class="table-body__cell"><div class="table__checkbox-wrapper der"><span> <input type="checkbox" class="inp"></span></div></td><td class="table-body__cell"><div class="table-body__text-cell font-color"><div>' + inputNameLine + '</div> <div class="table-body__visible-pin"></div></div></td> <td class="table-body__cell"><div class="table-body__text-cell">' + inputStatusLine + '</div></td> <td class="table-body__cell"><div class="table-body__text-cell">' + inputAutLine + '</div></td > <td class="table-body__cell"><div class="table-body__text-cell">' + inputLoginLine + '</div></td>  <td  class="table-body__cell"><div class="table-body__img-wrapper"><div class="table-body__img-wrapper_item"></div></div></td> </tr>'
+                var insertHTML = '<tr class="add_class dis"><td class="table-body__cell"><div class="table__checkbox-wrapper der"><span> <input type="checkbox" class="inp"></span></div></td><td class="table-body__cell"><div class="table-body__cell-text font-color"><div>' + inputNameLine + '</div> <div class="table-body__visible-pin"></div></div></td> <td class="table-body__cell"><div class="table-body__cell-text">' + inputStatusLine + '</div></td> <td class="table-body__cell"><div class="table-body__cell-text">' + inputAutLine + '</div></td > <td class="table-body__cell"><div class="table-body__cell-text">' + inputLoginLine + '</div></td>  <td  class="table-body__cell"><div class="table-body__img-wrapper"><div class="table-body__img-wrapper_item"></div></div></td> </tr>'
                 $('#onlyTable').append(insertHTML);
                 $(this).addClass("table-body__img-wrapper_item");
                 $('input[type=text]').prop('disabled', true);
@@ -119,8 +119,8 @@ $(document).ready(function() {
         $('.table-head__arrow-icon').click(function (event) {
 
             var element_click = event.target.className; // Тут имя класса по которому тыкнули
-            var parent_click_element = $('.table-head__arrow-icon').closest(".table-head__text-cell");
-            var objectSearchClass = event.target.closest('.table-head__text-cell');
+            var parent_click_element = $('.table-head__arrow-icon').closest(".table-head__cell-text");
+            var objectSearchClass = event.target.closest('.table-head__cell-text');
             var nameSearchClass = '.' + objectSearchClass.className;
             var repositoryIdTH = event.target.closest('th').id;// тут ID тега TH
             var id_element;
@@ -172,7 +172,7 @@ $(document).ready(function() {
             function sortTable(f, n) {
                 var allRows = $('#onlyTable tbody  tr').get();
                 allRows.sort(function (a, b) {
-                    $('.table-head__arrow-icon').parents('.table-body__text-cell').addClass('font-weight_bold');
+                    $('.table-head__arrow-icon').parents('.table-body__cell-text').addClass('font-weight_bold');
                     var A = getVal(a);
                     var B = getVal(b);
 

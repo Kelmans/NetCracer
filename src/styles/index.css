@@ -63,7 +63,7 @@ tr:hover {
 .table-head__text{
     font-size: 10px;
     color: black;
-}.table-head__text-cell{
+}.table-head__cell-text{
     font-size: 9px;
      display: flex;
 }
@@ -77,7 +77,7 @@ tr:hover {
     display: flex;
     padding-left: 80px;
 }
-.table-body__text-cell{
+.table-body__cell-text{
     font-size: 12px;
     display: flex;
  padding-top: 2px;
