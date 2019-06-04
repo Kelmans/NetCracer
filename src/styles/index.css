@@ -29,7 +29,7 @@ input{
     background: aqua;
 }
 
-#headLineage{
+#head-row{
     background: rgba(245,246,247,1) ;
     border-radius: 110px;
 }
@@ -38,7 +38,7 @@ table tr td:first-child {border-radius: 5px 0 0 5px}
 tr:hover {
     background: rgba(245,246,247,1) ;
 }
-.content-table{
+.body-content{
    color: #262626;
     font-family: 'Nato Sans', sans-serif;
     width: 1158px;
@@ -61,8 +61,11 @@ tr:hover {
     color: #0c6cb0;
 }
 .table-head__text{
-    font-size: 9px;
+    font-size: 10px;
     color: black;
+}.table-head__text-cell{
+    font-size: 9px;
+     display: flex;
 }
 .table-head__status-head{
     font-size: 9px;
@@ -73,6 +76,11 @@ tr:hover {
     font-size: 12px;
     display: flex;
     padding-left: 80px;
+}
+.table-body__text-cell{
+    font-size: 12px;
+    display: flex;
+ padding-top: 2px;
 }
 .table-head__aut-head{
     font-size: 9px;
@@ -162,7 +170,7 @@ tr:hover {
     /*font-family: FontAwesome;*/
     position: absolute;
 }
-.table-head__icons-filter{
+.table-head__filter-icon{
     margin-left: 6px;
     display: inline-block;
     width:10px;
@@ -170,14 +178,14 @@ tr:hover {
     background: round;
     background-image: url("../img/fltr3.png");
 }
-.table-head__icons-arrow{
+.table-head__arrow-icon{
 
     margin-left: 3px;
     width: 11px;
     height: 10px;
 
 }
-.table-head__icons-arrow:hover{
+.table-head__arrow-icon:hover{
  cursor: pointer;
     margin-left: 3px;
     width: 11px;
@@ -304,10 +312,13 @@ tr:hover .scr{
 .sr{
     display: none;
 }
-.fontWe{
+
+.font-weight_bold{
     font-weight: bold;
 }
-
 .dis{
     display: none;
+}
+.font-color{
+    color: #0c6cb0;
 }
