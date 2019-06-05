@@ -3,12 +3,13 @@ $(document).ready(function() {
         var counterAdditionLineage = 0;
         var counterСlicks = 0;
         var constSort = 1;
-
         var rowsOne = $('#table tbody  tr').get();
         var flag_sl = 0;// Флаг нажатия для #sl
         var flag_nm = 0;// Флаг нажатия для #nm
         var flag_km = 0;//Флаг нажатия для #km
         var flag_lm = 0;//Флаг нажатия для #lm
+
+
         // при клике по диву, делаем проверку
         $(document).on('click', '.table__checkbox-wrapper', function () {
             var checkbox = $(this).find('input[type=checkbox]');
@@ -53,29 +54,38 @@ $(document).ready(function() {
         $('#additionRow').click(function () {
             if (counterAdditionLineage == 0) {
                 $('#table')
-                    .append($('<tr class="remove_class">')
-                        .append($('<td class="table-body__cell">').append($('<div class="table__checkbox-wrapper ">').append($('<span>').append($('<input type="checkbox" class="table__input-checkbox" >')))))
-                        .append($('<td class="table-body__cell">').append($('<div class="table-body__cell-text color_blue">').append($('<div class="text_Line">').append('<input type=text  id="table-body__name-line"class="search-input search-input__one-cell " >'), $('<div class="table-body__pin-icon">'))))
-                        .append($('<td class="table-body__cell">').append($('<div class="table-body__cell-text ">').append($('<div>').append('<input type=text id="table-body__status-line"class="search-input search-input__two-cell ">'))))
-                        .append($('<td class="table-body__cell">').append($('<div class="table-body__cell-text ">').append($('<div>').append('<input type=text id="table-body__aut-line"  class="search-input search-input__three-cell ">'))))
-                        .append($('<td class="table-body__cell">').append($('<div class="table-body__cell-text ">').append($('<div>').append('<input type=text id="table-body__login-line" class="search-input search-input__four-cell ">'))))
-                        .append($('<td class="table-body__cell">').append($('<div class="table-body__img-wrapper">').append($('<div id="qwe" class="table-body__img-wrapper-item2">'))))
-                    )
+                    .append($('<tr class="remove_class">' +
+                        '<td class="table-body__cell"><div class="table__checkbox-wrapper "><span> <input type="checkbox" class="checkbox"></span></div></td>' +
+                        '<td class="table-body__cell"><div class="table-body__cell-text color_blue"><div ><input type=text id="table-body__name-line" class="search-input search-input__one-cell"></div></div></td> ' +
+                        '<td class="table-body__cell"><div class="table-body__cell-text"><input type=text id="table-body__status-line" class="search-input search-input__two-cell"></div></td> ' +
+                        '<td class="table-body__cell"><div class="table-body__cell-text"><input type=text id="table-body__aut-line" class="search-input search-input__three-cell"></div></td > ' +
+                        '<td class="table-body__cell"><div class="table-body__cell-text"><input type=text id="table-body__login-line" class="search-input search-input__four-cell"></div></td> ' +
+                        '<td  class="table-body__cell"><div class="table-body__img-wrapper"><div class="table-body__img-wrapper_item2"></div></div></td></tr>'));
+
+                    // ) $('#table')
+                    // .append($('<tr class="remove_class">')
+                    //     .append($('<td class="table-body__cell">').append($('<div class="table__checkbox-wrapper ">').append($('<span>').append($('<input type="checkbox" class="table__input-checkbox" >')))))
+                    //     .append($('<td class="table-body__cell">').append($('<div class="table-body__cell-text color_blue">').append($('<div class="text_Line">').append('<input type=text  id="table-body__name-line"class="search-input search-input__one-cell " >'), $('<div class="table-body__pin-icon">'))))
+                    //     .append($('<td class="table-body__cell">').append($('<div class="table-body__cell-text ">').append($('<div>').append('<input type=text id="table-body__status-line"class="search-input search-input__two-cell ">'))))
+                    //     .append($('<td class="table-body__cell">').append($('<div class="table-body__cell-text ">').append($('<div>').append('<input type=text id="table-body__aut-line"  class="search-input search-input__three-cell ">'))))
+                    //     .append($('<td class="table-body__cell">').append($('<div class="table-body__cell-text ">').append($('<div>').append('<input type=text id="table-body__login-line" class="search-input search-input__four-cell ">'))))
+                    //     .append($('<td class="table-body__cell">').append($('<div class="table-body__img-wrapper">').append($('<div  class="table-body__img-wrapper_item2">'))))
+                    // )
                 $('.table__checkbox-wrapper input:checkbox').prop('checked', false);
                 $('.table__checkbox-wrapper').not(this).removeClass("check_active");
                 $('div.table-body__name-line').addClass('table-body__name-line');
                 $.each(rowsOne, function (index, row) {
                     $('#table').children('tbody').append(row);
                 });
-                $('.table-head__arrow-icon').removeClass('containerArrowSortDec');
-                $('.table-head__arrow-icon').removeClass('containerArrowSortInc');
+                $('.table-head__arrow-icon').removeClass('containerArrowSortDec').removeClass('containerArrowSortInc');
                 counterAdditionLineage++;
             } else {
                 alert("Заполните предыдущую строку и нажмите 'ОК' ");
             }
 
         });
-        $(document).on('click', '.table-body__img-wrapper-item2', function () {// изменить имена
+    //$('.table-body__img-wrapper_item2').click(function () {
+        $(document).on('click', '.table-body__img-wrapper_item2', function (event) {
 
             if (document.getElementById("table-body__name-line").value === '' || document.getElementById("table-body__status-line").value === '' || document.getElementById("table-body__aut-line").value === '' || document.getElementById("table-body__login-line").value === '') {
                 alert("Заполните все поля")
@@ -85,17 +95,17 @@ $(document).ready(function() {
                 //У ново добавленого штмл кода убираю дисплэй нон и добавляю его инпутам
                 //Сделал для сортировки массива
                 var inputNameLine = document.getElementById("table-body__name-line").value;
-                var inputStatusLine = document.getElementById("table-body__name-line").value;
-                var inputAutLine = document.getElementById("table-body__name-line").value;
+                var inputStatusLine = document.getElementById("table-body__status-line").value;
+                var inputAutLine = document.getElementById("table-body__aut-line").value;
                 var inputLoginLine = document.getElementById("table-body__login-line").value;
-                var insertHTML = '<tr class="add_class dis"><td class="table-body__cell"><div class="table__checkbox-wrapper "><span> <input type="checkbox" class="inp"></span></div></td><td class="table-body__cell"><div class="table-body__cell-text color_blue"><div>' + inputNameLine + '</div> <div class="table-body__pin-icon"></div></div></td> <td class="table-body__cell"><div class="table-body__cell-text">' + inputStatusLine + '</div></td> <td class="table-body__cell"><div class="table-body__cell-text">' + inputAutLine + '</div></td > <td class="table-body__cell"><div class="table-body__cell-text">' + inputLoginLine + '</div></td>  <td  class="table-body__cell"><div class="table-body__img-wrapper"><div class="table-body__img-wrapper_item"></div></div></td> </tr>'
+                var insertHTML = '<tr class="add_class"><td class="table-body__cell"><div class="table__checkbox-wrapper "><span> <input type="checkbox" class="checkbox"></span></div></td><td class="table-body__cell"><div class="table-body__cell-text color_blue"><div>' + inputNameLine + '</div> <div class="table-body__pin-icon"></div></div></td> <td class="table-body__cell"><div class="table-body__cell-text">' + inputStatusLine + '</div></td> <td class="table-body__cell"><div class="table-body__cell-text">' + inputAutLine + '</div></td > <td class="table-body__cell"><div class="table-body__cell-text">' + inputLoginLine + '</div></td>  <td  class="table-body__cell"><div class="table-body__img-wrapper"><div class="table-body__img-wrapper_item"></div></div></td> </tr>'
                 $('#table').append(insertHTML);
-                $(this).addClass("table-body__img-wrapper_item");
+                $(event.target).addClass("table-body__img-wrapper_item");
                 $('input[type=text]').prop('disabled', true);
-                $('input[type=text]').addClass('scr');
-                $(this).removeClass("table-body__img-wrapper-item2");
-                $('.add_class').removeClass('dis');
-                $('.remove_class').addClass('dis');
+                $('input[type=text]').addClass('activeCheckbox');
+                $(event.target).removeClass("table-body__img-wrapper_item2");
+
+                $('.remove_class').remove();
                 counterAdditionLineage--;
             }
 
@@ -133,18 +143,35 @@ $(document).ready(function() {
                //   for (var i = 0; i < indexes.length; i++) {
                //     indexes[i]==index;
                // }
-                if (index == 1) {
-                    var numberColumn = 1;
-                    flag_sl++;
-                } else if (index == 2) {
-                    var numberColumn = 2;
-                    flag_nm++;
-                } else if (index == 3) {
-                    var numberColumn = 3
-                    flag_km++;
-                } else {
-                    var index = 4
-                    flag_lm++;
+               //  if (index == 1) {
+               //      var numberColumn = 1;
+               //      flag_sl++;
+               //  } else if (index == 2) {
+               //      var numberColumn = 2;
+               //      flag_nm++;
+               //  } else if (index == 3) {
+               //      var numberColumn = 3
+               //      flag_km++;
+               //  } else {
+               //      var index = 4
+               //      flag_lm++;
+               //  }
+                switch (index) {
+                    case 1:
+                        var numberColumn = 1;
+                        flag_sl++;
+                        break;
+                    case 2:
+                        var numberColumn = 2;
+                        flag_nm++;
+                        break;
+                    case 3:
+                        var numberColumn = 3
+                        flag_km++;
+                        break;
+                    default:
+                        var index = 4
+                        flag_lm++;
                 }
 
                 if (element_click == 'table-head__arrow-icon') {
@@ -153,6 +180,17 @@ $(document).ready(function() {
                     counterСlicks = 1;
                 } else {
                     counterСlicks = 2;
+                }
+                switch (element_click) {
+                    case 'table-head__arrow-icon':
+                        counterСlicks = 0;
+                        break;
+                    case 'table-head__arrow-icon containerArrowSortDec':
+                        counterСlicks = 1;
+                        break;
+                    default:
+                        var index = 4
+                        flag_lm++;
                 }
 
                 if (counterСlicks == 0) {
@@ -185,7 +223,7 @@ $(document).ready(function() {
                     if (A < B) {
                         return -1 * f;
                     }
-                    if (A > B) {
+                    else if (A > B) {
                         return 1 * f;
                     }
                     return 0;

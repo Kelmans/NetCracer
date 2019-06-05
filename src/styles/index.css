@@ -126,7 +126,7 @@ tr:hover {
 .table-body__img-wrapper_item:hover{
     cursor: pointer;
 }
-.table-body__img-wrapper-item2 {
+.table-body__img-wrapper_item2 {
     width: 24px;
     background: round;
     height: 22px;
@@ -301,7 +301,7 @@ tr:hover {
     height: 15px;
     width: 50px;
 }
-.scr{
+.activeCheckbox{
     background: white;
   border: none;
 }
@@ -312,12 +312,11 @@ tr:hover .scr{
 .sr{
     display: none;
 }
-
+.displayNone{
+    display: none;
+}
 .font-weight_bold{
     font-weight: bold;
-}
-.dis{
-    display: none;
 }
 .color_blue{
     color: #0c6cb0;
