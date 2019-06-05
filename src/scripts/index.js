@@ -64,16 +64,6 @@ $(document).ready(function() {
                         '<td class="table-body__cell"><div class="table-body__cell-text"><input type=text id="table-body__aut-line" class="search-input search-input__three-cell"></div></td > ' +
                         '<td class="table-body__cell"><div class="table-body__cell-text"><input type=text id="table-body__login-line" class="search-input search-input__four-cell"></div></td> ' +
                         '<td  class="table-body__cell"><div class="table-body__img-wrapper"><div class="table-body__img-wrapper_item2"></div></div></td></tr>'));
-
-                    // ) $('#table')
-                    // .append($('<tr class="remove_class">')
-                    //     .append($('<td class="table-body__cell">').append($('<div class="table__checkbox-wrapper ">').append($('<span>').append($('<input type="checkbox" class="table__input-checkbox" >')))))
-                    //     .append($('<td class="table-body__cell">').append($('<div class="table-body__cell-text color_blue">').append($('<div class="text_Line">').append('<input type=text  id="table-body__name-line"class="search-input search-input__one-cell " >'), $('<div class="table-body__pin-icon">'))))
-                    //     .append($('<td class="table-body__cell">').append($('<div class="table-body__cell-text ">').append($('<div>').append('<input type=text id="table-body__status-line"class="search-input search-input__two-cell ">'))))
-                    //     .append($('<td class="table-body__cell">').append($('<div class="table-body__cell-text ">').append($('<div>').append('<input type=text id="table-body__aut-line"  class="search-input search-input__three-cell ">'))))
-                    //     .append($('<td class="table-body__cell">').append($('<div class="table-body__cell-text ">').append($('<div>').append('<input type=text id="table-body__login-line" class="search-input search-input__four-cell ">'))))
-                    //     .append($('<td class="table-body__cell">').append($('<div class="table-body__img-wrapper">').append($('<div  class="table-body__img-wrapper_item2">'))))
-                    // )
                 $('.table__checkbox-wrapper input:checkbox').prop('checked', false);
                 $('.table__checkbox-wrapper').not(this).removeClass("check_active");
                 $('div.table-body__name-line').addClass('table-body__name-line');
