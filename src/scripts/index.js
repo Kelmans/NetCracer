@@ -3,11 +3,7 @@ $(document).ready(function() {
         var counterAdditionLineage = 0;
         var counterСlicks = 0;
         var constSort = 1;
-        var rowsOne = $('#table tbody  tr').get();
-        var flag_sl = 0;// Флаг нажатия для #sl
-        var flag_nm = 0;// Флаг нажатия для #nm
-        var flag_km = 0;//Флаг нажатия для #km
-        var flag_lm = 0;//Флаг нажатия для #lm
+        var rowsOne = $('.table-body__row').get();
 
     $(document).on('click', '.table__checkbox-wrapper', testActiveCheckbox);
     $(document).on('click', '#mainCheckbox', activeChecbox);
@@ -165,7 +161,7 @@ $(document).ready(function() {
                         flag_lm++;
                 }
 
-              
+
                 switch (element_click) {
                     case 'table-head__arrow-icon':
                         counterСlicks = 0;
@@ -180,13 +176,13 @@ $(document).ready(function() {
                 if (counterСlicks == 0) {
                     $('.table-head__arrow-icon').removeClass('containerArrowSortDec');
                     $('.table-head__arrow-icon').removeClass('containerArrowSortInc');
-                    constSort *= -1; //постоянная переменная работает как флаг для сортировки
+                    constSort *= -1;
                     $(event.target).addClass('containerArrowSortDec');
                     sortTable(constSort, numberColumn);
                 } else if (counterСlicks == 1) {
                     $('.table-head__arrow-icon').removeClass('containerArrowSortInc');
                     $(event.target).addClass('containerArrowSortInc');
-                    constSort *= -1;//постоянная переменная работает как флаг для сортировки
+                    constSort *= -1;
                     sortTable(constSort, numberColumn);
                 } else {
                     $.each(rowsOne, function (index, row) {
