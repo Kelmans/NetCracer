@@ -165,13 +165,7 @@ $(document).ready(function() {
                         flag_lm++;
                 }
 
-                if (element_click == 'table-head__arrow-icon') {
-                    counterСlicks = 0;
-                } else if (element_click == 'table-head__arrow-icon containerArrowSortDec') {
-                    counterСlicks = 1;
-                } else {
-                    counterСlicks = 2;
-                }
+              
                 switch (element_click) {
                     case 'table-head__arrow-icon':
                         counterСlicks = 0;
@@ -180,8 +174,7 @@ $(document).ready(function() {
                         counterСlicks = 1;
                         break;
                     default:
-                        var index = 4
-                        flag_lm++;
+                        counterСlicks = 2;
                 }
 
                 if (counterСlicks == 0) {
