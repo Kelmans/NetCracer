@@ -16,7 +16,7 @@ table{
     border-collapse: collapse;
 }
 
-tr:hover .table-body__visible-pin{
+tr:hover .table-body__pin-icon{
     background: url("../img/prkp.png") round;
 }
 thead{
@@ -29,7 +29,7 @@ input{
     background: aqua;
 }
 
-#head-row{
+#headRow{
     background: rgba(245,246,247,1) ;
     border-radius: 110px;
 }
@@ -134,7 +134,7 @@ tr:hover {
 
 
 }
-.table-body__visible-pin{
+.table-body__pin-icon{
    margin-left: 10px;
     width: 15px;
     height: 15px;
@@ -319,6 +319,6 @@ tr:hover .scr{
 .dis{
     display: none;
 }
-.font-color{
+.color_blue{
     color: #0c6cb0;
 }
