@@ -9,9 +9,16 @@ $(document).ready(function() {
         var flag_km = 0;//Флаг нажатия для #km
         var flag_lm = 0;//Флаг нажатия для #lm
 
+    $(document).on('click', '.table__checkbox-wrapper', testActiveCheckbox);
+    $(document).on('click', '#mainCheckbox', activeChecbox);
+    $(document).on('click', '.table__checkbox-wrapper', countActiveCheckbox);
+    $('#additionRow').click(innerHTML);
+    $('#removeRow').click(removeRow);
+    $(document).on('click', '.table-body__img-wrapper_item2',checkEmptyInput);
+    $('.table-head__arrow-icon').click(sortCollumnText);
 
-        // при клике по диву, делаем проверку
-        $(document).on('click', '.table__checkbox-wrapper', function () {
+
+       function testActiveCheckbox() {
             var checkbox = $(this).find('input[type=checkbox]');
             // если чекбокс был активен
             if (checkbox.prop("checked")) {
@@ -28,21 +35,21 @@ $(document).ready(function() {
                 // ставим галочку в чекбоксе
                 checkbox.prop("checked", true);
             }
-        });
+        };
 
-        $(document).on('click', '#mainCheckbox', function () { //Активация всех чекбоксов
-            var testActiveCheckbox = $(this).find('input[type=checkbox]');
+       function activeChecbox () { //Активация всех чекбоксов
+            var testActiveCheckbox = $('#mainCheckbox').find('input[type=checkbox]');
             if (testActiveCheckbox.prop("checked")) { //включен
                 $('.table__checkbox-wrapper input:checkbox').prop('checked', true);
-                $('.table__checkbox-wrapper').not(this).addClass("check_active");
+                $('.table__checkbox-wrapper').not('#mainCheckbox').addClass("check_active");
 
             } else { //выключен
                 $('.table__checkbox-wrapper input:checkbox').prop('checked', false);
-                $('.table__checkbox-wrapper').not(this).removeClass("check_active");
+                $('.table__checkbox-wrapper').not('#mainCheckbox').removeClass("check_active");
 
             }
-        });
-        $(document).on('click', '.table__checkbox-wrapper', function () {
+        };
+        function countActiveCheckbox() {
             var variableRow = document.getElementsByTagName('tr');
             var countActiveCheckbox = $('.checkbox[type=checkbox]:checked').length;
             if (countActiveCheckbox == variableRow.length - 1) {
@@ -50,8 +57,8 @@ $(document).ready(function() {
             } else {
                 $('#mainCheckbox').removeClass("check_active");
             }
-        });
-        $('#additionRow').click(function () {
+        };
+        function innerHTML() {
             if (counterAdditionLineage == 0) {
                 $('#table')
                     .append($('<tr class="remove_class">' +
@@ -83,9 +90,9 @@ $(document).ready(function() {
                 alert("Заполните предыдущую строку и нажмите 'ОК' ");
             }
 
-        });
+        };
     //$('.table-body__img-wrapper_item2').click(function () {
-        $(document).on('click', '.table-body__img-wrapper_item2', function (event) {
+     function checkEmptyInput(event) {
 
             if (document.getElementById("table-body__name-line").value === '' || document.getElementById("table-body__status-line").value === '' || document.getElementById("table-body__aut-line").value === '' || document.getElementById("table-body__login-line").value === '') {
                 alert("Заполните все поля")
@@ -109,9 +116,9 @@ $(document).ready(function() {
                 counterAdditionLineage--;
             }
 
-        });
+        };
 
-        $('#removeRow').click(function () {
+        function removeRow () {
             var flagSearch = true;
             $('tbody input:checkbox:checked').each(function () {
 
@@ -126,8 +133,8 @@ $(document).ready(function() {
             if (flagSearch == false) {
                 alert('Закончите с редактированием новой строки');
             }
-        });
-        $('.table-head__arrow-icon').click(function (event) {
+        };
+      function sortCollumnText(event) {
 
             var element_click = event.target.className; // Тут имя класса по которому тыкнули
             var parent_click_element = $('.table-head__arrow-icon').closest(".table-head__cell-text");
@@ -140,22 +147,6 @@ $(document).ready(function() {
 
             if (element_click == 'table-head__arrow-icon' || element_click == 'table-head__arrow-icon containerArrowSortDec' || element_click == 'table-head__arrow-icon containerArrowSortDec containerArrowSortInc') {
                 $('#table td').removeClass('font-weight_bold');
-               //   for (var i = 0; i < indexes.length; i++) {
-               //     indexes[i]==index;
-               // }
-               //  if (index == 1) {
-               //      var numberColumn = 1;
-               //      flag_sl++;
-               //  } else if (index == 2) {
-               //      var numberColumn = 2;
-               //      flag_nm++;
-               //  } else if (index == 3) {
-               //      var numberColumn = 3
-               //      flag_km++;
-               //  } else {
-               //      var index = 4
-               //      flag_lm++;
-               //  }
                 switch (index) {
                     case 1:
                         var numberColumn = 1;
@@ -214,7 +205,7 @@ $(document).ready(function() {
             }
 
             function sortTable(f, n) {
-                var allRows = $('#table tbody  tr').get();
+                var allRows = $('.table-body__row').get();
                 allRows.sort(function (a, b) {
                  //   $('.table-head__arrow-icon').parents('.table-body__cell-text').addClass('font-weight_bold');
                     var A = getVal(a);
@@ -243,5 +234,5 @@ $(document).ready(function() {
                     $('#table').children('tbody').append(row);
                 });
             };
-        });
+        };
     });
