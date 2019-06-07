@@ -185,8 +185,8 @@ $(document).ready(function () {
             var allRows = $('.table-body__row').get();
             allRows.sort(function (a, b) {
 
-                var A = getTextValueElement(a);
-                var B = getTextValueElement(b);
+                var A = getElementText(a);
+                var B = getElementText(b);
 
                 if (A < B) {
                     return -1 * f;
@@ -196,14 +196,14 @@ $(document).ready(function () {
                 return 0;
             });
 
-            function getTextValueElement(elm) {
-                var textUpperCaseElement = $(elm).children('td').eq(n).text().toUpperCase();
-                var textElement = $(elm).children('td').eq(n);
-                $(textElement).addClass('font-weight_bold');
-                if ($.isNumeric(textUpperCaseElement)) {
-                    textUpperCaseElement = parseInt(textUpperCaseElement, 10);
+            function getElementText(elm) {
+                var elementTextUpperCase = $(elm).children('td').eq(n).text().toUpperCase();
+                var elementText = $(elm).children('td').eq(n);
+                $(elementText).addClass('font-weight_bold');
+                if ($.isNumeric(elementTextUpperCase)) {
+                    elementTextUpperCase = parseInt(elementTextUpperCase, 10);
                 }
-                return textUpperCaseElement;
+                return elementTextUpperCase;
             }
 
             $.each(allRows, function (index, row) {
