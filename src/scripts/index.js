@@ -1,20 +1,22 @@
 
 $(document).ready(function() {
-        var counterAdditionLineage = 0;
-        var counterСlicks = 0;
+        var counterAddRow = 0;
+        var orderSort = 0;
         var constSort = 1;
-        var rowsOne = $('.table-body__row').get();
+        var originalRows = $('.table-body__row').get();
 
-    $(document).on('click', '.table__checkbox-wrapper', testActiveCheckbox);
-    $(document).on('click', '#mainCheckbox', activeChecbox);
-    $(document).on('click', '.table__checkbox-wrapper', countActiveCheckbox);
-    $('#additionRow').click(innerHTML);
+
+
+    $(document).on('click', '.table__checkbox-wrapper', checkingStatusCheckbox);
+    $(document).on('click', '#mainCheckbox', mainCheckboxState);
+    $(document).on('click', '.table__checkbox-wrapper', changesMainCheckboxState);
+    $('#additionRow').click(addRow);
     $('#removeRow').click(removeRow);
-    $(document).on('click', '.table-body__img-wrapper_item2',checkEmptyInput);
-    $('.table-head__arrow-icon').click(sortCollumnText);
+    $(document).on('click', '.table-body__img-wrapper_item2',checkingEmptyInput);
+    $('.table-head__arrow-icon').click(sortColumnText);
 
 
-       function testActiveCheckbox() {
+       function checkingStatusCheckbox() {
             var checkbox = $(this).find('input[type=checkbox]');
             // если чекбокс был активен
             if (checkbox.prop("checked")) {
@@ -31,31 +33,30 @@ $(document).ready(function() {
                 // ставим галочку в чекбоксе
                 checkbox.prop("checked", true);
             }
-        };
+        }
 
-       function activeChecbox () { //Активация всех чекбоксов
+       function mainCheckboxState () {
             var testActiveCheckbox = $('#mainCheckbox').find('input[type=checkbox]');
             if (testActiveCheckbox.prop("checked")) { //включен
-                $('.table__checkbox-wrapper input:checkbox').prop('checked', true);
+                $('.checkbox').prop('checked', true);
                 $('.table__checkbox-wrapper').not('#mainCheckbox').addClass("check_active");
 
             } else { //выключен
                 $('.table__checkbox-wrapper input:checkbox').prop('checked', false);
                 $('.table__checkbox-wrapper').not('#mainCheckbox').removeClass("check_active");
-
             }
-        };
-        function countActiveCheckbox() {
-            var variableRow = document.getElementsByTagName('tr');
-            var countActiveCheckbox = $('.checkbox[type=checkbox]:checked').length;
-            if (countActiveCheckbox == variableRow.length - 1) {
+        }
+        function changesMainCheckboxState() {
+            var gettingNumberRow = document.getElementsByTagName('tr');
+            var countActivatedCheckbox = $('.checkbox[type=checkbox]:checked').length;
+            if (countActivatedCheckbox == gettingNumberRow.length - 1) {
                 $('#mainCheckbox').addClass("check_active");
             } else {
                 $('#mainCheckbox').removeClass("check_active");
             }
-        };
-        function innerHTML() {
-            if (counterAdditionLineage == 0) {
+        }
+        function addRow() {
+            if (counterAddRow == 0) {
                 $('#table')
                     .append($('<tr class="remove_class">' +
                         '<td class="table-body__cell"><div class="table__checkbox-wrapper "><span> <input type="checkbox" class="checkbox"></span></div></td>' +
@@ -64,21 +65,20 @@ $(document).ready(function() {
                         '<td class="table-body__cell"><div class="table-body__cell-text"><input type=text id="table-body__aut-line" class="search-input search-input__three-cell"></div></td > ' +
                         '<td class="table-body__cell"><div class="table-body__cell-text"><input type=text id="table-body__login-line" class="search-input search-input__four-cell"></div></td> ' +
                         '<td  class="table-body__cell"><div class="table-body__img-wrapper"><div class="table-body__img-wrapper_item2"></div></div></td></tr>'));
-                $('.table__checkbox-wrapper input:checkbox').prop('checked', false);
+                // $('.checkbox').prop('checked', false);
                 $('.table__checkbox-wrapper').not(this).removeClass("check_active");
-                $('div.table-body__name-line').addClass('table-body__name-line');
-                $.each(rowsOne, function (index, row) {
-                    $('#table').children('tbody').append(row);
+                $.each(originalRows, function (index, row) {
+                    $('tbody').append(row);
                 });
                 $('.table-head__arrow-icon').removeClass('containerArrowSortDec').removeClass('containerArrowSortInc');
-                counterAdditionLineage++;
+                counterAddRow++;
             } else {
                 alert("Заполните предыдущую строку и нажмите 'ОК' ");
             }
 
         };
     //$('.table-body__img-wrapper_item2').click(function () {
-     function checkEmptyInput(event) {
+     function checkingEmptyInput(event) {
 
             if (document.getElementById("table-body__name-line").value === '' || document.getElementById("table-body__status-line").value === '' || document.getElementById("table-body__aut-line").value === '' || document.getElementById("table-body__login-line").value === '') {
                 alert("Заполните все поля")
@@ -99,16 +99,16 @@ $(document).ready(function() {
                 $(event.target).removeClass("table-body__img-wrapper_item2");
 
                 $('.remove_class').remove();
-                counterAdditionLineage--;
+                counterAddRow--;
             }
 
-        };
+        }
 
         function removeRow () {
             var flagSearch = true;
             $('tbody input:checkbox:checked').each(function () {
 
-                if (counterAdditionLineage == 0) {
+                if (counterAddRow == 0) {
                     $(this).parents('tr').addClass('sr')
                 }
                 else {
@@ -119,64 +119,63 @@ $(document).ready(function() {
             if (flagSearch == false) {
                 alert('Закончите с редактированием новой строки');
             }
-        };
-      function sortCollumnText(event) {
+        }
+      function sortColumnText(event) {
 
-            var element_click = event.target.className; // Тут имя класса по которому тыкнули
-            var parent_click_element = $('.table-head__arrow-icon').closest(".table-head__cell-text");
+            var nameElementClick = event.target.className; // Тут имя класса по которому тыкнули
+            var parentСlickElement = $('.table-head__arrow-icon').closest(".table-head__cell-text");
             var objectSearchClass = event.target.closest('.table-head__cell-text');
             var nameSearchClass = '.' + objectSearchClass.className;
             var repositoryIdTH = event.target.closest('th').id;// тут ID тега TH
             var id_element;
-            var index = parseInt( $(this).parents('th').index());
-            var indexes = $('th').map(function(){return $(this).index()});
+            var SearchIndexColumn = parseInt( $(this).parents('th').index());
+          //  var indexes = $('th').map(function(){return $(this).index()});
 
-            if (element_click == 'table-head__arrow-icon' || element_click == 'table-head__arrow-icon containerArrowSortDec' || element_click == 'table-head__arrow-icon containerArrowSortDec containerArrowSortInc') {
+            if (nameElementClick == 'table-head__arrow-icon' || nameElementClick == 'table-head__arrow-icon containerArrowSortDec' || nameElementClick == 'table-head__arrow-icon containerArrowSortDec containerArrowSortInc') {
                 $('#table td').removeClass('font-weight_bold');
-                switch (index) {
+                switch (SearchIndexColumn) {
                     case 1:
                         var numberColumn = 1;
-                        flag_sl++;
+
                         break;
                     case 2:
                         var numberColumn = 2;
-                        flag_nm++;
+
                         break;
                     case 3:
                         var numberColumn = 3
-                        flag_km++;
+
                         break;
                     default:
-                        var index = 4
-                        flag_lm++;
+                        var numberColumn = 4
+
                 }
-
-
-                switch (element_click) {
+                
+                switch (nameElementClick) {
                     case 'table-head__arrow-icon':
-                        counterСlicks = 0;
+                        orderSort = 0;
                         break;
                     case 'table-head__arrow-icon containerArrowSortDec':
-                        counterСlicks = 1;
+                        orderSort = 1;
                         break;
                     default:
-                        counterСlicks = 2;
+                        orderSort = 2;
                 }
 
-                if (counterСlicks == 0) {
+                if (orderSort == 0) {
                     $('.table-head__arrow-icon').removeClass('containerArrowSortDec');
                     $('.table-head__arrow-icon').removeClass('containerArrowSortInc');
                     constSort *= -1;
                     $(event.target).addClass('containerArrowSortDec');
                     sortTable(constSort, numberColumn);
-                } else if (counterСlicks == 1) {
+                } else if (orderSort == 1) {
                     $('.table-head__arrow-icon').removeClass('containerArrowSortInc');
                     $(event.target).addClass('containerArrowSortInc');
                     constSort *= -1;
                     sortTable(constSort, numberColumn);
                 } else {
-                    $.each(rowsOne, function (index, row) {
-                        $('#table').children('tbody').append(row);
+                    $.each(originalRows, function (indexColumn, AllRow) {
+                        $('#table').children('tbody').append(AllRow);
                     });
                     $(event.target).removeClass('containerArrowSortDec');
                     $(event.target).removeClass('containerArrowSortInc');
@@ -186,9 +185,9 @@ $(document).ready(function() {
             function sortTable(f, n) {
                 var allRows = $('.table-body__row').get();
                 allRows.sort(function (a, b) {
-                 //   $('.table-head__arrow-icon').parents('.table-body__cell-text').addClass('font-weight_bold');
-                    var A = getVal(a);
-                    var B = getVal(b);
+
+                    var A = getTextValueElement(a);
+                    var B = getTextValueElement(b);
 
                     if (A < B) {
                         return -1 * f;
@@ -199,19 +198,19 @@ $(document).ready(function() {
                     return 0;
                 });
 
-                function getVal(elm) {
-                    var elementText = $(elm).children('td').eq(n).text().toUpperCase();
-                    var element_fontWe = $(elm).children('td').eq(n);
-                    $(element_fontWe).addClass('font-weight_bold')
-                    if ($.isNumeric(elementText)) {
-                        elementText = parseInt(elementText, 10);
+                function getTextValueElement(elm) {
+                    var textElement = $(elm).children('td').eq(n).text().toUpperCase();
+                    var addFontWeightElement = $(elm).children('td').eq(n);
+                    $(addFontWeightElement).addClass('font-weight_bold');
+                    if ($.isNumeric(textElement)) {
+                        textElement = parseInt(textElement, 10);
                     }
-                    return elementText;
+                    return textElement;
                 }
 
                 $.each(allRows, function (index, row) {
                     $('#table').children('tbody').append(row);
                 });
-            };
-        };
+            }
+        }
     });
