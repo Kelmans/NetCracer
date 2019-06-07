@@ -100,7 +100,7 @@ tr:hover {
     font-size: 11px;
     display: flex;
 }
-.table-body__img-wrapper{
+.table-body__plus-icon-wrapper{
     margin: auto;
     /* margin-left: -21px; */
     margin-right: 7px;
@@ -115,7 +115,7 @@ tr:hover {
     box-shadow: 0 1px 0 rgb(214,209,206);
     border: 1px groove rgb(38,155,232);
 }
-.table-body__img-wrapper_item{
+.table-body__plus-icon{
 
     width: 10px;
     height: 10px;
@@ -123,10 +123,10 @@ tr:hover {
     background: round;
     background-image: url("../img/new1.svg");
 }
-.table-body__img-wrapper_item:hover{
+.table-body__plus-icon:hover{
     cursor: pointer;
 }
-.table-body__img-wrapper_item2 {
+.table-body__OK-icon {
     width: 24px;
     background: round;
     height: 22px;
@@ -193,18 +193,18 @@ tr:hover {
     background: round;
     background-image: url("../img/str.png");
 }
-.containerArrowSortDec{
+.container-arrow-sort-dec{
     margin-left: 3px;
     width: 11px;
     height: 10px;
     background: round;
     background-image: url("../img/str.png");
 }
-.containerArrowSortInc{
+.container-arrow-sort-inc{
      background: round;
      background-image: url("../img/strVr.png");
  }
-.containerArrowSortInc:hover{
+.container-arrow-sort-inc:hover{
     background: round;
     background-image: url("../img/strVr.png");
 }
@@ -239,7 +239,7 @@ tr:hover {
     height: 13px;
     display: block;
 }
-.check_active span{
+.active-checkbox-state span{
     background-image: url("../img/boxl.png");
 }
 
@@ -280,28 +280,28 @@ tr:hover {
     background: white;
     font-size: 12px;
 }
-.search-input__one-cell{
+.search-input__name-cell{
     font-size: 11px;
     height: 15px;
     color: #0c6cb0;
     width: 100px;
 }
-.search-input__four-cell{
+.search-input__login-cell{
     height: 15px;
 
     width: 100px;
 }
-.search-input__three-cell{
+.search-input__auth-cell{
 
     height: 15px;
     width: 35px;
 }
-.search-input__two-cell{
+.search-input__status-cell{
 
     height: 15px;
     width: 50px;
 }
-.activeCheckbox{
+.active-checkbox{
     background: white;
   border: none;
 }
@@ -309,7 +309,7 @@ tr:hover {
 tr:hover .scr{
     background: rgba(245,246,247,1)
 }
-.sr{
+.display_none{
     display: none;
 }
 .displayNone{
