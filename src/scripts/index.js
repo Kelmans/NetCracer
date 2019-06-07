@@ -6,7 +6,7 @@ $(document).ready(function () {
 
 
     $(document).on('click', '.table__checkbox-wrapper', checkCheckboxStatus);
-    $(document).on('click', '#mainCheckbox', changeAllCheckboxState);
+    $(document).on('click', '#mainCheckbox', changeAllCheckboxsState);
     $(document).on('click', '.table-body__OK-icon', checkingEmptyInput);
     $(document).on('click', '.table__checkbox-wrapper', changeMainCheckboxState);
     $('#additionRow').click(addRow);
@@ -18,29 +18,29 @@ $(document).ready(function () {
         // если чекбокс был активен
         if (checkbox.prop("checked")) {
             // снимаем класс с родительского дива
-            $(this).removeClass("active-checkbox-state");
+            $(this).removeClass("_active");
 
             // и снимаем галочку с чекбокса
             checkbox.prop("checked", false);
             // если чекбокс не был активен
         } else {
             // добавляем класс родительскому диву
-            $(this).addClass("active-checkbox-state");
+            $(this).addClass("_active");
 
             // ставим галочку в чекбоксе
             checkbox.prop("checked", true);
         }
     }
 
-    function changeAllCheckboxState() {
+    function changeAllCheckboxsState() {
         var testActiveCheckbox = $('#mainCheckbox').find('.checkbox');
         if (testActiveCheckbox.prop("checked")) { //включен
             $('.checkbox').prop('checked', true);
-            $('.table__checkbox-wrapper').not('#mainCheckbox').addClass("active-checkbox-state");
+            $('.table__checkbox-wrapper').not('#mainCheckbox').addClass("_active");
 
         } else { //выключен
             $('.checkbox').prop('checked', false);
-            $('.table__checkbox-wrapper').not('#mainCheckbox').removeClass("active-checkbox-state");
+            $('.table__checkbox-wrapper').not('#mainCheckbox').removeClass("_active");
         }
     }
 
@@ -48,16 +48,16 @@ $(document).ready(function () {
         var getNumberRow = document.getElementsByTagName('tr');
         var countActivateCheckbox = $('.table-body .checkbox:checked').length;
         if ( countActivateCheckbox == getNumberRow.length - 1  ) {
-            $('#mainCheckbox').addClass("active-checkbox-state");
+            $('#mainCheckbox').addClass("_active");
         }  else {
-            $('#mainCheckbox').removeClass("active-checkbox-state");
+            $('#mainCheckbox').removeClass("_active");
         }
     }
 
     function addRow() {
         if (counterIncompleteRow == 0) {
             $('#table')
-                .append($('<tr class="add-new-row">' +
+                .append($('<tr class="new-row">' +
                     '<td class="table-body__cell"><div class="table__checkbox-wrapper "><span> <input type="checkbox" class="checkbox"></span></div></td>' +
                     '<td class="table-body__cell"><div class="table-body__cell-text color_blue"><div ><input type=text id="table-body__name-column" class="search-input search-input__name-cell"></div></div></td> ' +
                     '<td class="table-body__cell"><div class="table-body__cell-text"><input type=text id="table-body__status-column" class="search-input search-input__status-cell"></div></td> ' +
@@ -65,7 +65,7 @@ $(document).ready(function () {
                     '<td class="table-body__cell"><div class="table-body__cell-text"><input type=text id="table-body__login-column" class="search-input search-input__login-cell"></div></td> ' +
                     '<td  class="table-body__cell"><div class="table-body__plus-icon-wrapper"><div class="table-body__OK-icon"></div></div></td></tr>'));
             // $('.checkbox').prop('checked', false);
-            $('.table__checkbox-wrapper').not(this).removeClass("active-checkbox-state");
+            $('.table__checkbox-wrapper').not(this).removeClass("_active");
             $.each(originalRows, function (SearchIndexColumn, row) {
                 $('tbody').append(row);
             });
@@ -96,7 +96,7 @@ $(document).ready(function () {
             $('.search-input').prop('disabled', true);
             $('.search-input').addClass('active-checkbox');
             $(event.target).removeClass("table-body__OK-icon");
-            $('.add-new-row').remove();
+            $('.new-row').remove();
             counterIncompleteRow--;
         }
 
@@ -131,21 +131,22 @@ $(document).ready(function () {
 
         if (nameElementClick == 'table-head__arrow-icon' || nameElementClick == 'table-head__arrow-icon container-arrow-sort-dec' || nameElementClick == 'table-head__arrow-icon container-arrow-sort-dec container-arrow-sort-inc') {
             $('#table td').removeClass('font-weight_bold');
+            var numberColumn = 0;
             switch (SearchIndexColumn) {
                 case 1:
-                    var numberColumn = 1;
+                     numberColumn = 1;
 
                     break;
                 case 2:
-                    var numberColumn = 2;
+                     numberColumn = 2;
 
                     break;
                 case 3:
-                    var numberColumn = 3;
+                     numberColumn = 3;
 
                     break;
                 default:
-                    var numberColumn = 4;
+                     numberColumn = 4;
 
             }
 
@@ -196,13 +197,13 @@ $(document).ready(function () {
             });
 
             function getTextValueElement(elm) {
-                var textElement = $(elm).children('td').eq(n).text().toUpperCase();
-                var addFontWeightElement = $(elm).children('td').eq(n);
-                $(addFontWeightElement).addClass('font-weight_bold');
-                if ($.isNumeric(textElement)) {
-                    textElement = parseInt(textElement, 10);
+                var textUpperCaseElement = $(elm).children('td').eq(n).text().toUpperCase();
+                var textElement = $(elm).children('td').eq(n);
+                $(textElement).addClass('font-weight_bold');
+                if ($.isNumeric(textUpperCaseElement)) {
+                    textUpperCaseElement = parseInt(textUpperCaseElement, 10);
                 }
-                return textElement;
+                return textUpperCaseElement;
             }
 
             $.each(allRows, function (index, row) {
